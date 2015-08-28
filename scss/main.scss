@@ -23,12 +23,17 @@ $main-color: #0976BB;
 $main-color-hover: #0a5b8e;
 $text-color: #222222;
 $section2: #efefef;
+$footer-color: #1B1B1B;
 
 body {
     font-family: $font;
     overflow-x: hidden !important;
 }
 
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
 
 .navbar-brand {
     margin-top: -10px;
@@ -109,10 +114,6 @@ body {
     padding-right: 3%;
 }
 
-.section1-image {
-    height: 400px;
-}
-
 .buttons-section1 {
     margin-top: 60px;
 }
@@ -153,11 +154,19 @@ body {
     color: white;
 }
 
-.instant-prices {
-    margin: 0 auto;
-    text-align: center;
+.section1-image {
+    height: 400px;
 }
 
+
+.instant-prices {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+// ------- SECTION 2 -------- //
 
 .section2 {
     background: $section2;
@@ -169,6 +178,8 @@ body {
     width: 95%;
     margin: 0 auto;
 }
+
+// ------- SECTION 3 -------- //
 
 .section3 {
     width: 95%;
@@ -221,7 +232,7 @@ body {
 }
 
 .CTA-wrapper {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -267,6 +278,22 @@ body {
     color: white;
 }
 
+// ------- FOOTER -------- //
+
+.footer {
+    background: $footer-color;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+}
+
+.footer-wrapper {
+    width: 95%;
+}
 // ------- FONTS ------- //
 
 h1 {
@@ -313,4 +340,76 @@ p {
     color:white;
     text-align: center;
     padding: 0;
+}
+
+li a {
+    color: white;
+    font-size: 0.9em;
+}
+
+.footer-category-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-p {    
+    color: white;
+    font-size: 0.9em;
+}
+
+
+// ------- MEDIA QUERIES -------- //
+
+@media (min-width : 100px) and (max-width : 992px)  {
+    .above-header-CTA {
+        height: 150px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    ul {
+        text-align: center;
+    }
+    
+    .CTA-button-full-section1 {
+        width: 100%;
+    }
+    
+    .CTA-button-ghost-section1 {
+        width: 100%;
+    }
+    
+    .h2-section2 {
+        text-align: center;
+    }
+    
+    .h3-seciton2  {
+        text-align: center;
+    }
+    
+    .h2-section3 {
+        text-align: center;
+    }
+    
+    .CTA-section {
+        padding-bottom: 130px;
+    }
+    
+    .CTA-button-ghost-CTA {
+        width: 100%;
+    }
+    
+    .section2-link {
+        text-align:center;display:block;
+    }
+    
+    .CTA-button-full-CTA {
+        width: 100%;
+    }
 }

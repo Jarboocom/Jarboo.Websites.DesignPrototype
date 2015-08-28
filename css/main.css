@@ -2,6 +2,8 @@
 @font-face { font-family: 'Raleway'; font-weight: 300; src: url("../fonts/Raleway-Light.eot"); src: url("../fonts/Raleway-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway-Light.woff") format("woff"), url("../fonts/Raleway-Light.ttf") format("truetype"), url("../fonts/Raleway-Light.svg#Raleway-ExtraBold") format("svg"); }
 body { font-family: "Raleway"; overflow-x: hidden !important; }
 
+img { max-height: 100%; max-width: 100%; }
+
 .navbar-brand { margin-top: -10px; height: 70px; margin-bottom: -10px; width: 174px; padding: 0px; }
 
 .navbar-default { border-radius: 0px; padding-top: 15px; padding-bottom: 15px; padding-left: 20px; }
@@ -24,8 +26,6 @@ body { font-family: "Raleway"; overflow-x: hidden !important; }
 
 .section1-text { padding-left: 3%; padding-right: 3%; }
 
-.section1-image { height: 400px; }
-
 .buttons-section1 { margin-top: 60px; }
 
 .CTA-button-full-section1 { height: 50px; width: 95%; border: none; margin: 0 auto; background: #0976BB; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
@@ -36,7 +36,9 @@ body { font-family: "Raleway"; overflow-x: hidden !important; }
 
 .CTA-button-ghost-section1:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
 
-.instant-prices { margin: 0 auto; text-align: center; }
+.section1-image { height: 400px; }
+
+.instant-prices { display: block; margin-left: auto; margin-right: auto; }
 
 .section2 { background: #efefef; padding-top: 50px; padding-bottom: 100px; }
 
@@ -54,7 +56,7 @@ body { font-family: "Raleway"; overflow-x: hidden !important; }
 
 .CTA-section { background: #0976BB; padding-top: 50px; padding-bottom: 50px; }
 
-.CTA-wrapper { width: 80%; margin: 0 auto; }
+.CTA-wrapper { width: 95%; margin: 0 auto; }
 
 .CTA-buttons-CTA { height: 50px; }
 
@@ -65,6 +67,12 @@ body { font-family: "Raleway"; overflow-x: hidden !important; }
 .CTA-button-full-CTA:hover { background: #0a5b8e; transition: 0.5 all; color: white; }
 
 .CTA-button-ghost-CTA:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
+
+.footer { background: #1B1B1B; padding-top: 40px; padding-bottom: 30px; }
+
+ul { list-style-type: none; color: white; }
+
+.footer-wrapper { width: 95%; }
 
 h1 { color: #0976BB; margin-bottom: 50px; text-align: left; font-size: 3em; }
 
@@ -81,5 +89,25 @@ p { color: #222222; margin-bottom: 5px; font-size: 1.1em; }
 .h2-section3 { font-size: 1.6em; margin-top: -50px; margin-bottom: 40px; }
 
 .CTA-h2 { color: white; text-align: center; padding: 0; }
+
+li a { color: white; font-size: 0.9em; }
+
+.footer-category-title { font-size: 1.2em; margin-bottom: 10px; }
+
+.footer-p { color: white; font-size: 0.9em; }
+
+@media (min-width: 100px) and (max-width: 992px) { .above-header-CTA { height: 150px; }
+  h1 { text-align: center; }
+  p { text-align: center; }
+  ul { text-align: center; }
+  .CTA-button-full-section1 { width: 100%; }
+  .CTA-button-ghost-section1 { width: 100%; }
+  .h2-section2 { text-align: center; }
+  .h3-seciton2 { text-align: center; }
+  .h2-section3 { text-align: center; }
+  .CTA-section { padding-bottom: 130px; }
+  .CTA-button-ghost-CTA { width: 100%; }
+  .section2-link { text-align: center; display: block; }
+  .CTA-button-full-CTA { width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
