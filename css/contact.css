@@ -1,0 +1,25 @@
+@font-face { font-family: 'Raleway'; font-weight: 200; src: url("../fonts/Raleway-ExtraLight.eot"); src: url("../fonts/Raleway-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway-ExtraLight.woff") format("woff"), url("../fonts/Raleway-ExtraLight.ttf") format("truetype"), url("../fonts/Raleway-ExtraLight.svg#Raleway-ExtraBold") format("svg"); }
+@font-face { font-family: 'Raleway'; font-weight: 300; src: url("../fonts/Raleway-Light.eot"); src: url("../fonts/Raleway-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway-Light.woff") format("woff"), url("../fonts/Raleway-Light.ttf") format("truetype"), url("../fonts/Raleway-Light.svg#Raleway-ExtraBold") format("svg"); }
+body { font-family: "Raleway"; overflow-x: hidden !important; }
+
+img { max-height: 100%; max-width: 100%; }
+
+.navbar-brand { margin-top: -10px; height: 70px; margin-bottom: -10px; width: 174px; padding: 0px; }
+
+.navbar-default { border-radius: 0px; padding-top: 15px; padding-bottom: 15px; padding-left: 20px; }
+
+.contact-wraper { width: 95%; margin: 0 auto; padding: 0; }
+
+.input-field { width: 100%; padding-top: 5px; padding-bottom: 5px; padding-left: 20px; margin-bottom: 20px; }
+
+.submit-btn { width: 50%; border: none; background: #0976BB; color: white; padding-top: 5px; padding-bottom: 5px; margin-bottom: 100px; }
+
+#active { color: #0976BB; }
+
+h1 { color: #0976BB; text-align: left; font-size: 3em; }
+
+h2 { color: #0976BB; margin-bottom: 25px; }
+
+.contact-page-p { font-size: 1.1em; width: 70%; }
+
+/*# sourceMappingURL=contact.css.map */

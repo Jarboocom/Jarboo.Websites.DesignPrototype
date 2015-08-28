@@ -96,6 +96,8 @@ li a { color: white; font-size: 0.9em; }
 
 .footer-p { color: white; font-size: 0.9em; }
 
+#active { color: #0976BB; }
+
 @media (min-width: 768px) and (max-width: 992px) { .above-header-CTA { height: 50px; }
   h1 { text-align: center; }
   p { text-align: center; }
