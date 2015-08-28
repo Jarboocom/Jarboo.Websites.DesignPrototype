@@ -96,8 +96,22 @@ li a { color: white; font-size: 0.9em; }
 
 .footer-p { color: white; font-size: 0.9em; }
 
-@media (min-width: 100px) and (max-width: 992px) { .above-header-CTA { height: 150px; }
+@media (min-width: 768px) and (max-width: 992px) { .above-header-CTA { height: 50px; }
   h1 { text-align: center; }
+  p { text-align: center; }
+  ul { text-align: center; }
+  .CTA-button-full-section1 { width: 100%; }
+  .CTA-button-ghost-section1 { width: 100%; }
+  .h2-section2 { text-align: center; }
+  .h3-seciton2 { text-align: center; }
+  .h2-section3 { text-align: center; }
+  .CTA-section { padding-bottom: 130px; }
+  .CTA-button-ghost-CTA { width: 100%; }
+  .section2-link { text-align: center; display: block; }
+  .CTA-button-full-CTA { width: 100%; } }
+@media (min-width: 0px) and (max-width: 768px) { .above-header-CTA { height: 150px; }
+  h1 { text-align: center; }
+  h5 { text-align: center; }
   p { text-align: center; }
   ul { text-align: center; }
   .CTA-button-full-section1 { width: 100%; }
