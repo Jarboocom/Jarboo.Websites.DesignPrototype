@@ -72,7 +72,6 @@ img {
     margin-top: 20px;
     padding-top: 12px;
     padding-bottom: 12px;
-    margin-bottom: 100px;
     transition: 0.5s all;
 }
 
@@ -98,6 +97,39 @@ img {
     margin-bottom: 200px;
 }
 
+.check-holder {
+    width: 100%;
+    height: 15px;
+    margin-left: -15px;
+    margin-bottom: 120px;
+}
+
+.chceck-img {
+    height: 15px;
+}
+
+.company-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+// ------- FOOTER -------- //
+
+.footer {
+    background: $footer-color;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+}
+
+.footer-wrapper {
+    width: 95%;
+}
+
 // ------- FONTS ------- //
 
 #active {
@@ -119,4 +151,27 @@ h2 {
 .contact-page-p {
     font-size: 1.1em;
     width: 70%;
+}
+
+.check-p {
+    margin-bottom: 0px;
+}
+
+li a {
+    color: white;
+    font-size: 0.9em;
+}
+
+.footer-category-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-p {    
+    color: white;
+    font-size: 0.9em;
+}
+
+.brands {
+    text-align: center;
 }
