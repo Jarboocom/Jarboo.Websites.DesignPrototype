@@ -64,7 +64,7 @@ img { max-height: 100%; max-width: 100%; }
 
 .CTA-button-ghost-CTA { height: 50px; width: 95%; border: 2px solid white; background: #0976BB; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
 
-.CTA-button-full-CTA:hover { background: #0a5b8e; transition: 0.5 all; color: white; }
+.CTA-button-full-CTA:hover { background: #0a5b8e; color: white; }
 
 .CTA-button-ghost-CTA:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
 

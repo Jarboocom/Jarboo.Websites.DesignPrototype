@@ -69,9 +69,33 @@ img {
     border: none;
     background: $main-color;
     color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     margin-bottom: 100px;
+    transition: 0.5s all;
+}
+
+.submit-btn:hover {
+    background: $main-color-hover;
+    color: white;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.control-label {
+    padding-right: 0px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.control-label-margin {
+    margin-bottom: 200px;
 }
 
 // ------- FONTS ------- //
