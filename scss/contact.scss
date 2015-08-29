@@ -175,3 +175,32 @@ li a {
 .brands {
     text-align: center;
 }
+
+
+// ------- MEDIA QUERIES -------- //
+
+@media (min-width : 0px) and (max-width : 992px)  {
+    .above-header-CTA {
+        height: 50px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    
+    .contact-page-p {
+        font-size: 1.1em;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    ul {
+        text-align: center;
+    }
+    
+   .submit-btn {
+       width: 100%;
+   }
+}
