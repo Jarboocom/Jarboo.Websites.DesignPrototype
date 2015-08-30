@@ -4,4 +4,91 @@
     ViewBag.Title = "title";
 }
 
-<h2>title</h2>
+<div class="row contact-wraper">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <h1>Start a development project</h1>
+        <p class="contact-page-p">No matter if your project is big or small, if it is a new or existing project, you should contact us. In most situations are we able to help, and when we are not, we can still give advice and give recommendations.</p>
+    </div>
+</div>
+
+<div class="row contact-wraper">
+    <div class="col-md-6 col-sm-12 col-xs-12">
+        <h2>Basic data</h2>
+        @using (Html.BeginForm("DiscussProject", "Lead", FormMethod.Post))
+        {
+
+            <div class="form-group">
+                <label for="email" class="col-md-3  col-sm-12 col-xs-12 control-label">E-mail</label>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    @Html.TextBoxFor(m=>m.Email,new {@class="form-control", placeholder ="Your e-mail adress"})
+                </div>
+                <div class="col-md-1 col-sm-12 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="col-md-3 col-sm-12 col-xs-12 control-label">Your name:</label>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your name" })
+                </div>
+                <div class="col-md-1  col-sm-12 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="skype" class="col-md-3 col-sm-12 col-xs-12 control-label">Skype ID:</label>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                   @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your Skype" })
+                </div>
+                <div class="col-md-1 col-sm-12 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="company" class="col-md-3 col-sm-12 col-xs-12 control-label">Company name:</label>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your company name" })
+                </div>
+                <div class="col-md-1  col-sm-12 col-xs-12"></div>
+            </div>
+
+            <h2>Project data</h2>
+
+            <div class="form-group">
+                <label for="message" class="col-md-12 col-sm-12 col-xs-12 control-label control-label-margin">Describe your project or situation:</label>
+                <div class="col-sm-12">
+                    @Html.TextAreaFor(m=>m.ProjectDescription,new {@class="form-control", placeholder = "Describe your project or situation" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="start" class="col-md-12 col-sm-12 col-xs-12 control-label">When do you expect the project to start?</label>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    @Html.TextBoxFor(m => m.ProjectStart, new { @class = "form-control", placeholder = "Project start" })
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12"></div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <input id="submit" name="submit" type="submit" value="Start project" class="submit-btn">
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="check-holder">
+                    <p class="check-p"><img src="@Url.Content("~/assets/images/check.png")" class="chceck-img" alt="">100% Risk free</p>
+                    <p class="check-p"><img src="@Url.Content("~/assets/images/check.png")" class="chceck-img" alt="">Free advice and help on project</p>
+                    <p><img src="@Url.Content("~/assets/images/check.png")" class="chceck-img" alt="">We're more affordable than employees, and we've no minimum project size</p>
+                </div>
+
+            </div>
+        }
+
+      
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+        <h2 class="brands">Trusted by big local brands</h2>
+        <div class="company-wrapper">
+            <img src="@Url.Content("~/assets/images/references/comapny.png")" alt="">
+        </div>
+    </div>
+</div>
