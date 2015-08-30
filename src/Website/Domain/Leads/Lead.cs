@@ -22,6 +22,8 @@ namespace Website.Domain.Leads
 
         // Project
         public string ProjectDeadline { get; set; }
+        public string ProjectStart { get; set; }
+
         public string ProjectDescription { get; set; }
     }
 }

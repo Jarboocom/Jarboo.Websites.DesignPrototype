@@ -25,9 +25,14 @@ namespace Website.Controllers
         [HttpPost]
         public ActionResult DiscussProject(Lead lead)
         {
+            _leadService.Create(lead);
+            
+            return RedirectToAction("LeadConfirmed");
+        }
 
-
-            return View(lead);
+        public ActionResult LeadConfirmed()
+        {
+            return View();
         }
 
 

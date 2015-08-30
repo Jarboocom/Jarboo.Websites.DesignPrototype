@@ -131,6 +131,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LeadController.cs" />
     <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Database\JarbooContext.cs" />
     <Compile Include="Domain\Case\Case.cs" />
     <Compile Include="Domain\Case\ICaseService.cs" />
     <Compile Include="Domain\Leads\ILeadService.cs" />
