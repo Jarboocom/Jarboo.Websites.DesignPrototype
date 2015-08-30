@@ -15,11 +15,6 @@ namespace Website.Controllers
 
 
 
-        public ActionResult DiscussProject()
-        {
-            return View();
-        }
-
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
