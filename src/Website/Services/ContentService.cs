@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web;
-using Website.Domain;
+using Website.Domain.Pages;
 
 namespace Website.Services
 {
@@ -25,7 +25,7 @@ namespace Website.Services
             {
                 var data = client.DownloadString(url);
 
-
+                return new JarbooPage();
             }
         }
 

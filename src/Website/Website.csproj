@@ -121,12 +121,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Domain\JarbooPage.cs" />
+    <Compile Include="Domain\Leads\LeadStatus.cs" />
+    <Compile Include="Domain\Pages\JarbooPage.cs" />
+    <Compile Include="Domain\Leads\Lead.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ContentService.cs" />
+    <Compile Include="Services\LeadService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\fonts\Raleway-ExtraLight.svg" />
@@ -139,13 +142,17 @@
     <Content Include="assets\images\pdf.png" />
     <Content Include="assets\images\references\comapny.png" />
     <Content Include="assets\images\references\saxo.png" />
-    <Content Include="assets\styles\main.css" />
+    <Content Include="assets\styles\main.css">
+      <DependentUpon>main.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\main.min.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="assets\fonts\Raleway-ExtraLight.eot" />
@@ -155,9 +162,9 @@
     <Content Include="assets\fonts\Raleway-Light.ttf" />
     <Content Include="assets\fonts\Raleway-Light.woff" />
     <Content Include="assets\styles\contact.scss" />
-    <Content Include="assets\styles\main.css.map" />
     <Content Include="assets\styles\main.scss" />
     <Content Include="assets\styles\references.scss" />
+    <None Include="compilerconfig.json" />
     <None Include="Properties\PublishProfiles\JarbooDesignPrototype.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
