@@ -10,6 +10,8 @@ img { max-height: 100%; max-width: 100%; }
 
 .header-button-a { padding: 0px; }
 
+.header-li-margin-element { margin-right: 20px; }
+
 .above-header-CTA { height: 50px; }
 
 .CTA-mail-head { padding: 0px; padding-top: 8px; padding-bottom: 8px; padding-left: 5%; }
