@@ -15,6 +15,7 @@ namespace Website.Domain.Leads
 
         // Customer info
         public string Email { get; set; }
+        public string Skype { get; set; }
         public string Phone { get; set; }
         public string Company { get; set; }
         public string Name { get; set; }
