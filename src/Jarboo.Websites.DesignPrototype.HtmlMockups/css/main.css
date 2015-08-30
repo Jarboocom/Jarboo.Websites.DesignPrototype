@@ -6,7 +6,7 @@ img { max-height: 100%; max-width: 100%; }
 
 .navbar-brand { margin-top: -10px; height: 70px; margin-bottom: -10px; width: 174px; padding: 0px; }
 
-.navbar-default { border-radius: 0px; padding-top: 15px; padding-bottom: 15px; padding-left: 20px; }
+.navbar-default { border-radius: 0px; padding-top: 20px; padding-bottom: 20px; padding-left: 20px; background: #1B1B1B; border: none; }
 
 .above-header-CTA { height: 50px; }
 
@@ -14,7 +14,7 @@ img { max-height: 100%; max-width: 100%; }
 
 .CTA-buttons-head { height: 50px; }
 
-.CTA-button-full-head { height: 30px; width: 95%; border: none; margin: 0 auto; background: #0976BB; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
+.CTA-button-full-head { height: 50px; width: 95%; border: none; margin: 0 auto; background: #0976BB; text-align: center; margin-top: 0px; padding-top: 5px; color: white; transition: 0.5s all; }
 
 .CTA-button-ghost-head { height: 30px; width: 95%; border: 2px solid #0976BB; background: white; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: #0976BB; transition: 0.5s all; }
 
@@ -40,9 +40,11 @@ img { max-height: 100%; max-width: 100%; }
 
 .instant-prices { display: block; margin-left: auto; margin-right: auto; }
 
-.section2 { background: #efefef; padding-top: 50px; padding-bottom: 50px; }
+.section2-index { background: #0976BB; padding-top: 50px; padding-bottom: 50px; }
 
-.section2-wrapper { width: 95%; margin: 0 auto; }
+.section2-index-wrapper { width: 95%; margin: 0 auto; }
+
+.section2-index-icon-holder { height: 200px; width: 95%; margin: 0 auto; margin-top: 20px; background: red; }
 
 .section3 { width: 95%; margin: 0 auto; padding-top: 50px; padding-bottom: 70px; }
 
@@ -53,6 +55,8 @@ img { max-height: 100%; max-width: 100%; }
 .get-pdf-button { width: 100%; border: none; padding-top: 10px; padding-bottom: 10px; background: #0976BB; color: white; transition: 0.5s all; }
 
 .get-pdf-button:hover { width: 100%; border: none; padding-top: 10px; padding-bottom: 10px; background: #0a5b8e; color: white; }
+
+.pdf-download-section-img { max-height: 250px; max-width: 250px; padding-top: 60px; margin: 0 auto; }
 
 .CTA-section { background: #0976BB; padding-top: 50px; padding-bottom: 50px; }
 
@@ -68,6 +72,26 @@ img { max-height: 100%; max-width: 100%; }
 
 .CTA-button-ghost-CTA:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
 
+.input-field { width: 100%; padding-top: 5px; padding-bottom: 5px; padding-left: 20px; margin-bottom: 20px; }
+
+.submit-btn { width: 50%; border: none; background: #0976BB; color: white; margin-top: 20px; padding-top: 12px; padding-bottom: 12px; transition: 0.5s all; }
+
+.submit-btn:hover { background: #0a5b8e; color: white; }
+
+.form-horizontal .control-label { text-align: left; margin-bottom: 10px; }
+
+.control-label { padding-right: 0px; }
+
+.form-control { border-radius: 0px; }
+
+.control-label-margin { margin-bottom: 200px; }
+
+.check-holder { width: 100%; height: 15px; margin-left: -15px; margin-bottom: 120px; }
+
+.chceck-img { height: 15px; }
+
+.company-wrapper { max-width: 520px; margin: 0 auto; }
+
 .footer { background: #1B1B1B; padding-top: 40px; padding-bottom: 30px; }
 
 ul { list-style-type: none; color: white; }
@@ -80,11 +104,11 @@ p { color: #222222; margin-bottom: 5px; font-size: 1.1em; }
 
 .fun-fact { color: #222222; font-size: 1em; margin-top: 30px; margin-bottom: 30px; }
 
-.h2-section2 { color: #0976BB; }
+.section2-index-h1 { color: white; text-align: center; margin-bottom: 20px; }
 
-.h3-seciton2 { margin-top: -10px; margin-bottom: 30px; }
+.section2-index-h3 { color: white; text-align: center; font-size: 1.4em; }
 
-.section2-link { text-decoration: underline; font-size: 1.1em; }
+.section2-index-p { color: white; text-align: center; font-size: 1em; }
 
 .h2-section3 { font-size: 1.6em; margin-top: -50px; margin-bottom: 40px; }
 
@@ -99,6 +123,8 @@ li a { color: white; font-size: 0.9em; }
 #active { color: #0976BB; }
 
 .company-wrapper { max-width: 520px; margin: 0 auto; }
+
+.navbar-default .navbar-nav > li > a { color: white; font-size: 1.03em; letter-spacing: 0px; }
 
 @media (min-width: 768px) and (max-width: 992px) { .above-header-CTA { height: 50px; }
   h1 { text-align: center; }
