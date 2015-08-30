@@ -48,8 +48,10 @@ img {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
-    background: #1B1B1B;
-    border: none;
+}
+
+.header-button-a {
+    padding: 0px;
 }
 
 .above-header-CTA {
@@ -173,7 +175,7 @@ img {
 .section2-index {
     background: $main-color;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 }
 
 .section2-index-wrapper {
@@ -182,11 +184,9 @@ img {
 }
 
 .section2-index-icon-holder {
-    height: 200px;
     width: 95%;
     margin: 0 auto;
-    margin-top: 20px;
-    background: red;
+    margin-top: 10px;
 }
 // ------- SECTION 3 -------- //
 
@@ -453,11 +453,22 @@ li a {
 }
 
 .navbar-default .navbar-nav>li>a  {
-    color: white;
+    color: #2f2f2f;
     font-size: 1.03em;
     letter-spacing: 0px;
 }
 
+.section2-index-icon-title {
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.section2-index-icon-p {
+    color: white;
+    font-size: 1em;
+    text-align: center;
+}
 // ------- MEDIA QUERIES -------- //
 
 @media (min-width : 768px) and (max-width : 992px)  {
