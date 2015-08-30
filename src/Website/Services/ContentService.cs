@@ -7,7 +7,7 @@ using Website.Domain.Pages;
 
 namespace Website.Services
 {
-    public class ContentService
+    public class ContentService:IContentService
     {
         private const string DomainBase = "http://blog.jarboo.com/";
         private const string ApiBase = "api/get_page_index?slug=";

@@ -121,7 +121,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Domain\Leads\ILeadService.cs" />
     <Compile Include="Domain\Leads\LeadStatus.cs" />
+    <Compile Include="Domain\Pages\IContentService.cs" />
     <Compile Include="Domain\Pages\JarbooPage.cs" />
     <Compile Include="Domain\Leads\Lead.cs" />
     <Compile Include="Global.asax.cs">
@@ -197,6 +200,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="assets\scripts\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Page\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
