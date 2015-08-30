@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 200;
+  src: url('../fonts/Raleway-ExtraLight.eot');
+  src: url('../fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-ExtraLight.woff') format('woff'),
+       url('../fonts/Raleway-ExtraLight.ttf') format('truetype'),
+       url('../fonts/Raleway-ExtraLight.svg#Raleway-ExtraBold') format('svg');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 300;
+  src: url('../fonts/Raleway-Light.eot');
+  src: url('../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-Light.woff') format('woff'),
+       url('../fonts/Raleway-Light.ttf') format('truetype'),
+       url('../fonts/Raleway-Light.svg#Raleway-ExtraBold') format('svg');
+}
+
+$font: 'Raleway';
+$main-color: #0976BB;
+$main-color-hover: #0a5b8e;
+$text-color: #222222;
+$section2: #efefef;
+$footer-color: #1B1B1B;
+
+body {
+    font-family: $font;
+    overflow-x: hidden !important;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+// ------- NAV BAR ------- //
+
+.navbar-brand {
+    margin-top: -10px;
+    height:70px;
+    margin-bottom: -10px;
+    width:174px;
+    padding: 0px;
+}
+
+.navbar-default {
+    border-radius: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.contact-wraper {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.input-field {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    width: 50%;
+    border: none;
+    background: $main-color;
+    color: white;
+    margin-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: 0.5s all;
+}
+
+.submit-btn:hover {
+    background: $main-color-hover;
+    color: white;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.control-label {
+    padding-right: 0px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.control-label-margin {
+    margin-bottom: 200px;
+}
+
+.check-holder {
+    width: 100%;
+    height: 15px;
+    margin-left: -15px;
+    margin-bottom: 120px;
+}
+
+.chceck-img {
+    height: 15px;
+}
+
+.company-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+// ------- FOOTER -------- //
+
+.footer {
+    background: $footer-color;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+}
+
+.footer-wrapper {
+    width: 95%;
+}
+
+// ------- FONTS ------- //
+
+#active {
+    color: $main-color;
+}
+
+h1 {
+    color: $main-color;
+    text-align: left;
+    font-size: 3em;
+}
+
+h2 {
+    color: $main-color;
+    margin-bottom: 25px;
+}
+
+
+.contact-page-p {
+    font-size: 1.1em;
+    width: 70%;
+}
+
+.check-p {
+    margin-bottom: 0px;
+}
+
+li a {
+    color: white;
+    font-size: 0.9em;
+}
+
+.footer-category-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-p {    
+    color: white;
+    font-size: 0.9em;
+}
+
+.brands {
+    text-align: center;
+}
+
+
+// ------- MEDIA QUERIES -------- //
+
+@media (min-width : 0px) and (max-width : 992px)  {
+    .above-header-CTA {
+        height: 50px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    
+    .contact-page-p {
+        font-size: 1.1em;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    ul {
+        text-align: center;
+    }
+    
+   .submit-btn {
+       width: 100%;
+   }
+}
