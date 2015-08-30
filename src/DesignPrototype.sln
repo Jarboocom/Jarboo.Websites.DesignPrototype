@@ -3,8 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{1DAC17F2-D500-40F8-B042-EBBB51E1AB7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{613754FF-4EE2-44B8-B298-F37A58B7DDF3}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureVMPublishModule.psm1 = PublishScripts\AzureVMPublishModule.psm1
+		PublishScripts\Publish-WebApplicationVM.ps1 = PublishScripts\Publish-WebApplicationVM.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{2A797202-2706-492C-8C49-81B60B421843}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\Website-WAWS-dev.json = PublishScripts\Configurations\Website-WAWS-dev.json
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DAC17F2-D500-40F8-B042-EBBB51E1AB7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAC17F2-D500-40F8-B042-EBBB51E1AB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAC17F2-D500-40F8-B042-EBBB51E1AB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAC17F2-D500-40F8-B042-EBBB51E1AB7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2A797202-2706-492C-8C49-81B60B421843} = {613754FF-4EE2-44B8-B298-F37A58B7DDF3}
 	EndGlobalSection
 EndGlobal
