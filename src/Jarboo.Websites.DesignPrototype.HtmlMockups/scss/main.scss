@@ -50,7 +50,8 @@ img {
     border-radius: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 20px;
+    padding-right: 2%;
+    padding-left: 2%;
 }
 
 .header-button-a {
@@ -59,6 +60,11 @@ img {
 
 .header-li-margin-element {
     margin-right: 20px;
+}
+
+.header-container {
+    width: 95%;
+    margin: 0 auto;
 }
 
 .above-header-CTA {
@@ -218,6 +224,10 @@ img {
 .section3 {
     width: 95%;
     margin: 0 auto;
+    background: red;
+}
+
+.section3-row {
     padding-top: 50px;
     padding-bottom: 70px;
 }
@@ -318,6 +328,72 @@ img {
     color: white;
 }
 
+
+// --------- COMPANY LOGO ---------//
+
+.index-wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.company-logo-section {
+    background: #f5f5f5;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.company-logo-img-hodler {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+// --------- CASE STUDY ---------//
+
+
+.case-study {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.case-study-img-container {
+    height: 90%;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.case-study-text-container {
+    height: 90%;
+    margin: 0 auto;
+    border-bottom: 2px solid $main-color;
+    border-left: 2px solid $main-color;
+    border-right: 2px solid $main-color;
+    padding: 20px;
+}
+
+.case-study-p {
+    font-size: 1em;
+}
+
+.case-study-read-more {
+    height: 30px;
+    width: 60%;
+    border: 2px solid white;
+    background: $main-color;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 5px;
+    color: white;
+    transition: 0.5s all;
+}
+
+.case-study-read-more:hover {
+    background: $main-color-hover;
+    color: white;
+}
 
 // ------- CONTACT PAGE -------- //
 
@@ -513,6 +589,16 @@ li a {
     text-align: center;
     font-size: 1em;
 }
+
+.case-study-heading {
+    color: $main-color;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
 
 // ------- MEDIA QUERIES -------- //
 

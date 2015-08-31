@@ -6,11 +6,13 @@ img { max-height: 100%; max-width: 100%; }
 
 .navbar-brand { margin-top: -10px; height: 70px; margin-bottom: -10px; width: 174px; padding: 0px; }
 
-.navbar-default { border-radius: 0px; padding-top: 20px; padding-bottom: 20px; padding-left: 20px; }
+.navbar-default { border-radius: 0px; padding-top: 20px; padding-bottom: 20px; padding-right: 2%; padding-left: 2%; }
 
 .header-button-a { padding: 0px; }
 
 .header-li-margin-element { margin-right: 20px; }
+
+.header-container { width: 95%; margin: 0 auto; }
 
 .above-header-CTA { height: 50px; }
 
@@ -56,7 +58,9 @@ img { max-height: 100%; max-width: 100%; }
 
 .section2-index-icon-holder { width: 95%; margin: 0 auto; margin-top: 10px; }
 
-.section3 { width: 95%; margin: 0 auto; padding-top: 50px; padding-bottom: 70px; }
+.section3 { width: 95%; margin: 0 auto; background: red; }
+
+.section3-row { padding-top: 50px; padding-bottom: 70px; }
 
 .mail-box { background: #F5F5F5; border: 1px solid #C3C3C3; width: 100%; margin-top: 40px; padding: 15px; }
 
@@ -81,6 +85,24 @@ img { max-height: 100%; max-width: 100%; }
 .CTA-button-full-CTA:hover { background: #0a5b8e; color: white; }
 
 .CTA-button-ghost-CTA:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
+
+.index-wrapper { width: 95%; margin: 0 auto; }
+
+.company-logo-section { background: #f5f5f5; border-top: 1px solid #d4d4d4; border-bottom: 1px solid #d4d4d4; padding-top: 30px; padding-bottom: 30px; }
+
+.company-logo-img-hodler { width: 80%; margin: 0 auto; }
+
+.case-study { padding-top: 50px; padding-bottom: 50px; }
+
+.case-study-img-container { height: 90%; margin: 0 auto; background-color: red; }
+
+.case-study-text-container { height: 90%; margin: 0 auto; border-bottom: 2px solid #0976BB; border-left: 2px solid #0976BB; border-right: 2px solid #0976BB; padding: 20px; }
+
+.case-study-p { font-size: 1em; }
+
+.case-study-read-more { height: 30px; width: 60%; border: 2px solid white; background: #0976BB; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
+
+.case-study-read-more:hover { background: #0a5b8e; color: white; }
 
 .input-field { width: 100%; padding-top: 5px; padding-bottom: 5px; padding-left: 20px; margin-bottom: 20px; }
 
@@ -145,6 +167,8 @@ li a { color: white; font-size: 0.9em; }
 .client-name { text-align: center; color: #0976BB; font-size: 1.2em; margin-bottom: 0px; }
 
 .client-position { text-align: center; font-size: 1em; }
+
+.case-study-heading { color: #0976BB; padding: 0px; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 1.2em; }
 
 @media (min-width: 768px) and (max-width: 992px) { .above-header-CTA { height: 50px; }
   h1 { text-align: center; }
