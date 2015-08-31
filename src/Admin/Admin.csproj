@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1DAC17F2-D500-40F8-B042-EBBB51E1AB7B}</ProjectGuid>
+    <ProjectGuid>{AA8DE933-AF28-47B8-AFCA-6EC290A1357E}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Website</RootNamespace>
-    <AssemblyName>Website</AssemblyName>
+    <RootNamespace>Admin</RootNamespace>
+    <AssemblyName>Admin</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -44,14 +44,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -129,48 +121,20 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LeadController.cs" />
-    <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\fonts\Raleway-ExtraLight.svg" />
-    <Content Include="assets\fonts\Raleway-Light.svg" />
-    <Content Include="assets\images\bracket.png" />
-    <Content Include="assets\images\check.png" />
-    <Content Include="assets\images\gigster.png" />
-    <Content Include="assets\images\instant-prices.png" />
-    <Content Include="assets\images\logo.png" />
-    <Content Include="assets\images\pdf.png" />
-    <Content Include="assets\images\references\comapny.png" />
-    <Content Include="assets\images\references\saxo.png" />
-    <Content Include="assets\styles\main.css">
-      <DependentUpon>main.scss</DependentUpon>
-    </Content>
-    <Content Include="assets\styles\main.min.css">
-      <DependentUpon>main.css</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="assets\fonts\Raleway-ExtraLight.eot" />
-    <Content Include="assets\fonts\Raleway-ExtraLight.ttf" />
-    <Content Include="assets\fonts\Raleway-ExtraLight.woff" />
-    <Content Include="assets\fonts\Raleway-Light.eot" />
-    <Content Include="assets\fonts\Raleway-Light.ttf" />
-    <Content Include="assets\fonts\Raleway-Light.woff" />
-    <Content Include="assets\styles\contact.scss" />
-    <Content Include="assets\styles\main.scss" />
-    <Content Include="assets\styles\references.scss" />
-    <None Include="compilerconfig.json" />
-    <None Include="Properties\PublishProfiles\JarbooDesignPrototype.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -197,12 +161,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Page\Index.cshtml" />
-    <Content Include="Views\Lead\DiscussProject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\scripts\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -235,9 +196,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50483</DevelopmentServerPort>
+          <DevelopmentServerPort>50568</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50483/</IISUrl>
+          <IISUrl>http://localhost:50568/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
