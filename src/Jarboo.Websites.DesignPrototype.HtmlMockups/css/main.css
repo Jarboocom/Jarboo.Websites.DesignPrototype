@@ -44,6 +44,12 @@ img { max-height: 100%; max-width: 100%; }
 
 .instant-prices { display: block; margin-left: auto; margin-right: auto; }
 
+.testemonial-section { padding-top: 40px; padding-bottom: 60px; }
+
+.testemonial { padding: 20px; border-left: 4px solid #0976BB; }
+
+.client-holder { width: 100px; height: 100px; margin: 0 auto; }
+
 .section2-index { background: #0976BB; padding-top: 50px; padding-bottom: 70px; }
 
 .section2-index-wrapper { width: 95%; margin: 0 auto; }
@@ -133,6 +139,12 @@ li a { color: white; font-size: 0.9em; }
 .section2-index-icon-title { color: white; text-align: center; font-size: 1.3em; }
 
 .section2-index-icon-p { color: white; font-size: 1em; text-align: center; }
+
+.section2-index-p { text-align: center; color: white; width: 80%; margin: 0 auto; }
+
+.client-name { text-align: center; color: #0976BB; font-size: 1.2em; margin-bottom: 0px; }
+
+.client-position { text-align: center; font-size: 1em; }
 
 @media (min-width: 768px) and (max-width: 992px) { .above-header-CTA { height: 50px; }
   h1 { text-align: center; }
