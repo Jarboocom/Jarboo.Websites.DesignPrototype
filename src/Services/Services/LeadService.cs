@@ -31,12 +31,23 @@ namespace Services.Services
 
         public Lead Update(Lead lead)
         {
-            throw new NotImplementedException();
+            var thelead = db.Leads.FirstOrDefault(c => c.Id ==lead.Id);
+
+            
+            thelead.DateUpdated = DateTime.Now;
+            thelead.LeadStatus = lead.LeadStatus;
+            
+            db.SaveChanges();
+
+            return GetById(lead.Id);
         }
 
         public void Delete(Lead lead)
         {
-            throw new NotImplementedException();
+            var thelead = db.Leads.FirstOrDefault(c => c.Id == lead.Id);
+
+            db.Leads.Remove(thelead);
+            db.SaveChanges();
         }
 
         public List<Lead> GetBySpecification(LeadSpecification specification)
