@@ -176,6 +176,22 @@ img {
     margin-right: auto;
 }
 
+.testemonial-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+
+.testemonial {
+    padding: 20px;
+    border-left: 4px solid $main-color;
+}
+
+.client-holder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
 
 // ------- SECTION 2 -------- //
 
@@ -478,6 +494,26 @@ li a {
     font-size: 1em;
     text-align: center;
 }
+
+.section2-index-p {
+    text-align: center;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.client-name {
+    text-align: center;
+    color: $main-color;
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+.client-position {
+    text-align: center;
+    font-size: 1em;
+}
+
 // ------- MEDIA QUERIES -------- //
 
 @media (min-width : 768px) and (max-width : 992px)  {
