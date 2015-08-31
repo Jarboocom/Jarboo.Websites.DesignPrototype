@@ -1,0 +1,40 @@
+﻿@using Website.Domain.Case
+@model System.Collections.Generic.List<Website.Domain.Case.Case>
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h1>Cases</h1>
+
+@Html.ActionLink("New case","NewCase","Case")
+
+<table class=""table table-stripped">
+    <thead>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Title
+        </th>
+        <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (Case a_case in Model)
+        {
+            <tr>
+                <td>
+                    @a_case.Id
+                </td>
+                <td>
+                    @a_case.Title
+                </td>
+                <td>
+                    @Html.ActionLink("Edit","EditCase","Case",new {slug=a_case.Slug},null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

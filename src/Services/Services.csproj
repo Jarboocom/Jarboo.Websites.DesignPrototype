@@ -55,9 +55,12 @@
   <ItemGroup>
     <Compile Include="Database\JarbooContext.cs" />
     <Compile Include="Domain\Case\Case.cs" />
+    <Compile Include="Domain\Case\CaseSpecification.cs" />
     <Compile Include="Domain\Case\ICaseService.cs" />
+    <Compile Include="Domain\Common\Specification.cs" />
     <Compile Include="Domain\Leads\ILeadService.cs" />
     <Compile Include="Domain\Leads\Lead.cs" />
+    <Compile Include="Domain\Leads\LeadSpecification.cs" />
     <Compile Include="Domain\Leads\LeadStatus.cs" />
     <Compile Include="Domain\Pages\DTO\WordpressPage.cs" />
     <Compile Include="Domain\Pages\IContentService.cs" />
