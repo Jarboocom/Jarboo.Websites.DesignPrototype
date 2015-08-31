@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Mandrill;
+using Mandrill.Model;
 using Services.Domain.Case;
 using Services.Services;
 using Website.Models;
@@ -48,10 +50,26 @@ namespace Website.Controllers
             return View(new ContactViewModel());
         }
 
-        public ActionResult Contact(ContactViewModel model)
+        public ActionResult PostContact(ContactViewModel model)
         {
+            Send(model);
             model.Status = "The message is sent.";
             return View(model);
+        }
+
+        private void Send(ContactViewModel model)
+        {
+            var api = new MandrillApi("IRWMe1g1dCTrG6uOZEy7gQ");
+            var message = new MandrillMessage();
+            message.FromEmail = "info@jarboo.com";
+            message.AddTo("lh@jarboo.com");
+            message.ReplyTo = "info@jarboo.com";
+            //supports merge var content as string
+            message.AddGlobalMergeVars("NAME", model.Name);
+
+            message.AddGlobalMergeVars("EMAIL", model.Email);
+            message.AddGlobalMergeVars("MESSAGE", model.Message);
+            var result = api.Messages.SendTemplate(message, "customer-invoice");
         }
     }
 }

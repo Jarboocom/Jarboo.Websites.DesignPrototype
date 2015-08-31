@@ -13,19 +13,22 @@
     
 }
 
-@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+@using (Html.BeginForm("PostContact", "Home", FormMethod.Post))
 {
     <div class="form-group">
         <div>
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.LabelFor(m=>m.Email)
+            @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
         </div>
 
         <div>
-            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, new {@class = "form-control"})
         </div>
 
         <div>
-            @Html.TextAreaFor(c=>c.Message,new {@class="form-control"})
+            @Html.LabelFor(m => m.Message)
+            @Html.TextAreaFor(c => c.Message, new {@class = "form-control"})
         </div>
 
 
