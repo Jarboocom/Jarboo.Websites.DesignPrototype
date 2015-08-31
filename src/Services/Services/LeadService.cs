@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Services.Database;
 using Services.Domain.Leads;
@@ -34,6 +35,11 @@ namespace Services.Services
         }
 
         public void Delete(Lead lead)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Lead> GetBySpecification(LeadSpecification specification)
         {
             throw new NotImplementedException();
         }

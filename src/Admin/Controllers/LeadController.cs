@@ -19,7 +19,19 @@ namespace Admin.Controllers
         // GET: Lead
         public ActionResult Index()
         {
-            return View();
+            var leads = _leadService.GetBySpecification(new LeadSpecification()
+            {
+                Take = int.MaxValue
+            });
+
+            return View(leads);
+        }
+
+        public ActionResult Lead(int id)
+        {
+            var alead = _leadService.GetById(id);
+
+            return View(alead);
         }
     }
 }

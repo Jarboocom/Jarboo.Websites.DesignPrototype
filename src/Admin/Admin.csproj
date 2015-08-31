@@ -164,11 +164,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Case\Index.cshtml" />
     <Content Include="Views\Case\NewCase.cshtml" />
+    <Content Include="Views\Lead\Index.cshtml" />
+    <Content Include="Views\Lead\Lead.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Lead\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -1,0 +1,47 @@
+﻿@model Services.Domain.Leads.Lead
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h1>Lead #@Model.Id</h1>
+
+@Html.ActionLink("GO back","Index","Lead")
+
+<div>
+    <h2>Lead data</h2>
+    <div>
+        @Model.Email
+    </div>
+    <div>
+        @Model.DateCreated
+    </div>
+    <div>
+        @Model.DateUpdated
+    </div>
+    <div>
+        @Model.LeadStatus
+    </div>
+    <div>
+        @Model.Company
+    </div>
+    <div>
+        @Model.Name
+    </div>
+    <div>
+        @Model.Skype
+    </div>
+
+    <h2>Project data</h2>
+    <div>
+        @Model.ProjectDescription
+    </div>
+    <div>
+        @Model.ProjectDeadline
+    </div>
+    <div>
+        @Model.ProjectStart
+    </div>
+
+
+</div>
