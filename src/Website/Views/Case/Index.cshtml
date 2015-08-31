@@ -1,0 +1,12 @@
+﻿@model Website.Domain.Case.Case
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h1>@Model.Title</h1>
+
+<div>
+    @Html.Raw(Model.Description)
+</div>
+
