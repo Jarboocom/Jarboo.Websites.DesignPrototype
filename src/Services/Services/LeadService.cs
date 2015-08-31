@@ -52,7 +52,14 @@ namespace Services.Services
 
         public List<Lead> GetBySpecification(LeadSpecification specification)
         {
-            throw new NotImplementedException();
+            IQueryable<Lead> cases = db.Leads;
+
+            //if (specification.Id > 0)
+            //{
+            //    dbLetters = dbLetters.Where(c => c.Id == specification.Id);
+            //}
+
+            return cases.OrderBy(c => c.Id).Take(specification.Take).Skip(specification.Skip).ToList();
         }
     }
 }

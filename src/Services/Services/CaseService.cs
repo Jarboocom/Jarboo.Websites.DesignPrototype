@@ -49,7 +49,14 @@ namespace Services.Services
 
         public List<Case> GetBySpecification(CaseSpecification specification)
         {
-            throw new NotImplementedException();
+            IQueryable<Case> cases = db.Cases;
+            
+            //if (specification.Id > 0)
+            //{
+            //    dbLetters = dbLetters.Where(c => c.Id == specification.Id);
+            //}
+
+            return cases.OrderBy(c=>c.Id).Take(specification.Take).Skip(specification.Skip).ToList();
         }
     }
 }

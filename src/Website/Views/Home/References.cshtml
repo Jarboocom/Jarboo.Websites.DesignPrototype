@@ -60,3 +60,14 @@
         <img src="@Url.Content("~/assets/images/references/saxo.png")" alt="">
     </div>
 </div>
+
+<h2>Cases</h2>
+
+<ul>
+    @foreach (var our_case in Model.Cases)
+    {
+        <li>
+            @Html.ActionLink("See case","Index","Case",new { slug =our_case.Slug},null)
+        </li>
+    }
+</ul>

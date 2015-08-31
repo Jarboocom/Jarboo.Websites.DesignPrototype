@@ -24,6 +24,12 @@ namespace Website.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
+
         public ActionResult References()
         {
             var cases = _caseService.GetBySpecification(new CaseSpecification());
@@ -39,7 +45,13 @@ namespace Website.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return View(new ContactViewModel());
+        }
+
+        public ActionResult Contact(ContactViewModel model)
+        {
+            model.Status = "The message is sent.";
+            return View(model);
         }
     }
 }

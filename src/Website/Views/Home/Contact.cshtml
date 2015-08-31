@@ -1,17 +1,35 @@
-﻿@{
+﻿@model Website.Models.ContactViewModel
+@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<h1>Contact Jarboo</h1>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+@if (!string.IsNullOrEmpty(Model.Status))
+{
+    <div class="bg-success">
+        @Model.Status
+    </div>
+    
+}
+
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+{
+    <div class="form-group">
+        <div>
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+
+        <div>
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+
+        <div>
+            @Html.TextAreaFor(c=>c.Message,new {@class="form-control"})
+        </div>
+
+
+    </div>
+
+    <input type="submit" value="Send message" class="btn btn-success"/>
+}
