@@ -282,4 +282,28 @@ li a { color: white; font-size: 0.9em; }
 
 .reference-case-study-p { color: white; }
 
+.solving-section1-1 { width: 95%; margin: 0 auto; }
+
+.solving-section1 { width: 95%; margin: 0 auto; padding-bottom: 50px; }
+
+.solving-section1-icon { max-width: 200px; max-height: 1500px; margin: 0 auto; margin-bottom: 20px; }
+
+.solving-section2-top { background: #f0f0f0; border-top: 1px solid #e3e3e3; padding-top: 30px; }
+
+.solving-section2-bottom { background: #f0f0f0; border-bottom: 1px solid #ECECEC; padding-bottom: 30px; }
+
+.solving-section1-head { font-size: 2.5em; }
+
+.solving-h2 { font-size: 1.4em; color: #0976BB; margin-top: -40px; }
+
+.solving-section1-sub-head { color: black; font-size: 1.2em; margin-top: 20px; letter-spacing: 2px; }
+
+.solving-h3 { color: #0976BB; text-align: center; font-size: 1.3em; margin-top: -10px; }
+
+.solving-p { color: #222222; text-align: center; margin-top: 30px; }
+
+.solving-section1-p { margin-top: 30px; }
+
+.solving-section2-h2-head { color: #0976BB; font-size: 1.7em; margin-top: -30px; }
+
 /*# sourceMappingURL=main.css.map */
