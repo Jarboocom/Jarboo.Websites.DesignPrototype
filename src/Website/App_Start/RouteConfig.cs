@@ -13,12 +13,21 @@ namespace Website
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+            routes.MapRoute(
+                name: "Resource",
+                url: "resources",
+                defaults: new { controller = "Page", action = "Index", slug = "resources" }
+            );
+
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
+           
             routes.MapRoute(
                             name: "Page",
                             url: "{controller}/{action}/{slug}",

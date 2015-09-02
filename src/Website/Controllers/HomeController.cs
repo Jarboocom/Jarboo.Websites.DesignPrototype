@@ -11,6 +11,7 @@ using Website.Models;
 
 namespace Website.Controllers
 {
+    [RoutePrefix("home")]
     public class HomeController : Controller
     {
         private ICaseService _caseService;
@@ -43,6 +44,7 @@ namespace Website.Controllers
 
         }
 
+        [Route("~/contact")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -50,6 +52,7 @@ namespace Website.Controllers
             return View(new ContactViewModel());
         }
 
+       
         public ActionResult PostContact(ContactViewModel model)
         {
             Send(model);
