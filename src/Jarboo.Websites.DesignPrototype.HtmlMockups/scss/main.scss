@@ -341,7 +341,7 @@ img {
     border-top: 1px solid #d4d4d4;
     border-bottom: 1px solid #d4d4d4;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .company-logo-img-hodler {
@@ -349,40 +349,61 @@ img {
     margin: 0 auto;
 }
 
+.client-link {
+    text-align: center;
+    padding-top: 20px;
+}
+
 
 // --------- CASE STUDY ---------//
 
-
 .case-study {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-.case-study-img-container {
-    height: 90%;
+.case-study-shell {
+    width: 95%;
+    height: 170px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.5s all;
     margin: 0 auto;
-    background-color: red;
 }
 
-.case-study-text-container {
-    height: 90%;
-    margin: 0 auto;
-    border-bottom: 2px solid $main-color;
-    border-left: 2px solid $main-color;
-    border-right: 2px solid $main-color;
-    padding: 20px;
+.case-study-holder {
+    margin-top: 20px;
+    width: 110px;
+    height: 110px;
+    background: url(../img/case-study.png);
+    background-size: contain;
+    transition: 0.5s all;
+}
+
+.case-study-text {
+    border-left: 4px solid $main-color;
+    height: 150px;
+    transition: 0.5s all;
+}
+
+.case-study-head {
+    color: $main-color;
+    margin-top: 5px;
+    transition: 0.5s all;
 }
 
 .case-study-p {
-    font-size: 1em;
+    transition: 0.5s all;
 }
 
-.case-study-read-more {
+.case-study-full-button {
     height: 30px;
-    width: 60%;
-    border: 2px solid white;
-    background: $main-color;
+    width: 45%;
+    position: absolute;
+    top: 110px;
+    border: none;
     margin: 0 auto;
+    background: $main-color;
     text-align: center;
     margin-top: 10px;
     padding-top: 5px;
@@ -390,9 +411,31 @@ img {
     transition: 0.5s all;
 }
 
-.case-study-read-more:hover {
-    background: $main-color-hover;
+
+.case-study-shell:hover {
+    background: $main-color;
+}
+
+.case-study-shell:hover .case-study-text {
+    border-left: 4px solid white;
+}
+
+.case-study-shell:hover .case-study-head {
     color: white;
+}
+
+.case-study-shell:hover .case-study-p {
+    color: white;
+}
+
+.case-study-shell:hover .case-study-full-button {
+    background: white;
+    color: $main-color;
+}
+
+.case-study-shell:hover .case-study-holder {
+    background: url(../img/case-study-white.pmg.png);
+    background-size: contain;
 }
 
 // ------- CONTACT PAGE -------- //
@@ -488,6 +531,14 @@ p {
     color: $text-color;
     margin-bottom: 5px;
     font-size: 1.1em;
+}
+
+a {
+    font-size: 1.1em;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 .fun-fact {
