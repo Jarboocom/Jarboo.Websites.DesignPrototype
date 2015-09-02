@@ -42,6 +42,12 @@ img { max-height: 100%; max-width: 100%; }
 
 .CTA-button-ghost-section1:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
 
+.footer { background: #1B1B1B; padding-top: 40px; padding-bottom: 30px; }
+
+ul { list-style-type: none; color: white; }
+
+.footer-wrapper { width: 95%; }
+
 .section1-image { height: 400px; }
 
 .instant-prices { display: block; margin-left: auto; margin-right: auto; }
@@ -154,12 +160,6 @@ img { max-height: 100%; max-width: 100%; }
 
 .company-wrapper { max-width: 520px; margin: 0 auto; }
 
-.footer { background: #1B1B1B; padding-top: 40px; padding-bottom: 30px; }
-
-ul { list-style-type: none; color: white; }
-
-.footer-wrapper { width: 95%; }
-
 h1 { color: #0976BB; margin-bottom: 50px; text-align: left; font-size: 3em; }
 
 p { color: #222222; margin-bottom: 5px; font-size: 1.1em; }
@@ -246,5 +246,40 @@ li a { color: white; font-size: 0.9em; }
   .CTA-section { padding-bottom: 130px; }
   .CTA-button-ghost-CTA { width: 100%; }
   .CTA-button-full-CTA { width: 100%; } }
+.wrapper { width: 95%; margin: 0 auto; }
+
+.wrapper-padding { width: 95%; margin: 0 auto; padding-top: 30px; margin-bottom: 20px; }
+
+.reference-case-study-holder { width: 95%; margin: 0 auto; }
+
+.img1-wrapper { max-width: 350px; margin: 0 auto; }
+
+.references-project-text-left { border-left: 3px solid #0976BB; }
+
+.resourcess-img-container-left { max-width: 300px; max-height: auto; float: right; }
+
+.references-project-text-right { border-right: 3px solid #0976BB; }
+
+.resourcess-img-container-right { max-width: 300px; max-height: auto; }
+
+.refference-case-study { background: #0976BB; margin-top: 90px; padding-top: 40px; padding-bottom: 40px; }
+
+.reference-case-study-icon { max-height: 140px; max-width: 140px; margin: 0 auto; }
+
+.reference-case-study-line { width: 50%; margin: 0 auto; height: 2px; background: white; margin-top: 10px; }
+
+.reference-case-study-text { width: 80%; margin: 0 auto; }
+
+.references-case-study-btn:hover { border: 2px solid white; background: white; color: #0976BB; }
+
+.references-case-study-btn { width: 70%; margin-left: 15%; margin-top: 15px; background: #0976BB; border: 2px solid white; color: white; transition: 0.5s all; }
+
+.references-h3 { color: #0976BB; text-align: center; }
+
+.references-h4 { color: #0976BB; }
+
+.reference-case-study-h4 { color: white; text-align: center; }
+
+.reference-case-study-p { color: white; }
 
 /*# sourceMappingURL=main.css.map */

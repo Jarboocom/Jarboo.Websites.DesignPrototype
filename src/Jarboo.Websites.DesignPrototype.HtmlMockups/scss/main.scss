@@ -171,6 +171,32 @@ img {
     color: white;
 }
 
+
+// ------- FOOTER -------- //
+
+.footer {
+    background: $footer-color;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+}
+
+.footer-wrapper {
+    width: 95%;
+}
+
+
+// -------------------------- //
+// -------------------------- //
+// ------- INDEX.HTML ------- //
+// -------------------------- //
+// -------------------------- //
+
+
 .section1-image {
     height: 400px;
 }
@@ -564,24 +590,6 @@ img {
 
 
 
-// ------- FOOTER -------- //
-
-.footer {
-    background: $footer-color;
-    padding-top: 40px;
-    padding-bottom: 30px;
-}
-
-ul {
-    list-style-type: none;
-    color: white;
-}
-
-.footer-wrapper {
-    width: 95%;
-}
-
-
 // ------- FONTS ------- //
 
 h1 {
@@ -951,3 +959,121 @@ li a {
         width: 100%;
     }
 }
+
+
+
+// --------------------------- //
+// --------------------------- //
+// -------  REFERECES  ------- //
+// --------------------------- //
+// --------------------------- //
+
+
+// ------- WRAPPERS -------- //
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.wrapper-padding {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.reference-case-study-holder {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.img1-wrapper {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.references-project-text-left {
+    border-left: 3px solid $main-color;
+}
+
+.resourcess-img-container-left {
+    max-width: 300px;
+    max-height: auto;
+    float: right;
+}
+
+.references-project-text-right {
+    border-right: 3px solid $main-color;
+}
+
+.resourcess-img-container-right {
+    max-width: 300px;
+    max-height: auto;
+}
+
+.refference-case-study {
+    background: $main-color;
+    margin-top: 90px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.reference-case-study-icon {
+    max-height: 140px;
+    max-width: 140px;
+    margin: 0 auto;
+}
+
+.reference-case-study-line {
+    width: 50%;
+    margin: 0 auto;
+    height: 2px;
+    background: white;
+    margin-top: 10px;
+}
+
+.reference-case-study-text {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.references-case-study-btn:hover {
+    border: 2px solid white;;
+    background: white;
+    color: $main-color;
+}
+
+.references-case-study-btn {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 15px;
+    background: $main-color;
+    border: 2px solid white;
+    color: white;
+    transition: 0.5s all; 
+}
+
+
+
+// ------- FOTNS -------- //
+
+.references-h3 {
+    color: $main-color;
+    text-align: center;
+}
+
+.references-h4 {
+    color: $main-color;
+}
+
+.reference-case-study-h4 {
+    color: white;
+    text-align: center;
+}
+
+.reference-case-study-p {
+    color: white;
+}
+
+
