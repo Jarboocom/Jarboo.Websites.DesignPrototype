@@ -592,7 +592,7 @@ ul {
 
 // ------- FONTS ------- //
 
-h1-index {
+.h1-index {
     color: $main-color;
     margin-bottom: 50px;
     text-align: left;
@@ -1203,5 +1203,31 @@ p {
     color: $text-color;
     margin-bottom: 5px;
     font-size: 1.1em;
+}
+
+
+// --------------------------------- //
+// -------------------------------- //
+// --------- CASE STUDY ---------- //
+// ------------------------------ //
+// ----------------------------- //
+
+.cs-page-case-study > h1{
+    max-width: 80%;
+}
+
+.content-wrapper > p {
+    font-size: 0.9em;
+    margin-left: 1%;
+    margin-top: -15px;
+    margin-bottom: -5px;
+}
+
+.mail-box-case-study {
+    background: #F5F5F5;
+    border: 1px solid #C3C3C3;
+    width: 100%;
+    margin-top:-20px;
+    padding: 15px;
 }
 

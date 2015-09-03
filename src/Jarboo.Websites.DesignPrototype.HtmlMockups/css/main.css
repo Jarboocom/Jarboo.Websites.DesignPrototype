@@ -160,7 +160,7 @@ ul { list-style-type: none; color: white; }
 
 .company-wrapper { max-width: 520px; margin: 0 auto; }
 
-h1-index { color: #0976BB; margin-bottom: 50px; text-align: left; font-size: 3em; }
+.h1-index { color: #0976BB; margin-bottom: 50px; text-align: left; font-size: 3em; }
 
 p { color: #222222; margin-bottom: 5px; font-size: 1.1em; }
 
@@ -321,5 +321,11 @@ h5 { color: #0976BB; }
 h6 { color: #0976BB; }
 
 p { color: #222222; margin-bottom: 5px; font-size: 1.1em; }
+
+.cs-page-case-study > h1 { max-width: 80%; }
+
+.content-wrapper > p { font-size: 0.9em; margin-left: 1%; margin-top: -15px; margin-bottom: -5px; }
+
+.mail-box-case-study { background: #F5F5F5; border: 1px solid #C3C3C3; width: 100%; margin-top: -20px; padding: 15px; }
 
 /*# sourceMappingURL=main.css.map */
