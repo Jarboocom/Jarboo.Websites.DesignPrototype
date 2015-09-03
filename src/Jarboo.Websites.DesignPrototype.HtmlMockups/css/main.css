@@ -306,7 +306,7 @@ li a { color: white; font-size: 0.9em; }
 
 .solving-section2-h2-head { color: #0976BB; font-size: 1.7em; margin-top: -30px; }
 
-.content-wrapper { width: 95%; margin: 0 auto; padding-top: 30px; padding-bottom: 30px; }
+.content-row { padding-bottom: 40px; width: 95%; margin: 0 auto; }
 
 h1 { color: #0976BB; }
 
@@ -324,7 +324,7 @@ p { color: #222222; margin-bottom: 5px; font-size: 1.1em; }
 
 .cs-page-case-study > h1 { max-width: 80%; }
 
-.content-wrapper > p { font-size: 0.9em; margin-left: 3%; margin-top: -15px; margin-bottom: -5px; }
+.content-wrapper > p { font-size: 0.9em; margin-left: 3%; margin-top: -15px; margin-bottom: -5px; padding-bottom: 40px; }
 
 .mail-box-case-study { background: #F5F5F5; border: 1px solid #C3C3C3; width: 96%; margin-left: 2%; margin-top: -20px; padding: 15px; }
 

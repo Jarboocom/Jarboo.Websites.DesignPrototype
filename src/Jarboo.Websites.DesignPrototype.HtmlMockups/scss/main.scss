@@ -1167,12 +1167,12 @@ li a {
 // -------------------------- //
 // -------------------------- //
 
-.content-wrapper {
-    width: 95%;
+.content-row {
+    padding-bottom: 40px;
+     width: 95%;
     margin: 0 auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
+
 
 h1 {
     color: $main-color;
@@ -1221,6 +1221,7 @@ p {
     margin-left: 3%;
     margin-top: -15px;
     margin-bottom: -5px;
+    padding-bottom: 40px;
 }
 
 .mail-box-case-study {
@@ -1231,4 +1232,5 @@ p {
     margin-top:-20px;
     padding: 15px;
 }
+
 
