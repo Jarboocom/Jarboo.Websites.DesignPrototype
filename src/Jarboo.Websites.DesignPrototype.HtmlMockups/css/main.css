@@ -282,17 +282,29 @@ li a { color: white; font-size: 0.9em; }
 
 .reference-case-study-p { color: white; }
 
+.solving-wrapper { width: 97%; margin-left: 3%; }
+
 .solving-section1-1 { width: 95%; margin: 0 auto; }
 
 .solving-section1 { width: 95%; margin: 0 auto; padding-bottom: 50px; }
 
 .solving-section1-icon { max-width: 200px; max-height: 1500px; margin: 0 auto; margin-bottom: 20px; }
 
-.solving-section2-top { background: #f0f0f0; border-top: 1px solid #e3e3e3; padding-top: 30px; }
+.solving-section2-top { background: #f0f0f0; border-top: 1px solid #e3e3e3; padding-top: 30px; padding-bottom: 40px; }
 
 .solving-section2-bottom { background: #f0f0f0; border-bottom: 1px solid #ECECEC; padding-bottom: 30px; }
 
-.solving-section1-head { font-size: 2.5em; }
+.solving-img-container-left { max-width: 200px; max-height: 200px; margin: 0 auto; }
+
+.solving-project-text-left { padding: 0px; padding-left: 20px; border-left: 3px solid #0976BB; }
+
+.solving-ipad { margin-top: 40px; }
+
+@media (min-width: 1500px) and (max-width: 2500px) { .solving-ipad { margin-top: 0px; }
+  .solving-section1 { padding-bottom: 10px; } }
+.solving-section1-mega { font-size: 4em; }
+
+.solving-section1-head { font-size: 1.8em; margin-top: -5px; }
 
 .solving-h2 { font-size: 1.4em; color: #0976BB; margin-top: -40px; }
 
@@ -302,9 +314,15 @@ li a { color: white; font-size: 0.9em; }
 
 .solving-p { color: #222222; text-align: center; margin-top: 30px; }
 
-.solving-section1-p { margin-top: 30px; }
+.solving-section1-p { margin-top: 30px; margin-left: -20px; }
 
 .solving-section2-h2-head { color: #0976BB; font-size: 1.7em; margin-top: -30px; }
+
+.solving-h4 { margin-top: 0px; }
+
+.solving-section2-icontext-wrapper { width: 100%; margin-top: 20px; }
+
+.solving-section2-icon { max-width: 100px; }
 
 .content-row { padding-bottom: 40px; width: 95%; margin: 0 auto; }
 
