@@ -13,8 +13,10 @@
     
 }
 
-@using (Html.BeginForm("PostContact", "Home", FormMethod.Post))
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
 {
+    @Html.AntiForgeryToken()
+    
     <div class="form-group">
         <div>
             @Html.LabelFor(m=>m.Email)

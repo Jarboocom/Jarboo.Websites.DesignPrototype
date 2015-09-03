@@ -52,11 +52,16 @@ namespace Website.Controllers
             return View(new ContactViewModel());
         }
 
-       
-        public ActionResult PostContact(ContactViewModel model)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Contact(ContactViewModel model)
         {
-            Send(model);
-            model.Status = "The message is sent.";
+            if (ModelState.IsValid)
+            {
+                Send(model);
+                model.Status = "The message is sent.";
+            }
+            
             return View(model);
         }
 
