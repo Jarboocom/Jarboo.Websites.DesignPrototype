@@ -592,7 +592,7 @@ ul {
 
 // ------- FONTS ------- //
 
-h1 {
+h1-index {
     color: $main-color;
     margin-bottom: 50px;
     text-align: left;
@@ -1158,4 +1158,50 @@ li a {
     margin-top: -30px;
 }
 
+
+
+
+// -------------------------- //
+// -------------------------- //
+// --------- CONTENT -------- //
+// -------------------------- //
+// -------------------------- //
+
+.content-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h1 {
+    color: $main-color;
+}
+
+h2 {
+    color: $main-color;
+}
+
+h3 {
+    color: $main-color;
+}
+
+h4 {
+    color: $main-color;
+}
+
+h5 {
+    color: $main-color;
+}
+
+h6 {
+    color: $main-color;
+}
+
+
+p {
+    color: $text-color;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
 
