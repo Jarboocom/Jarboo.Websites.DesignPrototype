@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Services.Domain.Leads
 {
@@ -11,6 +12,7 @@ namespace Services.Domain.Leads
         public DateTime DateUpdated { get; set; }
 
         // Customer info
+        [Required]
         public string Email { get; set; }
         public string Skype { get; set; }
         public string Phone { get; set; }
@@ -21,6 +23,7 @@ namespace Services.Domain.Leads
         public string ProjectDeadline { get; set; }
         public string ProjectStart { get; set; }
 
+        [Required]
         public string ProjectDescription { get; set; }
     }
 }

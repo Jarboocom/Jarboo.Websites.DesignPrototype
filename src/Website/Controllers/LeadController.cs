@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Services.Domain.Leads;
 using Services.Services;
 
@@ -10,8 +6,7 @@ namespace Website.Controllers
 {
     public class LeadController : Controller
     {
-
-        private ILeadService _leadService;
+        private readonly ILeadService _leadService;
         public LeadController()
         {
             _leadService = new LeadService();
@@ -23,18 +18,21 @@ namespace Website.Controllers
         }
 
         [HttpPost]
-        public ActionResult DiscussProject(Lead lead)
+        [ValidateAntiForgeryToken]
+        public ActionResult DiscussProject([Bind(Exclude = "Id")]Lead lead)
         {
-            _leadService.Create(lead);
+            if (ModelState.IsValid)
+            {
+                _leadService.Create(lead);
+                return RedirectToAction("LeadConfirmed");
+            }
             
-            return RedirectToAction("LeadConfirmed");
+            return View(lead);
         }
 
         public ActionResult LeadConfirmed()
         {
             return View();
         }
-
-
     }
 }

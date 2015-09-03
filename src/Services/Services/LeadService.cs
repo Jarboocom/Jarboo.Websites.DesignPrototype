@@ -8,11 +8,11 @@ namespace Services.Services
 {
     public class LeadService: ILeadService
     {
-        private JarbooContext db = new JarbooContext();
+        private readonly JarbooContext _db = new JarbooContext();
 
         public Lead GetById(int id)
         {
-            var lead = db.Leads.FirstOrDefault(c => c.Id == id);
+            var lead = _db.Leads.FirstOrDefault(c => c.Id == id);
 
             return lead;
         }
@@ -23,36 +23,38 @@ namespace Services.Services
             lead.DateUpdated = DateTime.Now;
             lead.LeadStatus = LeadStatus.New;
 
-            db.Leads.Add(lead);
-            db.SaveChanges();
+            _db.Leads.Add(lead);
+            _db.SaveChanges();
 
-            return GetById(lead.Id);
+            return lead;
         }
 
         public Lead Update(Lead lead)
         {
-            var thelead = db.Leads.FirstOrDefault(c => c.Id ==lead.Id);
+            var thelead = _db.Leads.FirstOrDefault(c => c.Id ==lead.Id);
 
-            
-            thelead.DateUpdated = DateTime.Now;
-            thelead.LeadStatus = lead.LeadStatus;
-            
-            db.SaveChanges();
+            if (thelead != null)
+            {
+                thelead.DateUpdated = DateTime.Now;
+                thelead.LeadStatus = lead.LeadStatus;
 
-            return GetById(lead.Id);
+                _db.SaveChanges();
+            }
+
+            return thelead;
         }
 
         public void Delete(Lead lead)
         {
-            var thelead = db.Leads.FirstOrDefault(c => c.Id == lead.Id);
+            var thelead = _db.Leads.FirstOrDefault(c => c.Id == lead.Id);
 
-            db.Leads.Remove(thelead);
-            db.SaveChanges();
+            _db.Leads.Remove(thelead);
+            _db.SaveChanges();
         }
 
         public List<Lead> GetBySpecification(LeadSpecification specification)
         {
-            IQueryable<Lead> cases = db.Leads;
+            IQueryable<Lead> cases = _db.Leads;
 
             //if (specification.Id > 0)
             //{

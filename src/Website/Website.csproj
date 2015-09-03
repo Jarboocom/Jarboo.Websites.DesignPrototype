@@ -175,6 +175,9 @@
     <Content Include="assets\styles\contact.scss" />
     <Content Include="assets\styles\main.scss" />
     <Content Include="assets\styles\references.scss" />
+    <Content Include="assets\styles\main.css.map">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
     <None Include="compilerconfig.json" />
     <None Include="Properties\PublishProfiles\JarbooDesignPrototype.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

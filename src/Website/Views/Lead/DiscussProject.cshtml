@@ -1,7 +1,7 @@
 ﻿@model Services.Domain.Leads.Lead
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Describe project";
 }
 
 <div class="row contact-wraper">
@@ -16,6 +16,7 @@
         <h2>Basic data</h2>
         @using (Html.BeginForm("DiscussProject", "Lead", FormMethod.Post))
         {
+            @Html.AntiForgeryToken()
 
             <div class="form-group">
                 <label for="email" class="col-md-3  col-sm-12 col-xs-12 control-label">E-mail</label>
