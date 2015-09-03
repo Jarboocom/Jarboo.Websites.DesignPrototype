@@ -39,78 +39,79 @@
                     <li>@Html.ActionLink("Solving development","About","Home")</li>
                     <li>@Html.ActionLink("References", "References", "Home")</li>
                     <li>@Html.ActionLink("Resources", "Index", "Page", new { slug = "resources" }, new { })</li>
-                    <li>@Html.ActionLink("Contact", "contact")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     
                 </ul>
             </div>
         </div>
     </nav>
 
-        @RenderBody()
-        <hr />
-
-
-        <div class="row CTA-section">
-            <div class="CTA-wrapper">
-                <div class="col-md-6 col-sm-12 col-xs-12 section1-text">
-                    <h2 class="CTA-h2">Solve your development:</h2>
+    <div class="row content-wrapper">
+        <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
+            @RenderBody()
+        </div>
+    </div>
+    <hr/>
+    <div class="row CTA-section">
+        <div class="CTA-wrapper">
+            <div class="col-md-6 col-sm-12 col-xs-12 section1-text">
+                <h2 class="CTA-h2">Solve your development:</h2>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 CTA-buttons-CTA">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <button class="CTA-button-full-CTA">DISCUSS A PROJECT</button>
                 </div>
-                <div class="col-md-6 col-sm-12 col-xs-12 CTA-buttons-CTA">
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <button class="CTA-button-full-CTA">DISCUSS A PROJECT</button>
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <button class="CTA-button-ghost-CTA">CONTACT US</button>
-                    </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <button class="CTA-button-ghost-CTA">CONTACT US</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="row footer">
-            <div class="footer-wrapper">
-                <div class="col-md-2 col-sm-12 col-xs-12 section1-text">
-                    <ul class="">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("New project", "DiscussProject", "Lead")</li>
-                        <li>@Html.ActionLink("Solving development", "About", "Home")</li>
-                        <li>@Html.ActionLink("References", "References", "Home")</li>
-                        <li>@Html.ActionLink("Resources", "Index", "Page", new { slug = "resources" }, null)</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    </ul>
-                </div>
-                <div class="col-md-2 col-sm-12 col-xs-12 section1-text">
-                    <ul class="">
-                        <li class="footer-category-title">Info</li>
-                        <li><a href="picks">FAQ</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 col-sm-12 col-xs-12 section1-text">
-                    <ul class="">
-                        <li class="footer-category-title">Contact</li>
-                        <p class="footer-p">mail@jarboo.com</p>
-                    </ul>
-                </div>
-                <div class="col-md-2 col-sm-12 col-xs-12 section1-text">
-                    <ul class="">
-                        <li class="footer-category-title">Address</li>
-                        <p class="footer-p">Street name 3.</p>
-                        <p class="footer-p">City</p>
-                        <p class="footer-p">Denmark</p>
-                    </ul>
-                </div>
-                <div class="col-md-2 col-sm-12 col-xs-12 section1-text"></div>
+    <div class="row footer">
+        <div class="footer-wrapper">
+            <div class="col-md-2 col-sm-12 col-xs-12 section1-text">
+                <ul class="">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("New project", "DiscussProject", "Lead")</li>
+                    <li>@Html.ActionLink("Solving development", "About", "Home")</li>
+                    <li>@Html.ActionLink("References", "References", "Home")</li>
+                    <li>@Html.ActionLink("Resources", "Index", "Page", new {slug = "resources"}, null)</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12 section1-text">
+                <ul class="">
+                    <li class="footer-category-title">Info</li>
+                    <li><a href="picks">FAQ</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12 section1-text">
+                <ul class="">
+                    <li class="footer-category-title">Contact</li>
+                    <p class="footer-p">mail@jarboo.com</p>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12 section1-text">
+                <ul class="">
+                    <li class="footer-category-title">Address</li>
+                    <p class="footer-p">Street name 3.</p>
+                    <p class="footer-p">City</p>
+                    <p class="footer-p">Denmark</p>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-12 col-xs-12 section1-text"></div>
 
-                <div class="col-md-2 hidden-md hidden-sm hidden-xs">
-                    <a href="@Url.Action("Index","Home")">
-                        <img src="@Url.Content("~/assets/images/logo.png")" alt="" class="instant-prices">
-                    </a>
-                    
-                </div>
+            <div class="col-md-2 hidden-md hidden-sm hidden-xs">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="@Url.Content("~/assets/images/logo.png")" alt="" class="instant-prices">
+                </a>
+
             </div>
         </div>
-
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
