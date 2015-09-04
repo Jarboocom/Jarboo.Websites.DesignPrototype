@@ -37,8 +37,10 @@ namespace Website.Controllers
         {
             var cases = _caseService.GetBySpecification(new CaseSpecification());
 
-            ReferencesViewModel model = new ReferencesViewModel();
-            model.Cases = cases;
+            ReferencesViewModel model = new ReferencesViewModel
+            {
+                Cases = cases
+            };
 
             return View(model);
 

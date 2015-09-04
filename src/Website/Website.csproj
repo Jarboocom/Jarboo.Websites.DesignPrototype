@@ -146,13 +146,21 @@
     <Content Include="assets\fonts\Raleway-ExtraLight.svg" />
     <Content Include="assets\fonts\Raleway-Light.svg" />
     <Content Include="assets\images\bracket.png" />
+    <Content Include="assets\images\case-study-white.png" />
     <Content Include="assets\images\check.png" />
+    <Content Include="assets\images\cons.png" />
+    <Content Include="assets\images\empl.png" />
     <Content Include="assets\images\gigster.png" />
     <Content Include="assets\images\instant-prices.png" />
     <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\monera.png" />
+    <Content Include="assets\images\outso.png" />
     <Content Include="assets\images\pdf.png" />
+    <Content Include="assets\images\references.png" />
     <Content Include="assets\images\references\comapny.png" />
     <Content Include="assets\images\references\saxo.png" />
+    <Content Include="assets\images\references\shipbeat.png" />
+    <Content Include="assets\images\references\USA-tours.png" />
     <Content Include="assets\styles\main.css">
       <DependentUpon>main.scss</DependentUpon>
     </Content>

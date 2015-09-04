@@ -1,9 +1,15 @@
 ﻿@model Services.Domain.Pages.JarbooPage
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = Model.Title;
 }
 
-<h1>@Model.Title</h1>
+<div class="row content-row">
+    <div class="content-wrapper">
+        <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
+            <h1>@Model.Title</h1>
 
-@Html.Raw(Model.Content)
+            @Html.Raw(Model.Content)
+        </div>
+    </div>
+</div>

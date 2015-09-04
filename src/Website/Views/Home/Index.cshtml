@@ -4,57 +4,190 @@
 
 <div class="row section1">
     <div class="col-md-7 col-sm-12 col-xs-12 section1-text">
-        <h1>
+        <h1 class="h1-index">
             Are you tired of how software <br>development works today?
         </h1>
         <p>
             Are you tired of missing deadlines, paying a lot of money and not receiving the software you really wanted? So were we and we founded Jarboo.
         </p>
-        <p>Jarboo provides affordable, scaleable and reliable  development - on time.</p>
+        <p>Jarboo provides affordable, scaleable and reliable development - on time.</p>
         <div class="row buttons-section1">
             <div class="col-md-6 col-sm-12 col-xs-12">
-                <button class="CTA-button-full-section1"><a href="@Url.Action("DiscussProject","Lead")">DISCUSS A PROJECT</a></button>
+                <a href="@Url.Action("DiscussProject", "Lead")"><button class="CTA-button-full-section1">DISCUSS A PROJECT</button></a>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
-                <button class="CTA-button-ghost-section1"><a href="@Url.Action("Contact","Home")">CONTACT US</a></button>
+                <a href="@Url.Action("Contact", "Home")"><button class="CTA-button-ghost-section1">CONTACT US</button></a>
             </div>
         </div>
-        <p class="fun-fact"><span style="color:#0976BB;">Did you know?</span> We're cheaper than employees, <br> and we have no minimum project size?</p>
+        <p class="fun-fact"><span style="color: #0976BB;">Did you know?</span> We're cheaper than employees, <br> and we have no minimum project size?
+        </p>
     </div>
     <div class="col-md-5 col-sm-12 col-xs-12 section1-image">
-        <img src="@Url.Content("~/assets/images/instant-prices.png")" alt="" class="instant-prices">
+        <img src="@Url.Content("~/assets/images/instant-prices.png")" alt="Instant prices" class="instant-prices">
     </div>
 </div>
 
-<div class="row section2">
-    <div class="section2-wrapper">
-        <div class="col-md-6 col-sm-12 col-xs-12 section1-text">
-            <h1>We have found a new way to do software development</h1>
-            <p>
-                <i>
-                    "Why are developers always late?"
-                    <br> "Why is it impossible to find good developers?"  <br> "Why did the developer not code the right thing?"
-                </i>
-            </p>
-            <p>Our whole careers, we've heard executives, founders and employees complain. We've worked hard to rethink how software development is done.</p>
-            <h2 class="h2-section2">We are mix of employees, consultants and outsourcing</h2>
+<div class="row section2-index">
+    <div class="section2-index-wrapper">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h1 class="section2-index-h1">We have found a new way to <br> do software development
+            </h1>
+            <h3 class="section2-index-h3">We are mix of employees, consultants and outsourcing</h3>
+        </div>
 
-            <p>
-                Employees, consultants and outsourcing has pro and cons.
-                <br>
-                <br><b>Employees</b> are great for building loyal teams with domain knowledge, but they're not scaleable and difficult to hire (and very risky). <br><br><b>Consultants</b> are technical domain experts and scaleable, but very expensive and not loyal. <br><br><b>Outsourcing</b> is affordable and scaleable, but very difficult to manage and a lot of time can be spent on mistakes.
-                <br><br>Jarboo is the best from all worlds.<br>You receive a loyal team, and you pay for hours used (with no minimum project size). It's cheaper than employees. Your main contact person is an experienced project manager who both understand business and technology. All code is designed and reviewed by a strong technical architect.
-            </p>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="section2-index-icon-holder">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section2-img-centering">
+                        <img src="@Url.Content("~/assets/images/empl.png")" alt="Employees">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h3 class="section2-index-icon-title">Employees</h3>
+                    <p class="section2-index-icon-p"><i>are great for building loyal teams with domain knowledge, but they're not scaleable and difficult to hire (and very risky).</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="section2-index-icon-holder">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section2-img-centering">
+                        <img src="@Url.Content("~/assets/images/cons.png")" alt="Consultants">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h3 class="section2-index-icon-title">Consultants</h3>
+                    <p class="section2-index-icon-p"><i>are technical domain experts and scaleable, but very expensive and not loyal. </i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="section2-index-icon-holder">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section2-img-centering">
+                        <img src="@Url.Content("~/assets/images/outso.png")" alt="">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h3 class="section2-index-icon-title">Outsourcing</h3>
+                    <p class="section2-index-icon-p"><i>is affordable and scaleable, but very difficult to manage and a lot of time can be spent on mistakes.</i>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            <p><a href="#" class="section2-link">How do we solve development</a></p>
+        <div class="col-md-12 col-sm-12 col-xs-12 jarboo-is-awesome-text">
+            <h3 class="section2-index-h3">Jarboo is the best from all worlds.</h3>
+            <p class="section2-index-p">You receive a loyal team, and you pay for hours used (with no minimum project size). It's cheaper than employees. Your main contact person is an experienced project manager who both understand business and technology. All code is designed and reviewed by a strong technical architect.</p>
+            <a href="@Url.Action("About", "Home")"><button class="jarboo-is-awesome-btn">SEE HOW WE DO IT</button></a>
+        </div>
+    </div>
+</div>
+
+<div class="row testemonial-section">
+    <div class="section2-index-wrapper">
+        <div class="col-md- col-sm-12 col-xs-12 section1-text">
+            <h1 class="h1-index">What are our customer saying?</h1>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+            <div class="client-holder">
+                <img src="@Url.Content("~/assets/images/monera.png")" alt="Monera">
+            </div>
+            <h3 class="client-name">Maximilian Frimmer</h3>
+            <p class="client-position">CEO and co-founder at Monera</p>
+        </div>
+        <div class="col-md-9 col-sm-12 col-xs-12 testemonial">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis arcu nec dui ornare bibendum. In hac habitasse platea dictumst. Curabitur at odio in mauris ultricies convallis. Nam nec semper dui. Fusce pulvinar elit interdum efficitur malesuada. Nulla odio felis, ullamcorper at tellus non, laoreet vulputate nibh. Pellentesque in risus quis nulla vestibulum consequat a vel nunc. Phasellus aliquet euismod elit, eget dapibus augue bibendum quis. Vivamus congue fermentum diam, ac fermentum arcu semper vitae.</p>
+            <a href="@Url.Action("References", "Home")" class="underline">Read more about our work</a>
+        </div>
+    </div>
+</div>
+
+<div class="row company-logo-section">
+    <div class="index-wrapper">
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <img src="@Url.Content("~/assets/images/references/saxo.png")" alt="Saxo">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <img src="@Url.Content("~/assets/images/references/shipbeat.png")" alt="Shipbeat">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <img src="@Url.Content("~/assets/images/references/USA-tours.png")" alt="USA-tours">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <img src="@Url.Content("~/assets/images/references/shipbeat.png")" alt="Shipbeat">
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="client-link">
+                <a href="@Url.Action("References", "Home")" class="underline">See more clients we've worked with</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row case-study">
+    <div class="index-wrapper">
+        <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
+            <h1>Our case studies</h1>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="case-study-shell">
+                <div class="col-md-3 col-sm-3 col-xs-2">
+                    <div class="case-study-holder"></div>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-10 case-study-text">
+                    <h3 class="case-study-head">Monera</h3>
+                    <p class="case-study-p">Read our case study about building Monera e-commerce website!</p>
+                    <a href="#"><button class="case-study-full-button">READ MORE</button></a>
+                </div>
+            </div>
         </div>
 
         <div class="col-md-6 col-sm-12 col-xs-12">
-            <div class="company-wrapper">
-                <img src="@Url.Content("~/assets/images/references/comapny.png")" alt="">
+            <div class="case-study-shell">
+                <div class="col-md-3 col-sm-3 col-xs-2">
+                    <div class="case-study-holder" id="case-study-img">
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-10 case-study-text">
+                    <h3 class="case-study-head">Monera</h3>
+                    <p class="case-study-p">Read our case study about building Monera e-commerce website!</p>
+                    <a href="#"><button class="case-study-full-button">READ MORE</button></a>
+                </div>
             </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <a href="#"><button class="case-study-cta-button">SEE HOW WE DO IT</button></a>
         </div>
     </div>
 </div>
 
-@Html.Partial("_Ebook")
+<div class="row section3-row">
+        <div class="section3">
+        <div class="col-md-7 col-sm-12 col-xs-12 section1-text">
+            <h1 class="h1-index">Download our free PDF:</h1>
+            <h2 class="h2-section3">"Modern development: 6 Mistakes you have to avoid"</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus.</p>
+       
+            <div class="col-md-12 col-sm-12 col-xs-12 mail-box">
+                <input type="email" name="email" class="mail-input" id="" placeholder="E-Mail address">
+                <input type="submit" class="get-pdf-button" value="GET FREE PDF">
+            </div>
+        </div>
+        <div class="col-md-5 hidden-md hidden-sm hidden-xs">
+            <div class="pdf-download-section-img">
+                <img src="@Url.Content("~/assets/images/pdf.png")" alt="pdf" class="instant-prices">
+            </div>
+        </div>
+        </div>
+    </div>

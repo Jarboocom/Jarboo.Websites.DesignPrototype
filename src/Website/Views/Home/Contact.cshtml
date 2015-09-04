@@ -3,38 +3,44 @@
     ViewBag.Title = "Contact";
 }
 
-<h1>Contact Jarboo</h1>
+<div class="row content-row">
+    <div class="content-wrapper">
+        <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
+            <h1>Contact Jarboo</h1>
 
-@if (!string.IsNullOrEmpty(Model.Status))
-{
-    <div class="bg-success">
-        @Model.Status
+            @if (!string.IsNullOrEmpty(Model.Status))
+            {
+                <div class="bg-success">
+                    @Model.Status
+                </div>
+
+            }
+
+            @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    <div>
+                        @Html.LabelFor(m => m.Email)
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(m => m.Name)
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                    </div>
+
+                    <div>
+                        @Html.LabelFor(m => m.Message)
+                        @Html.TextAreaFor(c => c.Message, new { @class = "form-control" })
+                    </div>
+
+
+                </div>
+
+                <input type="submit" value="Send message" class="btn btn-success" />
+            }
+        </div>
     </div>
-    
-}
-
-@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-group">
-        <div>
-            @Html.LabelFor(m=>m.Email)
-            @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
-        </div>
-
-        <div>
-            @Html.LabelFor(m => m.Name)
-            @Html.TextBoxFor(m => m.Name, new {@class = "form-control"})
-        </div>
-
-        <div>
-            @Html.LabelFor(m => m.Message)
-            @Html.TextAreaFor(c => c.Message, new {@class = "form-control"})
-        </div>
-
-
-    </div>
-
-    <input type="submit" value="Send message" class="btn btn-success"/>
-}
+</div>

@@ -3,21 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
 </head>
 <body>
-    <div class="row above-header-CTA">
-        <div class="col-md-8 col-sm-4 col-xs-12 CTA-mail-head">
-            <h5>info@jarboo.com</h5>
-        </div>
-        <div class="col-md-4 col-sm-8 col-xs-12 CTA-buttons-head">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <button class="CTA-button-full-head"><a href="@Url.Action("DiscussProject","Lead")">DISCUSS A PROJECT</a></button>
-            </div>
+    <div class="row above-header-CTA hidden-md hidden-lg">
+        <div class="hidden-md col-sm-12 col-xs-12">
+            <a href="@Url.Action("DiscussProject", "Lead")"><button class="CTA-button-full-head-small-devices">DISCUSS A PROJECT</button></a>
         </div>
     </div>
 
@@ -30,27 +22,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="@Url.Action("Index","Home")"><img src="@Url.Content("~/assets/images/logo.png")" alt="" style="width:100%;"></a>
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="@Url.Content("~/assets/images/logo.png")" alt="" style="width: 100%;"></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("New project", "DiscussProject", "Lead")</li>
-                    <li>@Html.ActionLink("Solving development","About","Home")</li>
+                    <li>@Html.ActionLink("Solving development", "About", "Home")</li>
                     <li>@Html.ActionLink("References", "References", "Home")</li>
-                    <li>@Html.ActionLink("Resources", "Index", "Page", new { slug = "resources" }, new { })</li>
+                    <li>@Html.ActionLink("Resources", "Index", "Page", new {slug = "resources"}, new {})</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    
+                    <li><a href="@Url.Action("DiscussProject", "Lead")" style="padding:0;"><button class="CTA-button-full-head">DISCUSS A PROJECT</button></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="row content-wrapper">
-        <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
-            @RenderBody()
-        </div>
-    </div>
+    @RenderBody()
+
     <hr/>
     <div class="row CTA-section">
         <div class="CTA-wrapper">
@@ -113,8 +102,8 @@
         </div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
 </body>
 </html>

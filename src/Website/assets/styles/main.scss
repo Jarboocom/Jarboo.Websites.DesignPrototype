@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'Raleway';
   font-weight: 200;
-  src: url('/assets/fonts/Raleway-ExtraLight.eot');
-  src: url('/assets/fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/Raleway-ExtraLight.woff') format('woff'),
-       url('/assets/fonts/Raleway-ExtraLight.ttf') format('truetype'),
-       url('/assets/fonts/Raleway-ExtraLight.svg#Raleway-ExtraBold') format('svg');
+  src: url('../fonts/Raleway-ExtraLight.eot');
+  src: url('../fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-ExtraLight.woff') format('woff'),
+       url('../fonts/Raleway-ExtraLight.ttf') format('truetype'),
+       url('../fonts/Raleway-ExtraLight.svg#Raleway-ExtraBold') format('svg');
 }
 
 @font-face {
   font-family: 'Raleway';
   font-weight: 300;
-  src: url('/assets/fonts/Raleway-Light.eot');
-  src: url('/assets/fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/Raleway-Light.woff') format('woff'),
-       url('/assets/fonts/Raleway-Light.ttf') format('truetype'),
-       url('/assets/fonts/Raleway-Light.svg#Raleway-ExtraBold') format('svg');
+  src: url('../fonts/Raleway-Light.eot');
+  src: url('../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-Light.woff') format('woff'),
+       url('../fonts/Raleway-Light.ttf') format('truetype'),
+       url('../fonts/Raleway-Light.svg#Raleway-ExtraBold') format('svg');
 }
 
 $font: 'Raleway';
@@ -35,9 +35,8 @@ img {
     max-width: 100%;
 }
 
-.input-validation-error {
-    border: 1px solid red;
-}
+// ------- HEADER -------- //
+
 
 .navbar-brand {
     margin-top: -10px;
@@ -49,9 +48,23 @@ img {
 
 .navbar-default {
     border-radius: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.header-button-a {
+    padding: 0px;
+}
+
+.header-li-margin-element {
+    margin-right: 20px;
+}
+
+.header-container {
+    width: 95%;
+    margin: 0 auto;
 }
 
 .above-header-CTA {
@@ -70,13 +83,13 @@ img {
 }
 
 .CTA-button-full-head {
-    height: 30px;
+    height: 50px;
     width: 95%;
     border: none;
     margin: 0 auto;
     background: $main-color;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0px;
     padding-top: 5px;
     color: white;
     transition: 0.5s all;
@@ -158,6 +171,32 @@ img {
     color: white;
 }
 
+
+// ------- FOOTER -------- //
+
+.footer {
+    background: $footer-color;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+}
+
+.footer-wrapper {
+    width: 95%;
+}
+
+
+// -------------------------- //
+// -------------------------- //
+// ------- INDEX.HTML ------- //
+// -------------------------- //
+// -------------------------- //
+
+
 .section1-image {
     height: 400px;
 }
@@ -169,18 +208,71 @@ img {
     margin-right: auto;
 }
 
+.testemonial-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+
+.testemonial {
+    padding: 20px;
+    border-left: 4px solid $main-color;
+}
+
+.client-holder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
 
 // ------- SECTION 2 -------- //
 
-.section2 {
-    background: $section2;
+.section2-index {
+    background: $main-color;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 }
 
-.section2-wrapper {
+.section2-index-wrapper {
     width: 95%;
     margin: 0 auto;
+}
+
+.section2-index-icon-holder {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.section2-img-centering {
+    max-width: 400px;
+    max-height: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.jarboo-is-awesome-text {
+    text-align: center;
+}
+
+.jarboo-is-awesome-btn {
+    height: 30px;
+    width: 25%;
+    font-size: 0.85em;
+    border: 2px solid white;
+    background: $main-color;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 5px;
+    color: white;
+    transition: 0.5s all; 
+}
+
+.jarboo-is-awesome-btn:hover {
+    border: 2px solid $main-color;
+    background: white;
+    color: $main-color;
 }
 
 // ------- SECTION 3 -------- //
@@ -188,6 +280,10 @@ img {
 .section3 {
     width: 95%;
     margin: 0 auto;
+    background: red;
+}
+
+.section3-row {
     padding-top: 50px;
     padding-bottom: 70px;
 }
@@ -227,6 +323,13 @@ img {
     padding-bottom: 10px;
     background: $main-color-hover;
     color: white;
+}
+
+.pdf-download-section-img {
+    max-height: 250px;
+    max-width: 250px;
+    padding-top: 60px;
+    margin: 0 auto;
 }
 
 .CTA-section {
@@ -281,25 +384,215 @@ img {
     color: white;
 }
 
-// ------- FOOTER -------- //
 
-.footer {
-    background: $footer-color;
-    padding-top: 40px;
+// --------- COMPANY LOGO ---------//
+
+.index-wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.company-logo-section {
+    background: #f5f5f5;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.company-logo-img-hodler {
+    max-width: 300px;
+    max-height: 100px;
+    margin: 0 auto;
+}
+
+.company-logo-margin {
+    margin-bottom: 20px;
+}
+
+.client-link {
+    text-align: center;
+}
+
+
+// --------- CASE STUDY ---------//
+
+.case-study {
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
-ul {
-    list-style-type: none;
+.case-study-shell {
+    width: 95%;
+    height: 180px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: 0.5s all;
+    margin: 0 auto;
+}
+
+.case-study-holder {
+    margin-top: 20px;
+    width: 110px;
+    height: 110px;
+    background: url(../img/case-study.png) no-repeat;
+    background-size: contain;
+    transition: 0.5s all;
+}
+
+.case-study-text {
+    border-left: 4px solid $main-color;
+    height: 150px;
+    transition: 0.5s all;
+}
+
+.case-study-head {
+    color: $main-color;
+    margin-top: 5px;
+    transition: 0.5s all;
+}
+
+.case-study-p {
+    transition: 0.5s all;
+}
+
+.case-study-full-button {
+    height: 30px;
+    width: 45%;
+    position: absolute;
+    top: 110px;
+    border: none;
+    margin: 0 auto;
+    background: $main-color;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 5px;
+    color: white;
+    transition: 0.5s all;
+}
+
+
+.case-study-shell:hover {
+    background: $main-color;
+}
+
+.case-study-shell:hover .case-study-text {
+    border-left: 4px solid white;
+}
+
+.case-study-shell:hover .case-study-head {
     color: white;
 }
 
-.footer-wrapper {
-    width: 95%;
+.case-study-shell:hover .case-study-p {
+    color: white;
 }
+
+.case-study-shell:hover .case-study-full-button {
+    background: white;
+    color: $main-color;
+}
+
+.case-study-shell:hover .case-study-holder {
+    background: url(../img/case-study-white.pmg.png);
+    background-size: contain;
+}
+
+.case-study-cta-button:hover {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 20px;
+    height: 35px;
+    font-size: 0.85em;
+    border: 2px solid $main-color;
+    background: $main-color;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 5px;
+    color: white;
+    transition: 0.5s all; 
+}
+
+.case-study-cta-button {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 20px;
+    height: 35px;
+    font-size: 0.85em;
+    border: 2px solid $main-color;
+    background: white;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 5px;
+    color: $main-color;
+    transition: 0.5s all; 
+}
+
+// ------- CONTACT PAGE -------- //
+
+
+.input-field {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    width: 50%;
+    border: none;
+    background: $main-color;
+    color: white;
+    margin-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: 0.5s all;
+}
+
+.submit-btn:hover {
+    background: $main-color-hover;
+    color: white;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.control-label {
+    padding-right: 0px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.control-label-margin {
+    margin-bottom: 200px;
+}
+
+.check-holder {
+    width: 100%;
+    height: 15px;
+    margin-left: -15px;
+    margin-bottom: 120px;
+}
+
+.chceck-img {
+    height: 15px;
+}
+
+.company-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+
+
 // ------- FONTS ------- //
 
-h1 {
+.h1-index {
     color: $main-color;
     margin-bottom: 50px;
     text-align: left;
@@ -312,6 +605,14 @@ p {
     font-size: 1.1em;
 }
 
+a {
+    font-size: 1.1em;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 .fun-fact {
     color:$text-color;
     font-size:1em;
@@ -319,19 +620,25 @@ p {
     margin-bottom: 30px;
 }
 
-.h2-section2 {
-    color: $main-color;
+
+.section2-index-h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.h3-seciton2 {
-    margin-top: -10px;
-    margin-bottom: 30px;
+.section2-index-h3 {
+    color: white;
+    text-align: center;
+    font-size: 1.4em;
 }
 
-.section2-link {
-    text-decoration: underline;
-    font-size: 1.1em;
+.section2-index-p {
+    color: white;
+    text-align: center;
+    font-size: 1em;
 }
+
 
 .h2-section3 {
     font-size:1.6em;
@@ -369,12 +676,65 @@ li a {
     margin: 0 auto;
 }
 
+.navbar-default .navbar-nav>li>a  {
+    color: #2f2f2f;
+    font-size: 1.03em;
+    letter-spacing: 0px;
+}
+
+.section2-index-icon-title {
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.section2-index-icon-p {
+    color: white;
+    font-size: 1em;
+    text-align: center;
+}
+
+.section2-index-p {
+    text-align: center;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.client-name {
+    text-align: center;
+    color: $main-color;
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+.client-position {
+    text-align: center;
+    font-size: 1em;
+}
+
+.case-study-heading {
+    color: $main-color;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
 // ------- MEDIA QUERIES -------- //
 
 @media (min-width : 768px) and (max-width : 992px)  {
-    .above-header-CTA {
-        height: 50px;
-    }
+    
+    // -------------------------- //
+    // -------------------------- //
+    // ------- INDEX.HTML ------- //
+    // -------------------------- //
+    // -------------------------- //
+    
+    
+    // ------- FONTS ------- //
     
     h1 {
         text-align: center;
@@ -386,14 +746,6 @@ li a {
     
     ul {
         text-align: center;
-    }
-    
-    .CTA-button-full-section1 {
-        width: 100%;
-    }
-    
-    .CTA-button-ghost-section1 {
-        width: 100%;
     }
     
     .h2-section2 {
@@ -408,6 +760,74 @@ li a {
         text-align: center;
     }
     
+    .navbar-default .navbar-nav>li>a  {
+        font-size: 0.97em;
+    }
+    
+    .client-link {
+        padding-top: 20px;
+    }
+    
+    .section2-link {
+        text-align:center;
+        display:block;
+    }
+    
+    // ------- CONTAINERS ------- //
+    
+    .header-container {
+        width: 100%;
+    }
+    
+    .above-header-CTA {
+        height: 50px;
+    }
+    
+    // ------- ABOVE HEADER SECTION ------- //
+    
+    
+    .CTA-button-full-head-small-devices {
+        height: 50px;
+        width: 100%;
+        border: none;
+        margin: 0 auto;
+        background: $main-color;
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 5px;
+        color: white;
+        transition: 0.5s all;
+    }
+    
+    .CTA-button-full-head {
+        display: none;
+    }
+    
+    // ------- SECTION 1 -------- //
+    
+    
+    .CTA-button-full-section1 {
+        width: 100%;
+    }
+    
+    .CTA-button-ghost-section1 {
+        width: 100%;
+    }
+    
+    // ------- SECTION 2 -------- //
+    
+    .testemonial {
+        text-align: center;
+    }
+    
+    // --------- CASE STUDY ---------//
+    
+    .case-study-p {
+        text-align: left;
+    }
+    
+    // --------- CTA SECTION ---------//
+    
     .CTA-section {
         padding-bottom: 130px;
     }
@@ -416,19 +836,14 @@ li a {
         width: 100%;
     }
     
-    .section2-link {
-        text-align:center;display:block;
-    }
-    
     .CTA-button-full-CTA {
         width: 100%;
     }
 }
 
 @media (min-width : 0px) and (max-width : 768px)  {
-    .above-header-CTA {
-        height: 150px;
-    }
+    
+    // ------- FONTS ------- //
     
     h1 {
         text-align: center;
@@ -446,14 +861,6 @@ li a {
         text-align: center;
     }
     
-    .CTA-button-full-section1 {
-        width: 100%;
-    }
-    
-    .CTA-button-ghost-section1 {
-        width: 100%;
-    }
-    
     .h2-section2 {
         text-align: center;
     }
@@ -466,6 +873,80 @@ li a {
         text-align: center;
     }
     
+    .section2-link {
+        text-align:center;display:block;
+    }
+    
+    // ------- CONTAINERS ------- //
+    
+    .header-container {
+        width: 100%;
+    }
+    
+    .above-header-CTA {
+        height: 50px;
+    }
+    
+    // ------- ABOVE HEADER SECTION ------- //
+    
+    
+    .CTA-button-full-head-small-devices {
+        height: 50px;
+        width: 100%;
+        border: none;
+        margin: 0 auto;
+        background: $main-color;
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 5px;
+        color: white;
+        transition: 0.5s all;
+    }
+    
+    .CTA-button-full-head {
+        display: none;
+    }
+    
+    
+    // ------- SECTION 2 ------- //
+    
+    .section2-img-centering {
+        max-width: 300px;
+        max-height: 150px;
+    }
+    
+    .jarboo-is-awesome-btn {
+        width: 60%;
+    }
+    
+    
+    // --------- CASE STUDY ---------//
+    
+    .case-study-p {
+        text-align: left;
+    }
+    
+    .case-study-holder {
+        width: 80%;
+        height: 50px;
+        margin-top: 0px;
+    }
+    
+    .case-study-cta-button {
+        width: 50%;
+        margin-left: 25%;
+    }
+    
+    // ------- CTA SECTION ------- //
+    
+    .CTA-button-full-section1 {
+        width: 100%;
+    }
+    
+    .CTA-button-ghost-section1 {
+        width: 100%;
+    }
+    
     .CTA-section {
         padding-bottom: 130px;
     }
@@ -474,11 +955,335 @@ li a {
         width: 100%;
     }
     
-    .section2-link {
-        text-align:center;display:block;
-    }
-    
     .CTA-button-full-CTA {
         width: 100%;
     }
 }
+
+
+
+// --------------------------- //
+// --------------------------- //
+// -------  REFERECES  ------- //
+// --------------------------- //
+// --------------------------- //
+
+
+// ------- WRAPPERS -------- //
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.wrapper-padding {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.reference-case-study-holder {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.img1-wrapper {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.references-project-text-left {
+    border-left: 3px solid $main-color;
+}
+
+.resourcess-img-container-left {
+    max-width: 300px;
+    max-height: auto;
+    float: right;
+}
+
+.references-project-text-right {
+    border-right: 3px solid $main-color;
+}
+
+.resourcess-img-container-right {
+    max-width: 300px;
+    max-height: auto;
+}
+
+.refference-case-study {
+    background: $main-color;
+    margin-top: 90px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.reference-case-study-icon {
+    max-height: 140px;
+    max-width: 140px;
+    margin: 0 auto;
+}
+
+.reference-case-study-line {
+    width: 50%;
+    margin: 0 auto;
+    height: 2px;
+    background: white;
+    margin-top: 10px;
+}
+
+.reference-case-study-text {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.references-case-study-btn:hover {
+    border: 2px solid white;;
+    background: white;
+    color: $main-color;
+}
+
+.references-case-study-btn {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 15px;
+    background: $main-color;
+    border: 2px solid white;
+    color: white;
+    transition: 0.5s all; 
+}
+
+
+
+// ------- FOTNS -------- //
+
+.references-h3 {
+    color: $main-color;
+    text-align: center;
+}
+
+.references-h4 {
+    color: $main-color;
+}
+
+.reference-case-study-h4 {
+    color: white;
+    text-align: center;
+}
+
+.reference-case-study-p {
+    color: white;
+}
+
+
+
+// --------------------------- //
+// --------------------------- //
+// --------  SOLVING  -------- //
+// --------------------------- //
+// --------------------------- //
+
+
+.solving-wrapper {
+    width: 97%;
+    margin-left: 3%;
+}
+
+.solving-section1-1 {
+    width: 95%;
+    margin: 0 auto;
+} 
+
+.solving-section1 {
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+} 
+
+.solving-section1-icon {
+    max-width: 200px;
+    max-height: 1500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+.solving-section2-top {
+    background:#f0f0f0;
+    border-top: 1px solid #e3e3e3;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.solving-section2-bottom {
+    background:#f0f0f0;
+    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 30px;
+}
+
+.solving-img-container-left {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 auto;
+}
+
+.solving-img-container {
+}
+
+.solving-project-text-left {
+    padding: 0px;
+    padding-left: 20px;
+    border-left: 3px solid $main-color;
+}
+
+.solving-ipad {
+    margin-top: 40px;
+}
+
+@media (min-width : 1500px) and (max-width : 2500px)  {
+    .solving-ipad {
+        margin-top:0px;
+    }
+    
+    .solving-section1 {
+    padding-bottom: 10px;
+    } 
+   
+}
+
+// ------- FOTNS -------- //
+
+.solving-section1-mega {
+    font-size: 4em;
+}
+
+.solving-section1-head {
+    font-size: 1.8em;
+    margin-top: -5px;
+}
+
+.solving-h2 {
+   font-size: 1.4em;
+    color: $main-color;
+    margin-top: -40px;
+}
+
+.solving-section1-sub-head {
+    color: black;
+    font-size: 1.2em;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.solving-h3 {
+    color: $main-color;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: -10px;
+}
+
+.solving-p {
+    color: #222222;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.solving-section1-p {
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.solving-section2-h2-head {
+    color: $main-color;
+    font-size: 1.7em;
+    margin-top: -30px;
+}
+
+.solving-h4 {
+    margin-top: 0px;
+}
+
+.solving-section2-icontext-wrapper {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.solving-section2-icon {
+    max-width: 100px;   
+}
+
+
+// -------------------------- //
+// -------------------------- //
+// --------- CONTENT -------- //
+// -------------------------- //
+// -------------------------- //
+
+.content-row {
+    padding-bottom: 40px;
+     width: 95%;
+    margin: 0 auto;
+}
+
+
+h1 {
+    color: $main-color;
+}
+
+h2 {
+    color: $main-color;
+}
+
+h3 {
+    color: $main-color;
+}
+
+h4 {
+    color: $main-color;
+}
+
+h5 {
+    color: $main-color;
+}
+
+h6 {
+    color: $main-color;
+}
+
+
+p {
+    color: $text-color;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+
+// --------------------------------- //
+// -------------------------------- //
+// --------- CASE STUDY ---------- //
+// ------------------------------ //
+// ----------------------------- //
+
+.cs-page-case-study > h1{
+    max-width: 80%;
+}
+
+.content-wrapper > p {
+    font-size: 0.9em;
+    margin-left: 3%;
+    margin-top: -15px;
+    margin-bottom: -5px;
+    padding-bottom: 40px;
+}
+
+.mail-box-case-study {
+    background: #F5F5F5;
+    border: 1px solid #C3C3C3;
+    width: 96%;
+    margin-left: 2%;
+    margin-top:-20px;
+    padding: 15px;
+}
+
+

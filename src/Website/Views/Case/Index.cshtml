@@ -1,12 +1,21 @@
 ﻿@model Website.Domain.Case.Case
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = Model.Title;
 }
 
-<h1>@Model.Title</h1>
-
-<div>
-    @Html.Raw(Model.Description)
+<div class="row">
+    <div class="content-wrapper">
+        <p><a href="@Url.Action("References", "Home")">References</a> > @Model.Title</p>
+        <div class="col-md-12 col-sm-12 col-xs-12 cs-page-case-study section1-text">
+            @Html.Raw(Model.Description)
+        </div>
+    </div>
 </div>
+<div class="row content-wrapper">
 
+    <div class="col-md-8 col-sm-12 col-xs-12 mail-box-case-study">
+        <input type="email" name="email" class="mail-input" id="" placeholder="E-Mail address">
+        <input type="submit" class="get-pdf-button" value="GET THE CASE">
+    </div>
+</div>
