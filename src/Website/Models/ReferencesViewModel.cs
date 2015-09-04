@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Website.Domain.Case;
+using Services.Domain.Case;
 
 namespace Website.Models
 {

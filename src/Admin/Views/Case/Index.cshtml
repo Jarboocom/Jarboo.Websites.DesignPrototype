@@ -1,5 +1,5 @@
-﻿@using Website.Domain.Case
-@model System.Collections.Generic.List<Website.Domain.Case.Case>
+﻿@using Services.Domain.Case
+@model System.Collections.Generic.List<Services.Domain.Case.Case>
 
 @{
     ViewBag.Title = "title";
@@ -9,7 +9,7 @@
 
 @Html.ActionLink("New case","NewCase","Case")
 
-<table class=""table table-stripped">
+<table class="table table-stripped">
     <thead>
     <tr>
         <th>

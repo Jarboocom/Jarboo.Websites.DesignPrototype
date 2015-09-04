@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using Services.Domain.Case;
 using Services.Domain.Leads;
-using Website.Domain.Case;
 
 namespace Services.Database
 {

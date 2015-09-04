@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Services.Database;
 using Services.Domain.Case;
-using Website.Domain.Case;
 
 namespace Services.Services
 {
