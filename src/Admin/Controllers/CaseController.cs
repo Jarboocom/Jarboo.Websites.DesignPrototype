@@ -18,34 +18,56 @@ namespace Admin.Controllers
         }
 
         // GET: Case
-        public ActionResult Index()
-        {
-            List<Case> cases = _caseService.GetBySpecification(new CaseSpecification()
-            {
-                Take = int.MaxValue
-            });
 
-
-            return View(cases);
-        }
-
+        [HttpGet]
         public ActionResult NewCase()
         {
             return View(new Case());
         }
 
+        [HttpPost]
         public ActionResult NewCase(Case newcase)
         {
+            if (ModelState.IsValid)
+            {
+                CaseService caseService = new CaseService();
+                caseService.Create(newcase);
+            }
+            else
+            {
+                return View(newcase);
+            }
             return RedirectToAction("Index");
         }
 
-        public ActionResult EditCase()
+        [HttpGet]
+        public ActionResult EditCase(int id)
         {
-            return null;  //View();
+            if (id != null)
+            {
+                CaseService caseService = new CaseService();
+                Case caseToEdit = caseService.GetById(id);
+                if (caseToEdit != null)
+                    return View(caseToEdit);
+            }
+            return RedirectToAction("Index");
         }
 
+        [HttpPost]
         public ActionResult EditCase(Case newcase)
         {
+            if (ModelState.IsValid)
+            {
+                CaseService caseService = new CaseService();
+                if (caseService.GetById(newcase.Id) != null)
+                {
+                    caseService.Update(newcase);
+                }
+            }
+            else
+            {
+                return View(newcase);
+            }
             return RedirectToAction("Index");
         }
     }
