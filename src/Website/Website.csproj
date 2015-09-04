@@ -180,9 +180,7 @@
     <Content Include="assets\fonts\Raleway-Light.eot" />
     <Content Include="assets\fonts\Raleway-Light.ttf" />
     <Content Include="assets\fonts\Raleway-Light.woff" />
-    <Content Include="assets\styles\contact.scss" />
     <Content Include="assets\styles\main.scss" />
-    <Content Include="assets\styles\references.scss" />
     <Content Include="assets\styles\main.css.map">
       <DependentUpon>main.css</DependentUpon>
     </Content>
