@@ -538,6 +538,9 @@ ul {
 
 // ------- CONTACT PAGE -------- //
 
+#contact-page {
+    margin-top: 30px; 
+}
 
 .input-field {
     width: 100%;
@@ -562,6 +565,37 @@ ul {
     background: $main-color-hover;
     color: white;
 }
+
+.submit-btn-contact {
+    width: 30%;
+    border: none;
+    background: $main-color;
+    color: white;
+    margin-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: 0.5s all;
+}
+
+.submit-btn-contact:hover {
+    background: $main-color-hover;
+    color: white;
+}
+
+.contact-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.lars-img {
+    width: 250px;
+    height: 250px;
+    background: url('../img/lars.jpg');
+    border-radius: 50%;
+    background-size: contain;
+}
+
 
 .form-horizontal .control-label {
     text-align: left;

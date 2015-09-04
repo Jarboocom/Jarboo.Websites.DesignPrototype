@@ -142,11 +142,21 @@ ul { list-style-type: none; color: white; }
 
 .case-study-cta-button { width: 30%; margin-left: 35%; margin-top: 20px; height: 35px; font-size: 0.85em; border: 2px solid #0976BB; background: white; text-align: center; margin-top: 30px; padding-top: 5px; color: #0976BB; transition: 0.5s all; }
 
+#contact-page { margin-top: 30px; }
+
 .input-field { width: 100%; padding-top: 5px; padding-bottom: 5px; padding-left: 20px; margin-bottom: 20px; }
 
 .submit-btn { width: 50%; border: none; background: #0976BB; color: white; margin-top: 20px; padding-top: 12px; padding-bottom: 12px; transition: 0.5s all; }
 
 .submit-btn:hover { background: #0a5b8e; color: white; }
+
+.submit-btn-contact { width: 30%; border: none; background: #0976BB; color: white; margin-top: 20px; padding-top: 12px; padding-bottom: 12px; transition: 0.5s all; }
+
+.submit-btn-contact:hover { background: #0a5b8e; color: white; }
+
+.contact-padding { padding-top: 30px; padding-bottom: 30px; }
+
+.lars-img { width: 250px; height: 250px; background: url("../img/lars.jpg"); border-radius: 50%; background-size: contain; }
 
 .form-horizontal .control-label { text-align: left; margin-bottom: 10px; }
 
