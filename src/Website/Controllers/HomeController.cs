@@ -27,12 +27,13 @@ namespace Website.Controllers
             return View();
         }
 
+        [Route("~/about")]
         public ActionResult About()
         {
             return View();
         }
 
-
+        [Route("~/references")]
         public ActionResult References()
         {
             var cases = _caseService.GetBySpecification(new CaseSpecification());
