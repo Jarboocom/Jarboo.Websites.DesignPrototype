@@ -250,11 +250,13 @@ li a { color: white; font-size: 0.9em; }
   .CTA-button-full-CTA { width: 100%; } }
 .wrapper { width: 95%; margin: 0 auto; }
 
-.wrapper-padding { width: 95%; margin: 0 auto; padding-top: 30px; margin-bottom: 20px; }
+.wrapper-padding { width: 97.5%; margin-left: 2.5%; }
 
 .reference-case-study-holder { width: 95%; margin: 0 auto; }
 
-.img1-wrapper { max-width: 350px; margin: 0 auto; }
+.reference-section1 { padding-top: 30px; padding-bottom: 40px; }
+
+.reference-growth-company { max-width: 250px; margin-left: -30px; }
 
 .references-project-text-left { border-left: 3px solid #0976BB; }
 
