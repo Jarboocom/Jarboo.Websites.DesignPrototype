@@ -1,5 +1,7 @@
 @font-face { font-family: 'Raleway'; font-weight: 200; src: url("../fonts/Raleway-ExtraLight.eot"); src: url("../fonts/Raleway-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway-ExtraLight.woff") format("woff"), url("../fonts/Raleway-ExtraLight.ttf") format("truetype"), url("../fonts/Raleway-ExtraLight.svg#Raleway-ExtraBold") format("svg"); }
 @font-face { font-family: 'Raleway'; font-weight: 300; src: url("../fonts/Raleway-Light.eot"); src: url("../fonts/Raleway-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway-Light.woff") format("woff"), url("../fonts/Raleway-Light.ttf") format("truetype"), url("../fonts/Raleway-Light.svg#Raleway-ExtraBold") format("svg"); }
+#icons { position: fixed; top: 50%; left: 50%; margin: -300px 0 0 -400px; z-index: 100; }
+
 body { font-family: "Raleway"; overflow-x: hidden !important; }
 
 img { max-height: 100%; max-width: 100%; }
@@ -282,23 +284,23 @@ li a { color: white; font-size: 0.9em; }
 
 .reference-case-study-p { color: white; }
 
-.solving-wrapper { width: 97%; margin-left: 3%; }
-
-.solving-section1-1 { width: 95%; margin: 0 auto; }
-
 .solving-section1 { width: 95%; margin: 0 auto; padding-bottom: 50px; }
 
-.solving-section1-icon { max-width: 200px; max-height: 1500px; margin: 0 auto; margin-bottom: 20px; }
+.solving-section1-icon { max-width: 200px; margin: 0 auto; margin-bottom: 20px; }
 
-.solving-section2-top { background: #f0f0f0; border-top: 1px solid #e3e3e3; padding-top: 30px; padding-bottom: 40px; }
-
-.solving-section2-bottom { background: #f0f0f0; border-bottom: 1px solid #ECECEC; padding-bottom: 30px; }
-
-.solving-img-container-left { max-width: 200px; max-height: 200px; margin: 0 auto; }
-
-.solving-project-text-left { padding: 0px; padding-left: 20px; border-left: 3px solid #0976BB; }
+.solving-section2 { background: #f0f0f0; border-top: 1px solid #e3e3e3; border-bottom: 1px solid #ECECEC; padding-top: 30px; padding-bottom: 40px; }
 
 .solving-ipad { margin-top: 40px; }
+
+.wrapper-solving-section2 { width: 97.5%; margin-left: 2.5%; }
+
+.solving-section3 { padding-top: 40px; padding-bottom: 40px; }
+
+.dev-phases { width: 100%; margin: 0 auto; margin-top: 30px; text-align: center; }
+
+.dev-phases > p { font-size: 1em; }
+
+.dev-phases-img { width: 30%; margin: 0 auto; }
 
 @media (min-width: 1500px) and (max-width: 2500px) { .solving-ipad { margin-top: 0px; }
   .solving-section1 { padding-bottom: 10px; } }
