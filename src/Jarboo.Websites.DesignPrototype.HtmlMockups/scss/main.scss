@@ -536,101 +536,6 @@ ul {
     transition: 0.5s all; 
 }
 
-// ------- CONTACT PAGE -------- //
-
-#contact-page {
-    margin-top: 30px; 
-}
-
-.input-field {
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.submit-btn {
-    width: 50%;
-    border: none;
-    background: $main-color;
-    color: white;
-    margin-top: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    transition: 0.5s all;
-}
-
-.submit-btn:hover {
-    background: $main-color-hover;
-    color: white;
-}
-
-.submit-btn-contact {
-    width: 30%;
-    border: none;
-    background: $main-color;
-    color: white;
-    margin-top: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    transition: 0.5s all;
-}
-
-.submit-btn-contact:hover {
-    background: $main-color-hover;
-    color: white;
-}
-
-.contact-padding {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-
-.lars-img {
-    width: 250px;
-    height: 250px;
-    background: url('../img/lars.jpg');
-    border-radius: 50%;
-    background-size: contain;
-}
-
-
-.form-horizontal .control-label {
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.control-label {
-    padding-right: 0px;
-}
-
-.form-control {
-    border-radius: 0px;
-}
-
-.control-label-margin {
-    margin-bottom: 200px;
-}
-
-.check-holder {
-    width: 100%;
-    height: 15px;
-    margin-left: -15px;
-    margin-bottom: 120px;
-}
-
-.chceck-img {
-    height: 15px;
-}
-
-.company-wrapper {
-    max-width: 520px;
-    margin: 0 auto;
-}
-
-
 
 // ------- FONTS ------- //
 
@@ -1333,3 +1238,139 @@ p {
 }
 
 
+// ------------------------------------------------ //
+// ----------------------------------------------- //
+// ------- CONTACT.HTML + CREATE-NEW.HTML ------- //
+// --------------------------------------------- //
+// -------------------------------------------- //
+
+
+#contact-page {
+    margin-top: 30px; 
+}
+
+.input-field {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    width: 50%;
+    border: none;
+    background: $main-color;
+    color: white;
+    margin-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: 0.5s all;
+}
+
+.submit-btn:hover {
+    background: $main-color-hover;
+    color: white;
+}
+
+.submit-btn-contact {
+    width: 30%;
+    border: none;
+    background: $main-color;
+    color: white;
+    margin-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: 0.5s all;
+}
+
+.submit-btn-contact:hover {
+    background: $main-color-hover;
+    color: white;
+}
+
+.contact-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.lars-img {
+    width: 250px;
+    height: 250px;
+    background: url('../img/lars.jpg');
+    border-radius: 50%;
+    background-size: contain;
+}
+
+
+.form-horizontal .control-label {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.control-label {
+    padding-right: 0px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.control-label-margin {
+    margin-bottom: 200px;
+}
+
+.check-holder {
+    width: 100%;
+    height: 15px;
+    margin-left: -15px;
+    margin-bottom: 120px;
+}
+
+.chceck-img {
+    height: 15px;
+}
+
+.company-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+
+// ------- MEDIA QUERIES -------- //
+
+@media (min-width : 768px) and (max-width : 992px)  {
+    .submit-btn-contact {
+        width: 100%;
+    }
+    
+    .contact-padding > p {
+        text-align: left;
+    }
+    
+    .lars-img{
+        width: 175px;
+        height: 175px;
+        margin-top:50px;
+    }
+}
+
+@media (min-width : 0px) and (max-width : 768px)  {
+    
+    .submit-btn-contact {
+        width: 100%;
+    }
+    
+    .contact-padding > h4 {
+        text-align: center;
+    }
+    
+    .lars-img{
+        width: 175px;
+        height: 175px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    
+}
