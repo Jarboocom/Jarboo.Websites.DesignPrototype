@@ -17,6 +17,16 @@ namespace Admin.Controllers
             _caseService = new CaseService();
         }
 
+        public ActionResult Index()
+        {
+            List<Case> cases = _caseService.GetBySpecification(new CaseSpecification()
+            {
+                Take = int.MaxValue
+            });
+
+
+            return View(cases);
+        }
         // GET: Case
 
         [HttpGet]
@@ -41,12 +51,12 @@ namespace Admin.Controllers
         }
 
         [HttpGet]
-        public ActionResult EditCase(int id)
+        public ActionResult EditCase(string slug)
         {
-            if (id != null)
+            if (!String.IsNullOrEmpty(slug))
             {
                 CaseService caseService = new CaseService();
-                Case caseToEdit = caseService.GetById(id);
+                Case caseToEdit = caseService.GetBySlug(slug);
                 if (caseToEdit != null)
                     return View(caseToEdit);
             }
