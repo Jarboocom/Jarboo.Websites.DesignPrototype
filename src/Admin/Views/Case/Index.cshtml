@@ -13,12 +13,22 @@
     <thead>
     <tr>
         <th>
-            ID
-        </th>
-        <th>
             Title
         </th>
-        <th>Edit</th>
+        <th>
+            Description
+        </th>
+        <th>
+            Slug
+        </th>
+        <th>
+            DownloadUrl
+        </th>
+
+        <th>
+            Edit
+        </th>
+
     </tr>
     </thead>
     <tbody>
@@ -26,11 +36,18 @@
         {
             <tr>
                 <td>
-                    @a_case.Id
-                </td>
-                <td>
                     @a_case.Title
                 </td>
+                <td>
+                    @a_case.Description
+                </td>
+                <td>
+                    @a_case.Slug
+                </td>
+                <td>
+                    @a_case.DownloadUrl
+                </td>
+                
                 <td>
                     @Html.ActionLink("Edit","EditCase","Case",new {slug=a_case.Slug},null)
                 </td>
