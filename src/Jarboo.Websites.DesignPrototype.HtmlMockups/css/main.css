@@ -186,7 +186,8 @@ li a { color: white; font-size: 0.9em; }
 
 .case-study-heading { color: #0976BB; padding: 0px; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 1.2em; }
 
-@media (min-width: 768px) and (max-width: 992px) { h1 { text-align: center; }
+@media (min-width: 768px) and (max-width: 992px) { .header-li-margin-element { margin-right: 0px; }
+  h1 { text-align: center; }
   p { text-align: center; }
   ul { text-align: center; }
   .h2-section2 { text-align: center; }
@@ -206,7 +207,8 @@ li a { color: white; font-size: 0.9em; }
   .CTA-section { padding-bottom: 130px; }
   .CTA-button-ghost-CTA { width: 100%; }
   .CTA-button-full-CTA { width: 100%; } }
-@media (min-width: 0px) and (max-width: 768px) { h1 { text-align: center; }
+@media (min-width: 0px) and (max-width: 768px) { .header-li-margin-element { margin-right: 0px; }
+  h1 { text-align: center; }
   h5 { text-align: center; }
   p { text-align: center; }
   ul { text-align: center; }
@@ -284,8 +286,6 @@ li a { color: white; font-size: 0.9em; }
 
 .dev-phases-img { width: 30%; margin: 0 auto; }
 
-@media (min-width: 1500px) and (max-width: 2500px) { .solving-ipad { margin-top: 0px; }
-  .solving-section1 { padding-bottom: 10px; } }
 .solving-section1-mega { font-size: 4em; }
 
 .solving-section1-head { font-size: 1.8em; margin-top: -5px; }
@@ -294,9 +294,11 @@ li a { color: white; font-size: 0.9em; }
 
 .solving-section1-sub-head { color: black; font-size: 1.2em; margin-top: 20px; letter-spacing: 2px; }
 
-.solving-h3 { color: #0976BB; text-align: center; font-size: 1.3em; margin-top: -10px; }
+.solving-h3 { color: #0976BB; text-align: center; font-size: 1.3em; margin-top: -40px; }
 
-.solving-p { color: #222222; text-align: center; margin-top: 30px; }
+.solving-h3-2 { color: #0976BB; text-align: center; font-size: 1.3em; margin-top: -5px; }
+
+.solving-p { color: #222222; text-align: center; margin-top: 10px; }
 
 .solving-section1-p { margin-top: 30px; margin-left: -20px; }
 
@@ -308,6 +310,13 @@ li a { color: white; font-size: 0.9em; }
 
 .solving-section2-icon { max-width: 100px; }
 
+@media (min-width: 1500px) and (max-width: 2500px) { .solving-ipad { margin-top: 0px; }
+  .solving-section1 { padding-bottom: 10px; } }
+@media (min-width: 768px) and (max-width: 992px) { .wrapper-solving-section2 { width: 95%; margin: 0 auto; }
+  .sm-left-p > p { text-align: left; } }
+@media (min-width: 0px) and (max-width: 768px) { .wrapper-solving-section2 { width: 95%; margin: 0 auto; }
+  .sm-left-p > h4 { text-align: center; }
+  .solving-section2-icon { width: 26%; margin-left: 37% !important; margin: 0 auto; max-width: 100%; } }
 .content-row { padding-bottom: 40px; width: 95%; margin: 0 auto; }
 
 h1 { color: #0976BB; }
