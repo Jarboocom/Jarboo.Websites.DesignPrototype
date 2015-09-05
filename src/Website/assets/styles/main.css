@@ -344,7 +344,7 @@ p { color: #222222; margin-bottom: 5px; font-size: 1.1em; }
 
 .contact-padding { padding-top: 30px; padding-bottom: 30px; }
 
-.lars-img { width: 250px; height: 250px; background: url("../img/lars.jpg"); border-radius: 50%; background-size: contain; }
+.lars-img { width: 250px; height: 250px; background: url("/assets/images/lars.jpg"); border-radius: 50%; background-size: contain; }
 
 .form-horizontal .control-label { text-align: left; margin-bottom: 10px; }
 
