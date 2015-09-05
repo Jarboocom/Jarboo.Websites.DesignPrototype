@@ -187,8 +187,7 @@ li a { color: white; font-size: 0.9em; }
 .case-study-heading { color: #0976BB; padding: 0px; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 1.2em; }
 
 @media (min-width: 768px) and (max-width: 992px) { .header-li-margin-element { margin-right: 0px; }
-  h1 { text-align: center; }
-  p { text-align: center; }
+  .h1-centered { text-align: center; }
   ul { text-align: center; }
   .h2-section2 { text-align: center; }
   .h3-seciton2 { text-align: center; }
@@ -207,10 +206,8 @@ li a { color: white; font-size: 0.9em; }
   .CTA-section { padding-bottom: 130px; }
   .CTA-button-ghost-CTA { width: 100%; }
   .CTA-button-full-CTA { width: 100%; } }
-@media (min-width: 0px) and (max-width: 768px) { .header-li-margin-element { margin-right: 0px; }
-  h1 { text-align: center; }
-  h5 { text-align: center; }
-  p { text-align: center; }
+@media (min-width: 0px) and (max-width: 768px) { .h1-centered { text-align: center; }
+  .header-li-margin-element { margin-right: 0px; }
   ul { text-align: center; }
   .h2-section2 { text-align: center; }
   .h3-seciton2 { text-align: center; }
@@ -371,9 +368,12 @@ p { color: #222222; margin-bottom: 5px; font-size: 1.1em; }
 
 @media (min-width: 768px) and (max-width: 992px) { .submit-btn-contact { width: 100%; }
   .contact-padding > p { text-align: left; }
-  .lars-img { width: 175px; height: 175px; margin-top: 50px; } }
+  .lars-img { width: 175px; height: 175px; margin-top: 50px; }
+  .mail-box-case-study { width: 90%; margin-left: 5%; } }
 @media (min-width: 0px) and (max-width: 768px) { .submit-btn-contact { width: 100%; }
   .contact-padding > h4 { text-align: center; }
-  .lars-img { width: 175px; height: 175px; margin: 0 auto; margin-bottom: 40px; } }
+  .lars-img { width: 175px; height: 175px; margin: 0 auto; margin-bottom: 40px; }
+  .contact-padding > p { text-align: center; }
+  .mail-box-case-study { width: 90%; margin-left: 5%; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -687,11 +687,7 @@ li a {
         margin-right: 0px;
     }
     
-    h1 {
-        text-align: center;
-    }
-    
-    p {
+   .h1-centered {
         text-align: center;
     }
     
@@ -796,20 +792,12 @@ li a {
     
     // ------- FONTS ------- //
     
+    .h1-centered {
+        text-align: center;
+    }
+    
     .header-li-margin-element {
         margin-right: 0px;
-    }
-    
-    h1 {
-        text-align: center;
-    }
-    
-    h5 {
-        text-align: center;
-    }
-    
-    p {
-        text-align: center;
     }
     
     ul {
@@ -1406,6 +1394,11 @@ p {
         height: 175px;
         margin-top:50px;
     }
+    
+    .mail-box-case-study {
+        width: 90%;
+        margin-left: 5%;
+    }
 }
 
 @media (min-width : 0px) and (max-width : 768px)  {
@@ -1423,6 +1416,15 @@ p {
         height: 175px;
         margin: 0 auto;
         margin-bottom: 40px;
+    }
+    
+    .contact-padding >p {
+        text-align: center;
+    }
+    
+    .mail-box-case-study {
+        width: 90%;
+        margin-left: 5%;
     }
     
 }
