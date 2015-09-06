@@ -74,7 +74,7 @@ ul { list-style-type: none; color: white; }
 
 .jarboo-is-awesome-btn:hover { border: 2px solid #0976BB; background: white; color: #0976BB; }
 
-.section3 { width: 95%; margin: 0 auto; background: red; }
+.section3 { width: 95%; margin: 0 auto; }
 
 .section3-row { padding-top: 50px; padding-bottom: 70px; }
 
@@ -163,6 +163,9 @@ a { font-size: 1.1em; }
 .CTA-h2 { color: white; text-align: center; padding: 0; }
 
 li a { color: white; font-size: 0.9em; }
+
+.pageli a { color: blue; font-size: 0.9em; }
+
 
 .footer-category-title { font-size: 1.2em; margin-bottom: 10px; }
 
