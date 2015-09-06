@@ -19,12 +19,12 @@
 
             <p>Questions? Comments? Want to talk with us? You're of course welcome to contact us.</p>
 
-            <form class="form-horizontal" id="contact-page" role="form" method="post" action="#">
-
+            <form class="form-horizontal" id="contact-page" role="form" method="post" action="">
+                @Html.AntiForgeryToken()
                 <div class="form-group">
                     <label for="email" class="col-md-12  col-sm-12 col-xs-12 control-label">E-mail:</label>
                     <div class="col-md-6 col-sm-12 col-xs-12">
-                        <input type="text" class="form-control" id="email" name="email" placeholder="E-Mail address" value="">
+                        <input type="email" required="required" class="form-control" id="email" name="email" placeholder="E-Mail address" value="">
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12"></div>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="form-group">
                     <label for="message" class="col-md-12 col-sm-12 col-xs-12 control-label control-label-margin">Describe your project or situation:</label>
                     <div class="col-md-10 col-sm-12 col-xs-12">
-                        <textarea class="form-control" rows="4" name="message" placeholder="Describe your project or situation"></textarea>
+                        <textarea required="required" class="form-control" rows="4" name="message" placeholder="Describe your project or situation"></textarea>
                     </div>
                     <div class="col-md-2 col-sm-12 col-xs-12"></div>
                 </div>
