@@ -22,9 +22,9 @@ namespace Website.Controllers
         {
             var our_case = _caseService.GetBySlug(slug);
 
-
-
-            return View(our_case);
+            if(our_case != null)
+                return View(our_case);
+            return new HttpNotFoundResult();
         }
     }
 }
