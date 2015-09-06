@@ -17,6 +17,7 @@ namespace Website.Controllers
         }
 
         // GET: Case
+        [Route("Index/{slug}")]
         public ActionResult Index(string slug)
         {
             var our_case = _caseService.GetBySlug(slug);
