@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'Raleway';
   font-weight: 200;
-  src: url('../fonts/Raleway-ExtraLight.eot');
-  src: url('../fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Raleway-ExtraLight.woff') format('woff'),
-       url('../fonts/Raleway-ExtraLight.ttf') format('truetype'),
-       url('../fonts/Raleway-ExtraLight.svg#Raleway-ExtraBold') format('svg');
+  src: url('/assets/fonts/Raleway-ExtraLight.eot');
+  src: url('/assets/fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/Raleway-ExtraLight.woff') format('woff'),
+       url('/assets/fonts/Raleway-ExtraLight.ttf') format('truetype'),
+       url('/assets/fonts/Raleway-ExtraLight.svg#Raleway-ExtraBold') format('svg');
 }
 
 @font-face {
   font-family: 'Raleway';
   font-weight: 300;
-  src: url('../fonts/Raleway-Light.eot');
-  src: url('../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Raleway-Light.woff') format('woff'),
-       url('../fonts/Raleway-Light.ttf') format('truetype'),
-       url('../fonts/Raleway-Light.svg#Raleway-ExtraBold') format('svg');
+  src: url('/assets/fonts/Raleway-Light.eot');
+  src: url('/assets/fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/Raleway-Light.woff') format('woff'),
+       url('/assets/fonts/Raleway-Light.ttf') format('truetype'),
+       url('/assets/fonts/Raleway-Light.svg#Raleway-ExtraBold') format('svg');
 }
 
 #icons {
@@ -443,7 +443,7 @@ ul {
     margin-top: 20px;
     width: 110px;
     height: 110px;
-    background: url(../img/case-study.png) no-repeat;
+    background: url(../images/case-study.png) no-repeat;
     background-size: contain;
     transition: 0.5s all;
 }
@@ -502,7 +502,7 @@ ul {
 }
 
 .case-study-shell:hover .case-study-holder {
-    background: url(../img/case-study-white.pmg.png);
+    background: url(../images/case-study-white.pmg.png);
     background-size: contain;
 }
 
@@ -535,6 +535,67 @@ ul {
     color: $main-color;
     transition: 0.5s all; 
 }
+
+// ------- CONTACT PAGE -------- //
+
+
+.input-field {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    width: 50%;
+    border: none;
+    background: $main-color;
+    color: white;
+    margin-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: 0.5s all;
+}
+
+.submit-btn:hover {
+    background: $main-color-hover;
+    color: white;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.control-label {
+    padding-right: 0px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.control-label-margin {
+    margin-bottom: 200px;
+}
+
+.check-holder {
+    width: 100%;
+    height: 15px;
+    margin-left: -15px;
+    margin-bottom: 120px;
+}
+
+.chceck-img {
+    height: 15px;
+}
+
+.company-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
 
 
 // ------- FONTS ------- //
@@ -683,11 +744,11 @@ li a {
     
     // ------- FONTS ------- //
     
-    .header-li-margin-element {
-        margin-right: 0px;
+    h1 {
+        text-align: center;
     }
     
-   .h1-centered {
+    p {
         text-align: center;
     }
     
@@ -792,12 +853,16 @@ li a {
     
     // ------- FONTS ------- //
     
-    .h1-centered {
+    h1 {
         text-align: center;
     }
     
-    .header-li-margin-element {
-        margin-right: 0px;
+    h5 {
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
     }
     
     ul {
@@ -920,8 +985,10 @@ li a {
 }
 
 .wrapper-padding {
-    width: 97.5%;
-    margin-left: 2.5%;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 30px;
+    margin-bottom: 20px;
 }
 
 .reference-case-study-holder {
@@ -929,20 +996,10 @@ li a {
     margin: 0 auto;
 }
 
-.reference-section1 {
-    padding-top: 30px;
-    padding-bottom: 40px;
+.img1-wrapper {
+    max-width: 350px;
+    margin: 0 auto;
 }
-
-.reference-office-img {
-    
-}
-
-.reference-growth-company {
-    max-width: 250px;
-    margin-left: -30px;
-}
-
 
 .references-project-text-left {
     border-left: 3px solid $main-color;
@@ -1029,11 +1086,11 @@ li a {
 
 
 
-// ---------------------------------- //
-// --------------------------------- //
-// --------  SOLVING.HTML  -------- //
-// ------------------------------- //
-// ------------------------------ //
+// --------------------------- //
+// --------------------------- //
+// --------  SOLVING  -------- //
+// --------------------------- //
+// --------------------------- //
 
 
 
@@ -1088,6 +1145,18 @@ li a {
     margin: 0 auto;
 }
 
+@media (min-width : 1500px) and (max-width : 2500px)  {
+    .solving-ipad {
+        margin-top:0px;
+    }
+    
+    .solving-section1 {
+    padding-bottom: 10px;
+    } 
+   
+}
+
+// ------- FOTNS -------- //
 
 .solving-section1-mega {
     font-size: 4em;
@@ -1115,20 +1184,13 @@ li a {
     color: $main-color;
     text-align: center;
     font-size: 1.3em;
-    margin-top: -40px;
-}
-
-.solving-h3-2 {
-    color: $main-color;
-    text-align: center;
-    font-size: 1.3em;
-    margin-top: -5px;
+    margin-top: -10px;
 }
 
 .solving-p {
     color: #222222;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .solving-section1-p {
@@ -1156,61 +1218,15 @@ li a {
 }
 
 
-// ------- MEDIA QUERIES -------- //
-
-@media (min-width : 1500px) and (max-width : 2500px)  {
-    .solving-ipad {
-        margin-top:0px;
-    }
-    
-    .solving-section1 {
-        padding-bottom: 10px;
-    } 
-}
-
-@media (min-width : 768px) and (max-width : 992px)  {
-    .wrapper-solving-section2 {
-        width: 95%;
-        margin: 0 auto;
-    }
-    
-    .sm-left-p > p{
-        text-align: left;
-    }
-}
-
-
-@media (min-width : 0px) and (max-width : 768px)  {
-    .wrapper-solving-section2 {
-        width: 95%;
-        margin: 0 auto;
-    }
-    
-    .sm-left-p > h4 {
-        text-align: center;
-    }
-    
-    
-    .solving-section2-icon {
-        width:26%;
-        margin-left: 37% !important;
-        margin: 0 auto;
-        max-width: 100%;
-    }
-    
-    
-}
-
-
-// ------------------------------ //
-// ----------------------------- //
-// --------- CONTENT ---------- //
-// --------------------------- //
+// -------------------------- //
+// -------------------------- //
+// --------- CONTENT -------- //
+// -------------------------- //
 // -------------------------- //
 
 .content-row {
     padding-bottom: 40px;
-    width: 95%;
+     width: 95%;
     margin: 0 auto;
 }
 
@@ -1268,163 +1284,10 @@ p {
 .mail-box-case-study {
     background: #F5F5F5;
     border: 1px solid #C3C3C3;
-    width: 50%;
-    margin: 0 auto;
+    width: 96%;
     margin-left: 2%;
-    margin-top: 40px;
-    margin-left: 25%;
-    margin-bottom: 40px;
+    margin-top:-20px;
     padding: 15px;
 }
 
 
-// ------------------------------------------------ //
-// ----------------------------------------------- //
-// ------- CONTACT.HTML + CREATE-NEW.HTML ------- //
-// --------------------------------------------- //
-// -------------------------------------------- //
-
-
-#contact-page {
-    margin-top: 30px; 
-}
-
-.input-field {
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.submit-btn {
-    width: 50%;
-    border: none;
-    background: $main-color;
-    color: white;
-    margin-top: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    transition: 0.5s all;
-}
-
-.submit-btn:hover {
-    background: $main-color-hover;
-    color: white;
-}
-
-.submit-btn-contact {
-    width: 30%;
-    border: none;
-    background: $main-color;
-    color: white;
-    margin-top: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    transition: 0.5s all;
-}
-
-.submit-btn-contact:hover {
-    background: $main-color-hover;
-    color: white;
-}
-
-.contact-padding {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-
-.lars-img {
-    width: 250px;
-    height: 250px;
-    background: url('../img/lars.jpg');
-    border-radius: 50%;
-    background-size: contain;
-}
-
-
-.form-horizontal .control-label {
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.control-label {
-    padding-right: 0px;
-}
-
-.form-control {
-    border-radius: 0px;
-}
-
-.control-label-margin {
-    margin-bottom: 200px;
-}
-
-.check-holder {
-    width: 100%;
-    height: 15px;
-    margin-left: -15px;
-    margin-bottom: 120px;
-}
-
-.chceck-img {
-    height: 15px;
-}
-
-.company-wrapper {
-    max-width: 520px;
-    margin: 0 auto;
-}
-
-
-// ------- MEDIA QUERIES -------- //
-
-@media (min-width : 768px) and (max-width : 992px)  {
-    .submit-btn-contact {
-        width: 100%;
-    }
-    
-    .contact-padding > p {
-        text-align: left;
-    }
-    
-    .lars-img{
-        width: 175px;
-        height: 175px;
-        margin-top:50px;
-    }
-    
-    .mail-box-case-study {
-        width: 90%;
-        margin-left: 5%;
-    }
-}
-
-@media (min-width : 0px) and (max-width : 768px)  {
-    
-    .submit-btn-contact {
-        width: 100%;
-    }
-    
-    .contact-padding > h4 {
-        text-align: center;
-    }
-    
-    .lars-img{
-        width: 175px;
-        height: 175px;
-        margin: 0 auto;
-        margin-bottom: 40px;
-    }
-    
-    .contact-padding >p {
-        text-align: center;
-    }
-    
-    .mail-box-case-study {
-        width: 90%;
-        margin-left: 5%;
-    }
-    
-}
