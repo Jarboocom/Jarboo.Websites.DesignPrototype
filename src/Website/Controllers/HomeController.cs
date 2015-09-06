@@ -8,6 +8,7 @@ using Mandrill.Model;
 using Services.Domain.Case;
 using Services.Services;
 using Website.Models;
+using Website.Models.ExtensionMethods;
 
 namespace Website.Controllers
 {
@@ -61,6 +62,7 @@ namespace Website.Controllers
         {
             if (ModelState.IsValid)
             {
+                //var result = MandrillSendExtension.customSend(model, MandrillTemplates.Invoice);
                 Send(model);
                 model.Status = "The message is sent.";
             }
