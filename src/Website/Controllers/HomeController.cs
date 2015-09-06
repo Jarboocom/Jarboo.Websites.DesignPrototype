@@ -55,6 +55,11 @@ namespace Website.Controllers
             return View(new ContactViewModel());
         }
 
+        public ActionResult NewsletterSignUp()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Contact(ContactViewModel model)
