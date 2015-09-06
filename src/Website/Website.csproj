@@ -139,6 +139,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactViewModel.cs" />
+    <Compile Include="Models\ExtensionMethods\MandrillSendExtension.cs" />
     <Compile Include="Models\ReferencesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
