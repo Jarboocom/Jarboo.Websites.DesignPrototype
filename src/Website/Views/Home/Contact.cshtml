@@ -9,6 +9,14 @@
     <div class="wrapper">
         <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
             <h1>Contact us</h1>
+
+            @if (!string.IsNullOrEmpty(Model.Status))
+            {
+                <div class="bg-success">
+                    <p>Thanks - we will get in touch with you as soon as possible.</p>
+                </div>
+            }
+
             <p>Questions? Comments? Want to talk with us? You're of course welcome to contact us.</p>
 
             <form class="form-horizontal" id="contact-page" role="form" method="post" action="#">
@@ -49,7 +57,7 @@
             <p>Email: info@jarboo.com  </p>
             <h4>Address:</h4>
             <p>YouFirm</p>
-            <p>Thuavej 5s</p>
+            <p>Thuavej 5</p>
             <p>3650 Ølstykke </p>
             <p>Denmark</p>
             <p><br>VAT: DK36406208</p>
