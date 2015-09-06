@@ -63,6 +63,8 @@ namespace Website.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("~/contact")]
+
         public ActionResult Contact(ContactViewModel model)
         {
             if (ModelState.IsValid)
@@ -83,11 +85,10 @@ namespace Website.Controllers
             message.AddTo("lh@jarboo.com");
             message.ReplyTo = "info@jarboo.com";
             //supports merge var content as string
-            message.AddGlobalMergeVars("NAME", model.Name);
 
             message.AddGlobalMergeVars("EMAIL", model.Email);
             message.AddGlobalMergeVars("MESSAGE", model.Message);
-            var result = api.Messages.SendTemplate(message, "customer-invoice");
+            var result = api.Messages.SendTemplate(message, "jarboo-contact-form");
         }
     }
 }
