@@ -28,6 +28,8 @@
 
 $font: 'Raleway';
 $main-color: #0976BB;
+$amazon: #E47911;
+$amazon-hover: #d36800;
 $main-color-hover: #0a5b8e;
 $text-color: #222222;
 $section2: #efefef;
@@ -95,7 +97,7 @@ img {
     width: 95%;
     border: none;
     margin: 0 auto;
-    background: $main-color;
+    background: $amazon;
     text-align: center;
     margin-top: 0px;
     padding-top: 5px;
@@ -117,7 +119,7 @@ img {
 }
 
 .CTA-button-full-head:hover {
-    background: $main-color-hover;
+    background: $amazon-hover;
     transition: 0.5 all;
 }
 
@@ -148,7 +150,7 @@ img {
     width: 95%;
     border: none;
     margin: 0 auto;
-    background: $main-color;
+    background: $amazon;
     text-align: center;
     margin-top: 10px;
     padding-top: 5px;
@@ -170,7 +172,7 @@ img {
 }
 
 .CTA-button-full-section1:hover {
-    background: $main-color-hover;
+    background: $amazon-hover;
 }
 
 .CTA-button-ghost-section1:hover {
@@ -360,7 +362,7 @@ ul {
     width: 95%;
     border: none;
     margin: 0 auto;
-    background: white;
+    background: $amazon;
     text-align: center;
     margin-top: 10px;
     padding-top: 5px;
@@ -382,7 +384,7 @@ ul {
 }
 
 .CTA-button-full-CTA:hover {
-    background: $main-color-hover;
+    background: $amazon-hover;
     color: white;
 }
 
@@ -669,6 +671,9 @@ li a {
     font-size: 1.2em;
 }
 
+.brands {
+    text-align: center;
+}
 
 // ------- MEDIA QUERIES -------- //
 
