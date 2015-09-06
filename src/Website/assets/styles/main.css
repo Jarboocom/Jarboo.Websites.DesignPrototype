@@ -8,7 +8,7 @@ img { max-height: 100%; max-width: 100%; }
 
 .navbar-brand { margin-top: -10px; height: 70px; margin-bottom: -10px; width: 174px; padding: 0px; }
 
-.navbar-default { border-radius: 0px; padding-top: 20px; padding-bottom: 20px; padding-right: 2%; padding-left: 2%; }
+.navbar-default { border-radius: 0px; padding-top: 20px; padding-bottom: 20px; padding-right: 2%; padding-left: 0; }
 
 .header-button-a { padding: 0px; }
 
@@ -32,7 +32,7 @@ img { max-height: 100%; max-width: 100%; }
 
 .section1 { width: 95%; margin: 0 auto; padding-top: 30px; padding-bottom: 30px; }
 
-.section1-text { padding-left: 3%; padding-right: 3%; }
+.section1-text { padding-left: 0%; padding-right: 3%; }
 
 .buttons-section1 { margin-top: 60px; }
 
@@ -74,7 +74,7 @@ ul { list-style-type: none; color: white; }
 
 .jarboo-is-awesome-btn:hover { border: 2px solid #0976BB; background: white; color: #0976BB; }
 
-.section3 { width: 95%; margin: 0 auto; background: red; }
+.section3 { width: 95%; margin: 0 auto; }
 
 .section3-row { padding-top: 50px; padding-bottom: 70px; }
 
@@ -162,9 +162,10 @@ a { font-size: 1.1em; }
 
 .CTA-h2 { color: white; text-align: center; padding: 0; }
 
-li a { color: white; font-size: 0.9em; }
+.pageli a { color: #222222; font-size: 0.9em; }
 
-.footer-category-title { font-size: 1.2em; margin-bottom: 10px; }
+
+.footer-category-title { font-size: 1.5em; margin-bottom: 10px; }
 
 .footer-p { color: white; font-size: 0.9em; }
 
