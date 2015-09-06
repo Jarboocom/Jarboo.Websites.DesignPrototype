@@ -22,11 +22,11 @@ img { max-height: 100%; max-width: 100%; }
 
 .CTA-buttons-head { height: 50px; }
 
-.CTA-button-full-head { height: 50px; width: 95%; border: none; margin: 0 auto; background: #E47911; text-align: center; margin-top: 0px; padding-top: 5px; color: white; transition: 0.5s all; }
+.CTA-button-full-head { height: 50px; width: 95%; border: none; margin: 0 auto; background: #e4b311; text-align: center; margin-top: 0px; padding-top: 5px; color: white; transition: 0.5s all; }
 
 .CTA-button-ghost-head { height: 30px; width: 95%; border: 2px solid #0976BB; background: white; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: #0976BB; transition: 0.5s all; }
 
-.CTA-button-full-head:hover { background: #d36800; transition: 0.5 all; }
+.CTA-button-full-head:hover { background: #d4a814; transition: 0.5 all; }
 
 .CTA-button-ghost-head:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
 
@@ -36,11 +36,11 @@ img { max-height: 100%; max-width: 100%; }
 
 .buttons-section1 { margin-top: 60px; }
 
-.CTA-button-full-section1 { height: 50px; width: 95%; border: none; margin: 0 auto; background: #E47911; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
+.CTA-button-full-section1 { height: 50px; width: 95%; border: none; margin: 0 auto; background: #e4b311; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
 
 .CTA-button-ghost-section1 { height: 50px; width: 95%; border: 2px solid #0976BB; background: white; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: #0976BB; transition: 0.5s all; }
 
-.CTA-button-full-section1:hover { background: #d36800; }
+.CTA-button-full-section1:hover { background: #d4a814; }
 
 .CTA-button-ghost-section1:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
 
@@ -94,11 +94,11 @@ ul { list-style-type: none; color: white; }
 
 .CTA-buttons-CTA { height: 50px; }
 
-.CTA-button-full-CTA { height: 50px; width: 95%; border: none; margin: 0 auto; background: #E47911; text-align: center; margin-top: 10px; padding-top: 5px; color: #0976BB; transition: 0.5s all; }
+.CTA-button-full-CTA { height: 50px; width: 95%; border: none; margin: 0 auto; background: #e4b311; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
 
 .CTA-button-ghost-CTA { height: 50px; width: 95%; border: 2px solid white; background: #0976BB; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
 
-.CTA-button-full-CTA:hover { background: #d36800; color: white; }
+.CTA-button-full-CTA:hover { background: #d4a814; color: white; }
 
 .CTA-button-ghost-CTA:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
 
@@ -187,6 +187,8 @@ li a { color: white; font-size: 0.9em; }
 .case-study-heading { color: #0976BB; padding: 0px; margin: 0px; margin-bottom: 10px; text-align: center; font-size: 1.2em; }
 
 .brands { text-align: center; }
+
+.index-consulting { text-align: center; margin-top: -30px; }
 
 @media (min-width: 768px) and (max-width: 992px) { .header-li-margin-element { margin-right: 0px; }
   .h1-centered { text-align: center; }

@@ -28,8 +28,8 @@
 
 $font: 'Raleway';
 $main-color: #0976BB;
-$amazon: #E47911;
-$amazon-hover: #d36800;
+$amazon: #e4b311;
+$amazon-hover: #d4a814;
 $main-color-hover: #0a5b8e;
 $text-color: #222222;
 $section2: #efefef;
@@ -366,7 +366,7 @@ ul {
     text-align: center;
     margin-top: 10px;
     padding-top: 5px;
-    color: $main-color;
+    color: white;
     transition: 0.5s all;
 }
 
@@ -673,6 +673,11 @@ li a {
 
 .brands {
     text-align: center;
+}
+
+.index-consulting {
+    text-align: center;
+    margin-top: -30px;
 }
 
 // ------- MEDIA QUERIES -------- //
