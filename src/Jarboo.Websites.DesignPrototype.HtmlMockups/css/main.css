@@ -1,8 +1,7 @@
-@font-face { font-family: 'Raleway'; font-weight: 200; src: url("../fonts/Raleway-ExtraLight.eot"); src: url("../fonts/Raleway-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway-ExtraLight.woff") format("woff"), url("../fonts/Raleway-ExtraLight.ttf") format("truetype"), url("../fonts/Raleway-ExtraLight.svg#Raleway-ExtraBold") format("svg"); }
-@font-face { font-family: 'Raleway'; font-weight: 300; src: url("../fonts/Raleway-Light.eot"); src: url("../fonts/Raleway-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway-Light.woff") format("woff"), url("../fonts/Raleway-Light.ttf") format("truetype"), url("../fonts/Raleway-Light.svg#Raleway-ExtraBold") format("svg"); }
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
 #icons { position: fixed; top: 50%; left: 50%; margin: -300px 0 0 -400px; z-index: 100; }
 
-body { font-family: "Raleway"; overflow-x: hidden !important; }
+body { font-family: "Raleway", sans-serif; overflow-x: hidden !important; }
 
 img { max-height: 100%; max-width: 100%; }
 
