@@ -237,7 +237,7 @@ li a { color: white; font-size: 0.9em; }
 
 .reference-section1 { padding-top: 30px; padding-bottom: 40px; }
 
-.reference-growth-company { max-width: 60%; margin-left: 20%; margin-bottom: 20px; }
+.reference-growth-company { max-width: 50%; margin-left: 25%; margin-bottom: 20px; }
 
 .references-project-text-left { border-left: 3px solid #0976BB; }
 
@@ -259,6 +259,8 @@ li a { color: white; font-size: 0.9em; }
 
 .references-case-study-btn { width: 70%; margin-left: 15%; margin-top: 15px; background: #0976BB; border: 2px solid white; color: white; transition: 0.5s all; }
 
+.refference-case-study-heading { color: white; text-align: center; margin-bottom: 40px; }
+
 .references-h3 { color: #0976BB; text-align: center; }
 
 .references-h4 { color: #0976BB; }
@@ -267,6 +269,11 @@ li a { color: white; font-size: 0.9em; }
 
 .reference-case-study-p { color: white; }
 
+@media (min-width: 768px) and (max-width: 992px) { .reference-case-study-p { text-align: center; }
+  .case-study-reference-hodler { margin-bottom: 50px; } }
+@media (min-width: 0px) and (max-width: 768px) { .reference-case-study-p { text-align: center; }
+  .case-study-reference-hodler { margin-bottom: 50px; }
+  .reference-growth-company { max-width: 80%; margin-left: 10%; margin-bottom: 20px; } }
 .solving-section1 { width: 95%; margin: 0 auto; padding-bottom: 50px; }
 
 .solving-section1-icon { max-width: 200px; margin: 0 auto; margin-bottom: 20px; }
