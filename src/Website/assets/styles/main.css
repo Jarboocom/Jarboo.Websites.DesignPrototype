@@ -8,7 +8,7 @@ img { max-height: 100%; max-width: 100%; }
 
 .navbar-brand { margin-top: -10px; height: 70px; margin-bottom: -10px; width: 174px; padding: 0px; }
 
-.navbar-default { border-radius: 0px; padding-top: 20px; padding-bottom: 20px; padding-right: 2%; padding-left: 2%; }
+.navbar-default { border-radius: 0px; padding-top: 20px; padding-bottom: 20px; padding-right: 2%; padding-left: 0; }
 
 .header-button-a { padding: 0px; }
 
@@ -22,25 +22,27 @@ img { max-height: 100%; max-width: 100%; }
 
 .CTA-buttons-head { height: 50px; }
 
-.CTA-button-full-head { height: 50px; width: 95%; border: none; margin: 0 auto; background: #0976BB; text-align: center; margin-top: 0px; padding-top: 5px; color: white; transition: 0.5s all; }
+.index-consulting { text-align: center; margin-top: -30px; }
 
-.CTA-button-ghost-head { height: 30px; width: 95%; border: 2px solid #0976BB; background: white; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: #0976BB; transition: 0.5s all; }
+.CTA-button-full-head { height: 50px; width: 95%; border: none; margin: 0 auto; background: #e4b311 ; text-align: center; margin-top: 0px; padding-top: 5px; color: white; transition: 0.5s all; }
 
-.CTA-button-full-head:hover { background: #0a5b8e; transition: 0.5 all; }
+.CTA-button-ghost-head { height: 30px; width: 95%; border: 2px solid #e4b311 ; background: white; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: #0976BB; transition: 0.5s all; }
 
-.CTA-button-ghost-head:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
+.CTA-button-full-head:hover { background: #d4a814;  transition: 0.5 all; }
+
+.CTA-button-ghost-head:hover { background: #0a5b8e;  border: 2px solid #0a5b8e; color: white; }
 
 .section1 { width: 95%; margin: 0 auto; padding-top: 30px; padding-bottom: 30px; }
 
-.section1-text { padding-left: 3%; padding-right: 3%; }
+.section1-text { padding-left: 0%; padding-right: 3%; }
 
 .buttons-section1 { margin-top: 60px; }
 
-.CTA-button-full-section1 { height: 50px; width: 95%; border: none; margin: 0 auto; background: #0976BB; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
+.CTA-button-full-section1 { height: 50px; width: 95%; border: none; margin: 0 auto; background: #e4b311;text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
 
 .CTA-button-ghost-section1 { height: 50px; width: 95%; border: 2px solid #0976BB; background: white; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: #0976BB; transition: 0.5s all; }
 
-.CTA-button-full-section1:hover { background: #0a5b8e; }
+.CTA-button-full-section1:hover { background: #d4a814;  }
 
 .CTA-button-ghost-section1:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
 
@@ -74,7 +76,7 @@ ul { list-style-type: none; color: white; }
 
 .jarboo-is-awesome-btn:hover { border: 2px solid #0976BB; background: white; color: #0976BB; }
 
-.section3 { width: 95%; margin: 0 auto; background: red; }
+.section3 { width: 95%; margin: 0 auto; }
 
 .section3-row { padding-top: 50px; padding-bottom: 70px; }
 
@@ -94,11 +96,11 @@ ul { list-style-type: none; color: white; }
 
 .CTA-buttons-CTA { height: 50px; }
 
-.CTA-button-full-CTA { height: 50px; width: 95%; border: none; margin: 0 auto; background: white; text-align: center; margin-top: 10px; padding-top: 5px; color: #0976BB; transition: 0.5s all; }
+.CTA-button-full-CTA { height: 50px; width: 95%; border: none; margin: 0 auto; background: #e4b311; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
 
 .CTA-button-ghost-CTA { height: 50px; width: 95%; border: 2px solid white; background: #0976BB; margin: 0 auto; text-align: center; margin-top: 10px; padding-top: 5px; color: white; transition: 0.5s all; }
 
-.CTA-button-full-CTA:hover { background: #0a5b8e; color: white; }
+.CTA-button-full-CTA:hover { background: #d4a814;  color: white; }
 
 .CTA-button-ghost-CTA:hover { background: #0a5b8e; border: 2px solid #0a5b8e; color: white; }
 
@@ -148,7 +150,7 @@ p { color: #222222; margin-bottom: 5px; font-size: 1.1em; }
 
 a { font-size: 1.1em; }
 
-.underline { text-decoration: underline; }
+.underline { margin: 0 25%;text-decoration: underline; }
 
 .fun-fact { color: #222222; font-size: 1em; margin-top: 30px; margin-bottom: 30px; }
 
@@ -162,9 +164,10 @@ a { font-size: 1.1em; }
 
 .CTA-h2 { color: white; text-align: center; padding: 0; }
 
-li a { color: white; font-size: 0.9em; }
+.pageli a { color: #222222; font-size: 0.9em; }
 
-.footer-category-title { font-size: 1.2em; margin-bottom: 10px; }
+
+.footer-category-title { font-size: 1.5em; margin-bottom: 10px; }
 
 .footer-p { color: white; font-size: 0.9em; }
 

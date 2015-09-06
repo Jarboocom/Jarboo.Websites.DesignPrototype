@@ -4,13 +4,13 @@
 
 <div class="row section1">
     <div class="col-md-7 col-sm-12 col-xs-12 section1-text">
-        <h1 class="h1-index">
+        <h1 class="h1-index h1-centered">
             Are you tired of how software <br>development works today?
         </h1>
         <p>
             Are you tired of missing deadlines, paying a lot of money and not receiving the software you really wanted? So were we and we founded Jarboo.
         </p>
-        <p>Jarboo provides affordable, scaleable and reliable development - on time.</p>
+        <p>Jarboo provides affordable, scaleable and reliable  development - on time.</p>
         <div class="row buttons-section1">
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <a href="@Url.Action("DiscussProject", "Lead")"><button class="CTA-button-full-section1">DISCUSS A PROJECT</button></a>
@@ -19,13 +19,17 @@
                 <a href="@Url.Action("Contact", "Home")"><button class="CTA-button-ghost-section1">CONTACT US</button></a>
             </div>
         </div>
-        <p class="fun-fact"><span style="color: #0976BB;">Did you know?</span> We're cheaper than employees, <br> and we have no minimum project size?
-        </p>
+        <p class="fun-fact"><span style="color:#0976BB;">Did you know?</span> We're cheaper than employees, <br> and we have no minimum project size?</p>
     </div>
     <div class="col-md-5 col-sm-12 col-xs-12 section1-image">
-        <img src="@Url.Content("~/assets/images/instant-prices.png")" alt="Instant prices" class="instant-prices">
+        <img src="@Url.Content("~/assets/images/instant-prices.png")" alt="" class="instant-prices">
+        <h4 class="index-consulting">Having a project? <br> Get a free chat about anything technical</h4>
     </div>
 </div>
+
+
+
+
 
 <div class="row section2-index">
     <div class="section2-index-wrapper">
@@ -173,3 +177,19 @@
 </div>
 
 @Html.Partial("_Ebook")
+
+<div class="row CTA-section">
+    <div class="CTA-wrapper">
+        <div class="col-md-6 col-sm-12 col-xs-12 section1-text">
+            <h2 class="CTA-h2">Solve your development:</h2>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 CTA-buttons-CTA">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button onclick="location.href ='@Url.Action("DiscussProject","Lead")'" class="CTA-button-full-CTA">DISCUSS A PROJECT</button>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button onclick="location.href='@Url.Action("Contact","Home")'" class="CTA-button-ghost-CTA">CONTACT US</button>
+            </div>
+        </div>
+    </div>
+</div>
