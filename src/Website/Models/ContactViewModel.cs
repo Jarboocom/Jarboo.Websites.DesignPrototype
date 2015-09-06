@@ -6,11 +6,10 @@ namespace Website.Models
     {
         [Required]
         public string Email { get; set; }
-
+        [Required]
         public string Name { get; set; }
         public string Company { get; set; }
 
-        [Required]
         public string Message { get; set; }
 
         public string Status { get; set; }

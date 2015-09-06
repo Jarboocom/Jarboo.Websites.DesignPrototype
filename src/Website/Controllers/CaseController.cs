@@ -17,14 +17,13 @@ namespace Website.Controllers
         }
 
         // GET: Case
-        [Route("Index/{slug}")]
         public ActionResult Index(string slug)
         {
             var our_case = _caseService.GetBySlug(slug);
 
-            if(our_case != null)
-                return View(our_case);
-            return new HttpNotFoundResult();
+
+
+            return View(our_case);
         }
     }
 }
