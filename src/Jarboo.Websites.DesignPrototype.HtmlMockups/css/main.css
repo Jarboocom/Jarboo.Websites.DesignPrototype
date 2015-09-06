@@ -237,7 +237,7 @@ li a { color: white; font-size: 0.9em; }
 
 .reference-section1 { padding-top: 30px; padding-bottom: 40px; }
 
-.reference-growth-company { max-width: 250px; margin-left: -30px; }
+.reference-growth-company { max-width: 60%; margin-left: 20%; margin-bottom: 20px; }
 
 .references-project-text-left { border-left: 3px solid #0976BB; }
 
@@ -275,7 +275,7 @@ li a { color: white; font-size: 0.9em; }
 
 .solving-ipad { margin-top: 40px; }
 
-.wrapper-solving-section2 { width: 97.5%; margin-left: 2.5%; }
+.wrapper-solving-section2 { width: 95%; margin-left: 2.5%; }
 
 .solving-section3 { padding-top: 40px; padding-bottom: 40px; }
 
@@ -303,9 +303,9 @@ li a { color: white; font-size: 0.9em; }
 
 .solving-section2-h2-head { color: #0976BB; font-size: 1.7em; margin-top: -30px; }
 
-.solving-h4 { margin-top: 0px; }
+.solving-h4 { margin-top: 0px; text-align: center; }
 
-.solving-section2-icontext-wrapper { width: 100%; margin-top: 20px; }
+.solving-section2-icontext-wrapper { margin-top: 40px; }
 
 .solving-section2-icon { max-width: 100px; }
 
