@@ -94,7 +94,7 @@
 <div class="row testemonial-section">
     <div class="section2-index-wrapper">
         <div class="col-md- col-sm-12 col-xs-12 section1-text">
-            <h1 class="h1-index">What are our customers saying?</h1>
+            <h1 class="h1-index  h1-centered">What are our customers saying?</h1>
         </div>
         <div class="col-md-3 col-sm-12 col-xs-12">
             <div class="client-holder">
@@ -143,7 +143,7 @@
 <div class="row case-study">
     <div class="index-wrapper">
         <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
-            <h1>Our case studies</h1>
+            <h1 class=" h1-centered">Our case studies</h1>
         </div>
 
         @foreach (var ourCase in Model.Cases)
@@ -151,7 +151,7 @@
             @Html.Partial("_Case", ourCase)
         }
         
-        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+        <div class="col-md-12 col-sm-12 col-xs-12 brands" style="margin-top: 20px;">
             <a href="@Url.Action("References")"  class="underline" >See all cases</a>
         </div>
     </div>

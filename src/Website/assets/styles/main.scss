@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
 #icons {
     position: fixed;
@@ -856,7 +855,7 @@ li a {
     // --------- CASE STUDY ---------//
     
     .case-study-p {
-        text-align: left;
+        text-align: center;
     }
     
     .case-study-holder {
@@ -868,6 +867,69 @@ li a {
     .case-study-cta-button {
         width: 50%;
         margin-left: 25%;
+    }
+
+      .case-study-cta-button {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .case-study-shell{
+        height: auto;
+        padding-bottom: 20px;
+        margin-left: 0px;
+    }
+    .case-study-text {
+        border: none;
+        height: auto;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-left: 0px;
+    }
+
+    .case-study-text:hover {
+        border-left: none !important;
+    }
+    .case-study-full-button {
+        width: 60%;
+        position: relative;
+        top: 0;
+    }
+
+    .case-study-holder {
+        margin-top: 50px;
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+        background: url(/assets/images/case-study.png) no-repeat;
+        background-size: contain;
+        transition: 0.5s all;
+    }
+
+
+    .case-study-shell:hover {
+        background: white;
+    }
+
+    .case-study-shell:hover .case-study-text {
+        border-left: none;
+    }
+
+    .case-study-shell:hover .case-study-head {
+        color: $main-color;
+    }
+
+    .case-study-shell:hover .case-study-p {
+        color: #222222;
+    }
+
+    .case-study-shell:hover .case-study-full-button {
+        background: $main-color;
+        color: white;
+    }
+
+    .case-study-shell:hover .case-study-holder {
+        background: url(/assets/images/case-study.png);
+        background-size: contain;
     }
     
     // ------- CTA SECTION ------- //
