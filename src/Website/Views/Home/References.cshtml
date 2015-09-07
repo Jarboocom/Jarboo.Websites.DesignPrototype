@@ -64,66 +64,24 @@
 
 <div class="row refference-case-study">
     <div class="reference-case-study-holder">
-        <div class="col-md-3 col-sm-12 col-xs-12">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="reference-case-study-icon">
-                    <a href=""><img src="@Url.Content("~/assets/images/case-study-white.pmg.png")" alt=""></a>
+        @foreach (var ourCase in Model.Cases)
+        {
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="reference-case-study-icon">
+                        <a href=""><img src="@Url.Content("~/assets/images/case-study-white.pmg.png")" alt=""></a>
+                    </div>
+                    <div class="reference-case-study-line"></div>
                 </div>
-                <div class="reference-case-study-line"></div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="reference-case-study-text">
-                    <h4 class="reference-case-study-h4">MONERA</h4>
-                    <p class="reference-case-study-p">Making a very affordable prototype fast and easy</p>
-                    <a href="#"><button class="references-case-study-btn">READ MORE</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-12 col-xs-12">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="reference-case-study-icon">
-                    <a href=""><img src="@Url.Content("~/assets/images/case-study-white.pmg.png")" alt=""></a>
-                </div>
-                <div class="reference-case-study-line"></div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="reference-case-study-text">
-                    <h4 class="reference-case-study-h4">MONERA</h4>
-                    <p class="reference-case-study-p">Making a very affordable prototype fast and easy</p>
-                    <a href="#"><button class="references-case-study-btn">READ MORE</button></a>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="reference-case-study-text">
+                        <h4 class="reference-case-study-h4">@ourCase.Title</h4>
+                        <p class="reference-case-study-p">@ourCase.Description</p>
+                        <a href="#"><button class="references-case-study-btn">READ MORE</button></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-12 col-xs-12">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="reference-case-study-icon">
-                    <a href="#"><img src="@Url.Content("~/assets/images/case-study-white.pmg.png")" alt=""></a>
-                </div>
-                <div class="reference-case-study-line"></div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="reference-case-study-text">
-                    <h4 class="reference-case-study-h4">MONERA</h4>
-                    <p class="reference-case-study-p">Making a very affordable prototype fast and easy</p>
-                    <a href="#"><button class="references-case-study-btn">READ MORE</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-12 col-xs-12">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="reference-case-study-icon">
-                    <a href="#"><img src="@Url.Content("~/assets/images/case-study-white.pmg.png")" alt=""></a>
-                </div>
-                <div class="reference-case-study-line"></div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="reference-case-study-text">
-                    <h4 class="reference-case-study-h4">MONERA</h4>
-                    <p class="reference-case-study-p">Making a very affordable prototype fast and easy</p>
-                    <a href="#"><button class="references-case-study-btn">READ MORE</button></a>
-                </div>
-            </div>
-        </div>
+        }
     </div>
 </div>
 

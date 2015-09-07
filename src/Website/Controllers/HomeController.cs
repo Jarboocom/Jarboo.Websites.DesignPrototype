@@ -37,7 +37,8 @@ namespace Website.Controllers
         [Route("~/references")]
         public ActionResult References()
         {
-            var cases = _caseService.GetBySpecification(new CaseSpecification());
+            const int topReferenceCases = 4;
+            var cases = _caseService.GetBySpecification(new CaseSpecification { Take = topReferenceCases });
 
             ReferencesViewModel model = new ReferencesViewModel
             {
