@@ -321,7 +321,6 @@ ul {
 
 .case-study-shell {
   width: 95%;
-  height: 180px;
   padding-top: 15px;
   padding-bottom: 15px;
   transition: 0.5s all;
@@ -337,8 +336,8 @@ ul {
 
 .case-study-text {
   border-left: 4px solid #0976BB;
-  height: 150px;
-  transition: 0.5s all; }
+  transition: 0.5s all;
+  padding-bottom: 20px; }
 
 .case-study-head {
   color: #0976BB;
@@ -351,7 +350,6 @@ ul {
 .case-study-full-button {
   height: 30px;
   width: 45%;
-  position: absolute;
   top: 110px;
   border: none;
   margin: 0 auto;
@@ -362,11 +360,9 @@ ul {
   color: white;
   transition: 0.5s all; }
 
-.case-study-shell:hover {
-  background: #0976BB; }
-
 .case-study-shell:hover .case-study-text {
-  border-left: 4px solid white; }
+  border-left: 4px solid white;
+  background: #0976BB; }
 
 .case-study-shell:hover .case-study-head {
   color: white; }
@@ -378,7 +374,7 @@ ul {
   background: white;
   color: #0976BB; }
 
-.case-study-shell:hover .case-study-holder {
+.case-study-shelll:hover .case-study-holder {
   background: url(/assets/images/case-study-white.pmg.png);
   background-size: contain; }
 
