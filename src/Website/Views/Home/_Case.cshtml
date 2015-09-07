@@ -8,7 +8,7 @@
         <div class="col-md-9 col-sm-8 col-xs-10 case-study-text">
             <h3 class="case-study-head">@Model.Title</h3>
             <p class="case-study-p">@Model.Description</p>
-            <a href="#"><button class="case-study-full-button">READ MORE</button></a>
+            <a href="@Url.Action("Index", new {controller = "Case", slug = Model.Slug})"><button class="case-study-full-button">READ MORE</button></a>
         </div>
     </div>
 </div>

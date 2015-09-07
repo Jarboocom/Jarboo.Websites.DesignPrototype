@@ -77,7 +77,7 @@
                     <div class="reference-case-study-text">
                         <h4 class="reference-case-study-h4">@ourCase.Title</h4>
                         <p class="reference-case-study-p">@ourCase.Description</p>
-                        <a href="#"><button class="references-case-study-btn">READ MORE</button></a>
+                        <a href="@Url.Action("Index", new {controller = "Case", slug = ourCase.Slug})"><button class=" references-case-study-btn">READ MORE</button></a>
                     </div>
                 </div>
             </div>
