@@ -167,6 +167,7 @@
     <Content Include="assets\images\lars.jpg" />
     <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\manager.png" />
+    <Content Include="assets\images\monera-logo.png" />
     <Content Include="assets\images\monera.png" />
     <Content Include="assets\images\money.png" />
     <Content Include="assets\images\office.png" />
