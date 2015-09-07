@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>@ViewBag.Title</title>
     <link rel="icon" type="image/png" href="@Url.Content("~/assets/images/favico.png")">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
     @Styles.Render("~/Content/css")
     @RenderSection("Header", false)
 </head>
@@ -65,7 +66,7 @@
     <div class="row footer">
         <div class="footer-wrapper">
             <div class="col-md-2 col-sm-3 col-xs-12 section1-text">
-                <ul class="">
+                <ul class="footer-ul">
                     <li class="footer-category-title">Pages</li>
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Solving development", "About", "Home")</li>
