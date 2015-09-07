@@ -1228,6 +1228,10 @@ li a {
     margin-top: 0px;
 }
 
+.references-h4 {
+    text-align: center;
+}
+
 .solving-section2-icontext-wrapper {
     margin-top: 40px;
 }
@@ -1236,7 +1240,9 @@ li a {
     max-width: 100px;   
 }
 
-
+.footer-ul > li > a {
+    color: white;
+}
 // ------- MEDIA QUERIES -------- //
 
 @media (min-width : 1500px) and (max-width : 2500px)  {
@@ -1268,9 +1274,13 @@ li a {
     }
     
     .sm-left-p > h4 {
+        margin-top: 20px;
         text-align: center;
     }
     
+    .sm-left-p > p {
+        text-align: center;
+    }
     
     .solving-section2-icon {
         width:26%;
