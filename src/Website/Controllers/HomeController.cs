@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Mandrill;
 using Mandrill.Model;
 using Services.Domain.Case;
 using Services.Services;
 using Website.Models;
-using Website.Models.ExtensionMethods;
 
 namespace Website.Controllers
 {
     [RoutePrefix("home")]
     public class HomeController : Controller
     {
-        private ICaseService _caseService;
+        private readonly ICaseService _caseService;
 
         public HomeController()
         {
@@ -25,7 +20,15 @@ namespace Website.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            const int topCasesCount = 2;
+            var cases = _caseService.GetBySpecification(new CaseSpecification{Take = topCasesCount});
+
+            var model = new HomeViewModel
+            {
+                Cases = cases
+            };
+
+            return View(model);
         }
 
         [Route("~/about")]
