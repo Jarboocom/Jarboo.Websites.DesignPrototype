@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\ExtensionMethods\MandrillSendExtension.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\ReferencesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -246,6 +247,7 @@
     <Content Include="Views\Lead\LeadConfirmed.cshtml" />
     <Content Include="Views\Shared\_Ebook.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\_Case.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

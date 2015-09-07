@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Newtonsoft.Json.Serialization;
 
 namespace Services.Domain.Case
 {
@@ -12,7 +11,5 @@ namespace Services.Domain.Case
         Case Update(Case acase);
 
         List<Case> GetBySpecification(CaseSpecification specification);
-
-
     }
 }

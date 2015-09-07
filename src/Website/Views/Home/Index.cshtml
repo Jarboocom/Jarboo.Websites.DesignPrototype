@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Website.Models.HomeViewModel
+@{
     ViewBag.Title = "Jarboo - Build anything";
 }
 
@@ -144,32 +145,12 @@
         <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
             <h1>Our case studies</h1>
         </div>
-        <div class="col-md-6 col-sm-12 col-xs-12">
-            <div class="case-study-shell">
-                <div class="col-md-3 col-sm-3 col-xs-2">
-                    <div class="case-study-holder"></div>
-                </div>
-                <div class="col-md-9 col-sm-8 col-xs-10 case-study-text">
-                    <h3 class="case-study-head">Monera</h3>
-                    <p class="case-study-p">Read our case study about building Monera e-commerce website!</p>
-                    <a href="#"><button class="case-study-full-button">READ MORE</button></a>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-md-6 col-sm-12 col-xs-12">
-            <div class="case-study-shell">
-                <div class="col-md-3 col-sm-3 col-xs-2">
-                    <div class="case-study-holder" id="case-study-img">
-                    </div>
-                </div>
-                <div class="col-md-9 col-sm-8 col-xs-10 case-study-text">
-                    <h3 class="case-study-head">Monera</h3>
-                    <p class="case-study-p">Read our case study about building Monera e-commerce website!</p>
-                    <a href="#"><button class="case-study-full-button">READ MORE</button></a>
-                </div>
-            </div>
-        </div>
+        @foreach (var ourCase in Model.Cases)
+        {
+            @Html.Partial("_Case", ourCase)
+        }
+        
         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
             <a href="@Url.Action("References")"  class="underline" >See all cases</a>
         </div>
