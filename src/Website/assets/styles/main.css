@@ -380,7 +380,7 @@ ul {
   color: #0976BB; }
 
 .case-study-shell:hover .case-study-holder {
-  background: url(../img/case-study-white.pmg.png);
+  background: url(/assets/images/case-study-white.pmg.png);
   background-size: contain; }
 
 .case-study-cta-button:hover {
@@ -426,8 +426,7 @@ a {
   font-size: 1.1em; }
 
 .underline {
-  text-decoration: underline;
-  margin: 0 25%; }
+  text-decoration: underline; }
 
 .fun-fact {
   color: #222222;
