@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Website
 {
-    public class RouteConfig
+    public static class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
@@ -23,8 +19,8 @@ namespace Website
 
             routes.MapRoute(
                 name: "Resource",
-                url: "resources",
-                defaults: new { controller = "Page", action = "Index", slug = "resources" }
+                url: "resources/{*slug}",
+                defaults: new { controller = "Page", action = "Index", slug = UrlParameter.Optional }
             );
 
 

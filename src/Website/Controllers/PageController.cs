@@ -16,8 +16,13 @@ namespace Website.Controllers
         } 
 
         // GET: Page
-        public ActionResult Index(string slug)
+        public ActionResult Index(string slug = "resources")
         {
+            if (!slug.Contains("resources"))
+            {
+                slug = "resources/" + slug;
+            }
+
             var page = _contentService.GetBySlug(slug);
 
             if (page == null)
