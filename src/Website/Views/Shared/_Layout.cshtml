@@ -53,10 +53,10 @@
                     <li class="@Html.IsActive("About", "Home")">@Html.ActionLink("Solving development", "About", "Home")</li>
                     <li class="@Html.IsActive("References", "Home")">@Html.ActionLink("References", "References", "Home")</li>
                     <li class="dropdown">
-                        <button class=" @Html.IsActive("Index", "Page") btn btn-primary dropdown-toggle button-dropdown" type="button" data-toggle="dropdown">
+                        <a class="@Html.IsActive("Index", "Page") btn btn-primary dropdown-toggle button-dropdown" href="@Url.Action("Index", new {controller = "Page", slug = "resources"})">
                             Resources
                             <span class="caret"></span>
-                        </button>
+                        </a>
                         <ul class="dropdown-menu">
                             <li class="@Html.IsActive("Index", "Page")">@Html.ActionLink("Services", "Index", "Page", new { slug = "resources" }, new { })</li>
                             <li class="divider"></li>
