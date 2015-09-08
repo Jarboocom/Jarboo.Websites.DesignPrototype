@@ -1,17 +1,16 @@
-﻿#icons {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin: -300px 0 0 -400px;
-  z-index: 100; }
-
-body {
-  font-family: "Raleway", sans-serif;
-  overflow-x: hidden !important; }
+﻿body {
+  font-family: "Raleway", sans-serif; }
 
 img {
   max-height: 100%;
   max-width: 100%; }
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px; }
+
+.section1-text > ul > li {
+  text-align: left; }
 
 .navbar-brand {
   margin-top: -10px;
@@ -89,6 +88,10 @@ img {
   padding-bottom: 30px; }
 
 .section1-text {
+  padding-left: 3%;
+  padding-right: 3%; }
+
+.section1-text-footer {
   padding-left: 3%;
   padding-right: 3%; }
 
@@ -547,6 +550,8 @@ li a {
   .header-container {
     width: 100%; }
   .above-header-CTA {
+    width: 100%;
+    background: #0976BB;
     height: 50px; }
   .CTA-button-full-head-small-devices {
     height: 50px;
@@ -595,7 +600,9 @@ li a {
   .header-container {
     width: 100%; }
   .above-header-CTA {
-    height: 50px; }
+    height: 50px;
+    width: 100%;
+    background: #0976BB; }
   .CTA-button-full-head-small-devices {
     height: 50px;
     width: 100%;
