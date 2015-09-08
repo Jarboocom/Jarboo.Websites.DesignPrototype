@@ -53,7 +53,7 @@
                     <li class="@Html.IsActive("About", "Home")">@Html.ActionLink("Solving development", "About", "Home")</li>
                     <li class="@Html.IsActive("References", "Home")">@Html.ActionLink("References", "References", "Home")</li>
                     <li class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle button-dropdown" type="button" data-toggle="dropdown">
+                        <button class=" @Html.IsActive("Index", "Page") btn btn-primary dropdown-toggle button-dropdown" type="button" data-toggle="dropdown">
                             Resources
                             <span class="caret"></span>
                         </button>
@@ -162,6 +162,14 @@
 	    __gaTracker('require', 'displayfeatures');
 	    __gaTracker('send','pageview');
 
+    </script>
+
+    <script type="text/javascript">
+	    $('ul.nav li.dropdown').hover(function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+        }, function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+        });
     </script>
     @RenderSection("scripts", required: false)
 </body>
