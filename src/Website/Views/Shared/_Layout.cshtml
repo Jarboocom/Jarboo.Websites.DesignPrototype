@@ -96,55 +96,65 @@
 
     <div class="row footer">
         <div class="footer-wrapper">
-            <div class="col-md-2 col-sm-3 col-xs-12 section1-text-footer">
-                <ul class="footer-ul">
-                    <li class="footer-category-title">Pages</li>
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Solving development", "About", "Home")</li>
-                    <li>@Html.ActionLink("References", "References", "Home")</li>
-                    <li>@Html.ActionLink("Resources", "Index", "Page", new { slug = "resources" }, new { })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Discuss project", "DiscussProject", "Lead")</li>
-                </ul>
-            </div>
-            
-            <div class="col-md-2 col-sm-3 col-xs-12 section1-text-footer">
-                <ul class="">
-                    <li class="footer-category-title">Contact</li>
-                    <li class="footer-p">mail@jarboo.com</li>
-                    <li class="footer-p">(+45) 6179 3650</li>
+            <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-12 section1-text-footer">
+                    <ul class="footer-ul">
+                        <li class="footer-category-title">Pages</li>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Solving development", "About", "Home")</li>
+                        <li>@Html.ActionLink("References", "References", "Home")</li>
+                        <li>@Html.ActionLink("Resources", "Index", "Page", new { slug = "resources" }, new { })</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Discuss project", "DiscussProject", "Lead")</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-12 section1-text-footer">
+                    <ul class="">
+                        <li class="footer-category-title">Address</li>
+                        <p class="footer-p">Thuavej 5</p>
+                        <p class="footer-p">3650 Ølstykke</p>
+                        <p class="footer-p">Denmark</p>
+                    </ul>
+                </div>
 
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-3 col-xs-12 section1-text-footer">
-                <ul class="">
-                    <li class="footer-category-title">Address</li>
-                    <p class="footer-p">Thuavej 5</p>
-                    <p class="footer-p">3650 Ølstykke</p>
-                    <p class="footer-p">Denmark</p>
-                </ul>
-            </div>
-            
-            <div class="col-md-2 hidden-sm col-xs-12 section1-text-footer">
-                <ul class="">
-                    <li class="footer-category-title">Company registration</li>
-                    <li class="footer-p">YouFirm IvS</li>
-                    <li class="footer-p">DK36406208</li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-3 col-xs-12 section1-text-footer">
-                @*<ul class="">
-                <li class="footer-category-title">Info</li>
-                <li><a href="picks">FAQ</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>*@
-            </div>
+                <div class="col-md-2 hidden-sm col-xs-12 section1-text-footer">
+                    <ul class="">
+                        <li class="footer-category-title">Company registration</li>
+                        <li class="footer-p">YouFirm IvS</li>
+                        <li class="footer-p">DK36406208</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 section1-text-footer">
+                    <ul class="">
+                        <li class="footer-category-title">Contact</li>
+                        <li class="footer-p">mail@jarboo.com</li>
+                        <li class="footer-p">(+45) 6179 3650</li>
 
-            <div class="col-md-2 hidden-sm hidden-xs">
-                <img src="@Url.Content("~/assets/images/logo.png")" alt=" ">
+                    </ul>
+                </div>
+                <div class="col-md-1 col-sm-3 col-xs-12 section1-text-footer">
+                    @*<ul class="">
+                    <li class="footer-category-title">Info</li>
+                    <li><a href="picks">FAQ</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>*@
+                </div>
+
+                <div class="col-md-2 hidden-sm hidden-xs">
+                    <img src="@Url.Content("~/assets/images/logo.png")" alt=" ">
+                </div>
             </div>
-        </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 section1-text-footer-social">
+                <div class="social-icons">
+                    <div class="social-icons-facebook">
+                        <a href="https://www.facebook.com/jarboocom"><img src="@Url.Content("~/assets/images/facebook.png")" alt="facebook"></a>
+                    </div>
+                    <div class="social-icons-twitter">
+                        <a href="https://twitter.com/jarboocom"><img src="@Url.Content("~/assets/images/twitter.png")" alt="twitter"></a>
+</div>
+                </div>
+            </div>
     </div>
 
 
