@@ -37,6 +37,14 @@ namespace Website.Controllers
             return View();
         }
 
+        [Route("~/free-advice")]
+        public ActionResult FreeAdvice()
+        {
+            return View();
+        }
+
+
+
 
         [Route("~/about")]
         public ActionResult About()
