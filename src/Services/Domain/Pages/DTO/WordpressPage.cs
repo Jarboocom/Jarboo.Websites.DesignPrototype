@@ -8,6 +8,11 @@
         public Page page { get; set; }
     }
 
+    public class WordpressPost
+    {
+        public Page post { get; set; }
+    }
+
     public class Page
     {
         public int id { get; set; }
