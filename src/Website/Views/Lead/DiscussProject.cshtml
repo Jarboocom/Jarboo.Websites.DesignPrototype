@@ -20,6 +20,7 @@
         <div class="col-md-7 col-sm-12 col-xs-12 section1-text">
             <h2>Basic data</h2>
             <form class="form-horizontal" role="form" method="post" action="#">
+                @Html.AntiForgeryToken()
 
                 <div class="form-group">
                     <label for="email" class="col-md-12  col-sm-12 col-xs-12 control-label">E-mail:</label>
