@@ -43,6 +43,11 @@ namespace Website.Controllers
             return View();
         }
 
+        [Route("~/ebook")]
+        public ActionResult EbookSignup()
+        {
+            return View();
+        }
 
 
 

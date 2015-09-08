@@ -254,6 +254,7 @@
     <Content Include="Views\Home\GratisRadgivning.cshtml" />
     <Content Include="Views\Home\NewsletterSignUp.cshtml" />
     <Content Include="Views\Page\Blog.cshtml" />
+    <Content Include="Views\Home\EbookSignup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

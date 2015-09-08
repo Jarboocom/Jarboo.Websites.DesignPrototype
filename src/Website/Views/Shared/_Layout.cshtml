@@ -47,12 +47,22 @@
                 </button>
                 <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="@Url.Content("~/assets/images/logo.png")" alt="" style="width: 100%;"></a>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <li class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="@Html.IsActive("Index", "Home")">@Html.ActionLink("Home", "Index", "Home")</li>
                     <li class="@Html.IsActive("About", "Home")">@Html.ActionLink("Solving development", "About", "Home")</li>
                     <li class="@Html.IsActive("References", "Home")">@Html.ActionLink("References", "References", "Home")</li>
-                    <li class="@Html.IsActive("Index", "Page")">@Html.ActionLink("Resources", "Index", "Page", new { slug = "resources" }, new { })</li>
+                    <li class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle button-dropdown" type="button" data-toggle="dropdown">
+                            Resources
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="@Html.IsActive("Index", "Page")">@Html.ActionLink("Services", "Index", "Page", new { slug = "resources" }, new { })</li>
+                            <li class="divider"></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
                     <li class="@Html.IsActive("Contact", "Home")">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "header-li-margin-element" })</li>
                     <li>
                         <a href="@Url.Action("DiscussProject", "Lead")" style="padding: 0;"><button class="CTA-button-full-head">DISCUSS A PROJECT</button></a>
