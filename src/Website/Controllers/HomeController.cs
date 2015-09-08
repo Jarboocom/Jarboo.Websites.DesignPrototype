@@ -31,6 +31,13 @@ namespace Website.Controllers
             return View(model);
         }
 
+        [Route("~/gratis-radgivning")]
+        public ActionResult GratisRadgivning()
+        {
+            return View();
+        }
+
+
         [Route("~/about")]
         public ActionResult About()
         {

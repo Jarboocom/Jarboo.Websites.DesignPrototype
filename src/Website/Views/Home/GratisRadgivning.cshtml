@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "title";
+}
+
+<div class="row section1">
+    <div class="col-md-7 col-sm-12 col-xs-12 section1-text">
+        <h1 class="h1-index h1-centered">
+            Vil du have gratis rådgivning<br>om dit software projekt??
+        </h1>
+        <p>
+            Jeg tilbyder en gratis 1-times samtale, hvor vi kan snakke om dit software projekt (app, websites, webshop eller lignende).
+        </p>
+
+        <div class="row buttons-section1">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <a href="@Url.Action("Contact","Home")"><button class="CTA-button-full-section1">FÅ ET GRATIS MØDE</button></a>
+            </div>
+        </div>
+        @*<p class="fun-fact"><span style="color:#0976BB;">Did you know?</span> We're cheaper than employees, <br> and we have no minimum project size?</p>*@
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12 section1-image">
+        <img src="@Url.Content("~/assets/images/instant-prices.png")" alt="" class="instant-prices">
+        @*<h4 class="index-consulting">Having a project? <br> Get a free chat about anything technical</h4>*@
+    </div>
+</div>
+
+<div class="row solving-section2">
+    <div class="wrapper-solving-section2">
+        <div class="col-md-7 col-sm-12 col-xs-12">
+            <h1>Eksempler på rådgivning</h1>
+            
+            <p>
+                Vi kan snakke om alt det tekniske du vil, men he er nogen eksempler på emner:
+            </p>
+            <div class="col-md-12 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                <div class="col-md-2 col-sm-2 col-xs-12 solving-section2-icon">
+                    <img src="@Url.Content("~/assets/images/scalable.png")" alt="">
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-12 sm-left-p">
+                    <h4 class="solving-h4">Hvor meget koster det at lave denne app / website / lign.</h4>
+                    <p>Det kan være ekstremt svært for en ikke-teknisk person at vurdere hvor meget det koster at lave en specifik app, website, webshop eller lignende. </p>
+                    <p>Vi kan gå igennem dit projekt, også kan jeg give et groft estimat (eller foreslå hvordan en meget billig prototype kunne laves).</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                <div class="col-md-2 col-sm-2 col-xs-12 solving-section2-icon">
+                    <img src="@Url.Content("~/assets/images/time.png")" alt=" ">
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-12 sm-left-p">
+                    <h4 class="solving-h4">Hvordan finder jeg den rigtige tekniske co-founder?</h4>
+                    <p>Hvis du har et startup, har du ofte brug for en teknisk co-founder. Men hvordan finder du ud af om en kandidat er god eller dårlig? Og hvordan finder du overhoved sådan en person?</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                <div class="col-md-2 col-sm-2 col-xs-12 solving-section2-icon">
+                    <img src="@Url.Content("~/assets/images/money.png")" alt="">
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-12 sm-left-p">
+                    <h4 class="solving-h4">Hvordan lave rman en billig prototype?</h4>
+                    <p>For at få en investering, eller bare teste en ide, er det ofte en rigtig god ide at lave en prototype.</p>
+                    <p>Der er altid måder hvorpå man kan lave en (meget) billig prototype, og vi kan snakke om hvordan det kan gøres.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-5 hidden-sm hidden-xs solving-ipad">
+            <img src="@Url.Content("~/assets/images/ipad.png")" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row testemonial-section">
+    <div class="section2-index-wrapper">
+        <div class="col-md- col-sm-12 col-xs-12 section1-text">
+            <h1 class="h1-index  h1-centered">Teknisk rådgivning fra en ekspert</h1>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+            <div class="client-holder">
+                <img src="@Url.Content("~/assets/images/lars.jpg")" alt="Monera">
+            </div>
+            <h3 class="client-name">Lras Holdgaard</h3>
+            <p class="client-position">CEO og co-founder i Jarboo</p>
+        </div>
+        <div class="col-md-9 col-sm-12 col-xs-12 testemonial">
+            <p><i>Jeg har lavet websites, apps, interne programmer og har brugt de fleste største teknologier.<br/><br/>Jeg har programmeret i 9 år, og har arbejdet med startups de sidste 7 år. Jeg har desuden en bachelorgrad i softwareteknologi, og en kandidat i e-business.<br/><br/>Men vigtigst af alt:<br/>Hver dag arbejder jeg med startups. I min virksomhed Jarboo, arbejder du med iværksættere med at få bygget produkter. Vi <b>VIL</b> være den billigste måde at udvikle på, samtidig med høj kvalitet</i>.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row CTA-section">
+    <div class="CTA-wrapper">
+        <div class="col-md-6 col-sm-12 col-xs-12 section1-text">
+            <h2 class="CTA-h2">Få et gratis møde:</h2>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 CTA-buttons-CTA">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button onclick="location.href ='@Url.Action("Contact","Home")'" class="CTA-button-full-CTA">Få et gratis møde</button>
+            </div>
+        </div>
+    </div>
+</div>

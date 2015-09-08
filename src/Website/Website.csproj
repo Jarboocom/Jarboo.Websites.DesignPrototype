@@ -212,6 +212,7 @@
       <DependentUpon>main.css</DependentUpon>
     </Content>
     <None Include="compilerconfig.json" />
+    <None Include="Properties\PublishProfiles\file.pubxml" />
     <None Include="Properties\PublishProfiles\JarbooDesignPrototype.pubxml" />
     <None Include="Properties\PublishProfiles\Prod publish.pubxml" />
     <None Include="Properties\PublishProfiles\Test publish.pubxml" />
