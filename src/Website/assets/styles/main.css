@@ -194,9 +194,8 @@ ul {
   margin-left: 3%; }
 
 .must-field {
-  font-size: 0.85em;
-  margin-top: 5px;
-  color: #0976BB; }
+  font-size: 25px;
+  line-height: -50px; }
 
 .section1-image {
   height: 400px; }
