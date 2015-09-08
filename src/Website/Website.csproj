@@ -148,6 +148,7 @@
   <ItemGroup>
     <Content Include="assets\fonts\Raleway-ExtraLight.svg" />
     <Content Include="assets\fonts\Raleway-Light.svg" />
+    <Content Include="assets\images\amino.png" />
     <Content Include="assets\images\arhite.png" />
     <Content Include="assets\images\bracket.png" />
     <Content Include="assets\images\case-study-white.pmg.png" />
@@ -185,6 +186,7 @@
     <Content Include="assets\images\saxo.png" />
     <Content Include="assets\images\scalable.png" />
     <Content Include="assets\images\shipbeat.png" />
+    <Content Include="assets\images\tech.png" />
     <Content Include="assets\images\test-solving.png" />
     <Content Include="assets\images\test.png" />
     <Content Include="assets\images\time.png" />

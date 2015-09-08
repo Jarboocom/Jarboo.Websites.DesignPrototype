@@ -23,10 +23,9 @@
                 @Html.AntiForgeryToken()
 
                 <div class="form-group">
-                    <label for="email" class="col-md-12  col-sm-12 col-xs-12 control-label">E-mail:</label>
+                    <label for="email" class="col-md-12  col-sm-12 col-xs-12 control-label"><div>E-mail:<span class="must-field">*</span></div></label>
                     <div class="col-md-10 col-sm-12 col-xs-12">
                         @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Your e-mail adress", value = "", id = "email" })
-                        <p class="must-field">Must be filled out</p>
                     </div>
                     <div class="col-md-2 col-sm-12 col-xs-12"></div>
                 </div>
@@ -58,10 +57,9 @@
                 <h2>Project data</h2>
 
                 <div class="form-group">
-                    <label for="message" class="col-md-12 col-sm-12 col-xs-12 control-label control-label-margin">Describe your project or situation:**</label>
+                    <label for="message" class="col-md-12 col-sm-12 col-xs-12 control-label control-label-margin">Describe your project or situation:<span class="must-field">*</span></label>
                     <div class="col-sm-10">
                         @Html.TextAreaFor(m => m.ProjectDescription, new { @class = "form-control", placeholder = "Describe your project or situation", rows = "4", name = "message" })
-                        <p class="must-field">Must be filled out</p>
                     </div>
                     <div class="col-md-2  col-sm-12 col-xs-12"></div>
                 </div>
