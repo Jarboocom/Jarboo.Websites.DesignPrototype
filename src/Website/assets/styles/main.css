@@ -193,6 +193,11 @@ ul {
 .section1-text-footer-social {
   margin-left: 3%; }
 
+.must-field {
+  font-size: 0.85em;
+  margin-top: 5px;
+  color: #0976BB; }
+
 .section1-image {
   height: 400px; }
 
