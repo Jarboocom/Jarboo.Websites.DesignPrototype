@@ -150,6 +150,7 @@
     <Content Include="assets\fonts\Raleway-Light.svg" />
     <Content Include="assets\images\amino.png" />
     <Content Include="assets\images\arhite.png" />
+    <Content Include="assets\images\BilligeFly.png" />
     <Content Include="assets\images\bracket.png" />
     <Content Include="assets\images\case-study-white.pmg.png" />
     <Content Include="assets\images\case-study-white.png" />
@@ -163,6 +164,7 @@
     <Content Include="assets\images\developer.png" />
     <Content Include="assets\images\development.png" />
     <Content Include="assets\images\empl.png" />
+    <Content Include="assets\images\facebook.png" />
     <Content Include="assets\images\gigster.png" />
     <Content Include="assets\images\imac.png" />
     <Content Include="assets\images\instant-prices.png" />
@@ -190,6 +192,7 @@
     <Content Include="assets\images\test-solving.png" />
     <Content Include="assets\images\test.png" />
     <Content Include="assets\images\time.png" />
+    <Content Include="assets\images\twitter.png" />
     <Content Include="assets\images\USA-tours.png" />
     <Content Include="assets\styles\main.css">
       <DependentUpon>main.scss</DependentUpon>
