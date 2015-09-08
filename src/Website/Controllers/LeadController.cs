@@ -64,11 +64,8 @@ namespace Website.Controllers
             message.AddGlobalMergeVars("ProjectStart", model.ProjectStart);
             message.AddGlobalMergeVars("ProjectDeadline", model.ProjectDeadline);
             //template should be created
-            var result = api.Messages.SendTemplate(message, "customer-lead");
+            var result = api.Messages.SendTemplate(message, "jarboo-new-lead");
         }
-
-        
-       
     }
 }
 
