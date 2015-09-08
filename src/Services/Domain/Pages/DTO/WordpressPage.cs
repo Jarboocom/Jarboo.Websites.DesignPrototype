@@ -1,4 +1,6 @@
-﻿namespace Services.Domain.Pages.DTO
+﻿using System.Collections.Generic;
+
+namespace Services.Domain.Pages.DTO
 {
 
 
@@ -11,6 +13,14 @@
     public class WordpressPost
     {
         public Page post { get; set; }
+    }
+
+    public class WordpressBlog
+    {
+        public int count_total { get; set; }
+        public int count { get; set; }
+        public int pages { get; set; }
+        public List<Page> posts { get; set; }
     }
 
     public class Page

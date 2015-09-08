@@ -32,5 +32,22 @@ namespace Website.Controllers
 
             return View(page);
         }
+
+        [Route("~/blog")]
+        public ActionResult Blog(int page = 1)
+        {
+            const int articlesPerPage = 3;
+            var spec = new PageSpecification
+            {
+                Take = articlesPerPage,
+                Skip = (page - 1) * articlesPerPage
+            };
+
+            var blogs = _postService.GetBySpecifiction(spec);
+
+            ViewBag.Page = page;
+
+            return View(blogs);
+        }
     }
 }
