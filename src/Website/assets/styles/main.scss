@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
 #icons {
     position: fixed;
@@ -119,7 +118,7 @@ img {
 }
 
 .section1-text {
-    padding-left: 0%;
+    padding-left: 3%;
     padding-right: 3%;
 }
 
@@ -415,7 +414,6 @@ ul {
 
 .case-study-shell {
     width: 95%;
-    height: 180px;
     padding-top: 15px;
     padding-bottom: 15px;
     transition: 0.5s all;
@@ -433,8 +431,8 @@ ul {
 
 .case-study-text {
     border-left: 4px solid $main-color;
-    height: 150px;
     transition: 0.5s all;
+    padding-bottom: 20px;
 }
 
 .case-study-head {
@@ -450,7 +448,6 @@ ul {
 .case-study-full-button {
     height: 30px;
     width: 45%;
-    position: absolute;
     top: 110px;
     border: none;
     margin: 0 auto;
@@ -462,32 +459,42 @@ ul {
     transition: 0.5s all;
 }
 
+.case-study-img {
+}
 
 .case-study-shell:hover {
-    background: $main-color;
 }
 
-.case-study-shell:hover .case-study-text {
+.case-study-shelll:hover .case-study-text {
     border-left: 4px solid white;
+    background:$main-color;
 }
 
-.case-study-shell:hover .case-study-head {
+.case-study-shelll:hover .case-study-head {
     color: white;
 }
 
-.case-study-shell:hover .case-study-p {
+.case-study-shelll:hover .case-study-p {
     color: white;
 }
 
-.case-study-shell:hover .case-study-full-button {
+.case-study-shelll:hover .case-study-full-button {
     background: white;
     color: $main-color;
 }
 
-.case-study-shell:hover .case-study-holder {
+.case-study-shelll:hover .case-study-holder {
     background: url(/assets/images/case-study-white.pmg.png);
     background-size: contain;
 }
+
+.case-study-full-button:hover {
+    border: 2px solid $main-color;
+    background: white;
+    color: $main-color;
+    transition: 0.5s all; 
+}
+
 
 .case-study-cta-button:hover {
     width: 30%;
@@ -856,7 +863,7 @@ li a {
     // --------- CASE STUDY ---------//
     
     .case-study-p {
-        text-align: left;
+        text-align: center;
     }
     
     .case-study-holder {
@@ -868,6 +875,69 @@ li a {
     .case-study-cta-button {
         width: 50%;
         margin-left: 25%;
+    }
+
+      .case-study-cta-button {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .case-study-shell{
+        height: auto;
+        padding-bottom: 20px;
+        margin-left: 0px;
+    }
+    .case-study-text {
+        border: none;
+        height: auto;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-left: 0px;
+    }
+
+    .case-study-text:hover {
+        border-left: none !important;
+    }
+    .case-study-full-button {
+        width: 60%;
+        position: relative;
+        top: 0;
+    }
+
+    .case-study-holder {
+        margin-top: 50px;
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+        background: url(/assets/images/case-study.png) no-repeat;
+        background-size: contain;
+        transition: 0.5s all;
+    }
+
+
+    .case-study-shell:hover {
+        background: white;
+    }
+
+    .case-study-shell:hover .case-study-text {
+        border-left: none;
+    }
+
+    .case-study-shell:hover .case-study-head {
+        color: $main-color;
+    }
+
+    .case-study-shell:hover .case-study-p {
+        color: #222222;
+    }
+
+    .case-study-shell:hover .case-study-full-button {
+        background: $main-color;
+        color: white;
+    }
+
+    .case-study-shell:hover .case-study-holder {
+        background: url(/assets/images/case-study.png);
+        background-size: contain;
     }
     
     // ------- CTA SECTION ------- //
@@ -1166,6 +1236,10 @@ li a {
     margin-top: 0px;
 }
 
+.references-h4 {
+    text-align: center;
+}
+
 .solving-section2-icontext-wrapper {
     margin-top: 40px;
 }
@@ -1174,7 +1248,9 @@ li a {
     max-width: 100px;   
 }
 
-
+.footer-ul > li > a {
+    color: white;
+}
 // ------- MEDIA QUERIES -------- //
 
 @media (min-width : 1500px) and (max-width : 2500px)  {
@@ -1206,9 +1282,13 @@ li a {
     }
     
     .sm-left-p > h4 {
+        margin-top: 20px;
         text-align: center;
     }
     
+    .sm-left-p > p {
+        text-align: center;
+    }
     
     .solving-section2-icon {
         width:26%;

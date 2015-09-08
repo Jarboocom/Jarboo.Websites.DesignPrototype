@@ -14,6 +14,13 @@ namespace Website
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapMvcAttributeRoutes();
+
+            routes.MapRoute(
+                name: "Single case",
+                url: "case/{*slug}",
+                defaults: new { controller = "Case", action = "Index", slug = UrlParameter.Optional }
+            );
+
             routes.MapRoute(
                 name: "Resource",
                 url: "resources",
@@ -29,10 +36,10 @@ namespace Website
 
            
             routes.MapRoute(
-                            name: "Page",
-                            url: "{controller}/{action}/{slug}",
-                            defaults: new { controller = "Page", action = "Index" }
-                        );
+                name: "Page",
+                url: "{controller}/{action}/{slug}",
+                defaults: new { controller = "Page", action = "Index" }
+            );
 
 
         }
