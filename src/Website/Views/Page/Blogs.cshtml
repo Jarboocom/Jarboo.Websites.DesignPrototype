@@ -1,0 +1,43 @@
+﻿@model List<Services.Domain.Pages.JarbooPage>
+@{
+    ViewBag.Title = "Blog";
+    var page = (int)ViewBag.Page;
+    int? totalPages = null;
+    var artcile = Model.FirstOrDefault();
+    if (artcile != null)
+    {
+        totalPages = artcile.Pages;
+    }
+}
+
+<div class="row content-row">
+    <div class="content-wrapper">
+        @foreach (var post in Model)
+        {
+            <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
+                <h2>
+                    @Html.ActionLink(post.Title, "Blog", new { controller = "Page", slug = post.Slug })
+                </h2>
+            </div>
+        }
+
+        <div>
+            @if (totalPages != null && totalPages > 1)
+            {
+                for (int i = 1; i <= totalPages; i++)
+                {
+                    
+                    if (page == i)
+                    {
+                        <span>@i</span>
+                    }
+
+                    if (page != i)
+                    {
+                        <a href="@Url.Action("Blogs", new {controller = "Page", page = i})" class="btn btn-primary">@i</a>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>

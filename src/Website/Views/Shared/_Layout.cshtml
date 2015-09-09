@@ -47,20 +47,20 @@
                 </button>
                 <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="@Url.Content("~/assets/images/logo.png")" alt="" style="width: 100%;"></a>
             </div>
-            <li class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="@Html.IsActive("Index", "Home")">@Html.ActionLink("Home", "Index", "Home")</li>
                     <li class="@Html.IsActive("About", "Home")">@Html.ActionLink("Solving development", "About", "Home")</li>
                     <li class="@Html.IsActive("References", "Home")">@Html.ActionLink("References", "References", "Home")</li>
                     <li class="dropdown">
-                        <a class="@Html.IsActive("Index", "Page") btn btn-primary dropdown-toggle button-dropdown" href="@Url.Action("Index", new {controller = "Page", slug = "resources"})">
+                        <a class="@Html.IsActive("Index", "Page") btn btn-primary dropdown-toggle button-dropdown" href="@Url.Action("Index", "Page")">
                             Resources
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="@Html.IsActive("Index", "Page")">@Html.ActionLink("Services", "Index", "Page", new { slug = "resources" }, new { })</li>
+                            <li class="@Html.IsActive("Index", "Page")">@Html.ActionLink("Services", "Services", "Page")</li>
                             <li class="divider"></li>
-                            <li><a href="#">Blog</a></li>
+                            <li class="@Html.IsActive("Blog", "Page")">@Html.ActionLink("Blog", "Blogs", "Page")</li>
                         </ul>
                     </li>
                     <li class="@Html.IsActive("Contact", "Home")">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "header-li-margin-element" })</li>
@@ -103,7 +103,7 @@
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("Solving development", "About", "Home")</li>
                         <li>@Html.ActionLink("References", "References", "Home")</li>
-                        <li>@Html.ActionLink("Resources", "Index", "Page", new { slug = "resources" }, new { })</li>
+                        <li>@Html.ActionLink("Resources", "Index", "Page", new {slug = "resources"}, new {})</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         <li>@Html.ActionLink("Discuss project", "DiscussProject", "Lead")</li>
                     </ul>
@@ -134,11 +134,11 @@
                 </div>
                 <div class="col-md-1 col-sm-3 col-xs-12 section1-text-footer">
                     @*<ul class="">
-                    <li class="footer-category-title">Info</li>
-                    <li><a href="picks">FAQ</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>*@
+                        <li class="footer-category-title">Info</li>
+                        <li><a href="picks">FAQ</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>*@
                 </div>
 
                 <div class="col-md-2 hidden-sm hidden-xs">
@@ -152,10 +152,12 @@
                     </div>
                     <div class="social-icons-twitter">
                         <a href="https://twitter.com/jarboocom"><img src="@Url.Content("~/assets/images/twitter.png")" alt="twitter"></a>
-</div>
+                    </div>
                 </div>
             </div>
+        </div>
     </div>
+
 
 
 
