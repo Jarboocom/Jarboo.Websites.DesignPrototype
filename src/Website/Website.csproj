@@ -175,6 +175,7 @@
     <Content Include="assets\images\monera-logo.png" />
     <Content Include="assets\images\monera.png" />
     <Content Include="assets\images\money.png" />
+    <Content Include="assets\images\nsa-log.png" />
     <Content Include="assets\images\office.png" />
     <Content Include="assets\images\outso.png" />
     <Content Include="assets\images\pdf.png" />
