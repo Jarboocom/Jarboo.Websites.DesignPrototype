@@ -69,13 +69,13 @@
             <div class="col-md-3 col-sm-12 col-xs-12">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="reference-case-study-icon">
-                        <a href=""><img src="@Url.Content("~/assets/images/case-study-white.pmg.png")" alt=""></a>
+                        <a href="@Url.Action("Index", new {controller = "Case", slug = ourCase.Slug})"><img src="@Url.Content("~/assets/images/case-study-white.pmg.png")" alt=""></a>
                     </div>
                     <div class="reference-case-study-line"></div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="reference-case-study-text">
-                        <h4 class="reference-case-study-h4">@ourCase.Title</h4>
+                        <a href="@Url.Action("Index", new {controller = "Case", slug = ourCase.Slug})"><h4 class="reference-case-study-h4">@ourCase.Title</h4></a>
                         <p class="reference-case-study-p">@ourCase.Description</p>
                         <a href="@Url.Action("Index", new {controller = "Case", slug = ourCase.Slug})"><button class=" references-case-study-btn">READ MORE</button></a>
                     </div>

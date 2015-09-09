@@ -637,7 +637,7 @@ a {
 .section2-index-h3 {
     color: white;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 2.3em;
 }
 
 .section2-index-p {
@@ -743,6 +743,14 @@ li a {
     text-align: center;
     margin-top: -30px;
 }
+.case-study-text>a:hover {
+    text-decoration:none;
+}
+
+.reference-case-study-text>a:hover {
+    text-decoration:none;
+}
+
 
 // ------- MEDIA QUERIES -------- //
 
@@ -802,7 +810,7 @@ li a {
     
     .above-header-CTA {
         width: 100%;
-        background: $main-color;
+        background: $amazon;
         height: 50px;
     }
     
@@ -814,7 +822,7 @@ li a {
         width: 100%;
         border: none;
         margin: 0 auto;
-        background: $main-color;
+        background: $amazon;
         text-align: center;
         margin-top: 0px;
         padding-top: 5px;
@@ -905,7 +913,7 @@ li a {
     .above-header-CTA {
         height: 50px;
         width: 100%;
-        background: $main-color;
+        background: $amazon;
     }
     
     // ------- ABOVE HEADER SECTION ------- //
@@ -916,7 +924,7 @@ li a {
         width: 100%;
         border: none;
         margin: 0 auto;
-        background: $main-color;
+        background: $amazon;
         text-align: center;
         margin-top: 0px;
         padding-top: 5px;
