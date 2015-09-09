@@ -501,7 +501,7 @@ a {
 .section2-index-h3 {
   color: white;
   text-align: center;
-  font-size: 1.4em; }
+  font-size: 2.3em; }
 
 .section2-index-p {
   color: white;
@@ -585,6 +585,12 @@ li a {
   text-align: center;
   margin-top: -30px; }
 
+.case-study-text > a:hover {
+  text-decoration: none; }
+
+.reference-case-study-text > a:hover {
+  text-decoration: none; }
+
 @media (min-width: 768px) and (max-width: 992px) {
   .header-li-margin-element {
     margin-right: 0px; }
@@ -609,14 +615,14 @@ li a {
     width: 100%; }
   .above-header-CTA {
     width: 100%;
-    background: #0976BB;
+    background: #e4b311;
     height: 50px; }
   .CTA-button-full-head-small-devices {
     height: 50px;
     width: 100%;
     border: none;
     margin: 0 auto;
-    background: #0976BB;
+    background: #e4b311;
     text-align: center;
     margin-top: 0px;
     padding-top: 5px;
@@ -660,13 +666,13 @@ li a {
   .above-header-CTA {
     height: 50px;
     width: 100%;
-    background: #0976BB; }
+    background: #e4b311; }
   .CTA-button-full-head-small-devices {
     height: 50px;
     width: 100%;
     border: none;
     margin: 0 auto;
-    background: #0976BB;
+    background: #e4b311;
     text-align: center;
     margin-top: 0px;
     padding-top: 5px;
