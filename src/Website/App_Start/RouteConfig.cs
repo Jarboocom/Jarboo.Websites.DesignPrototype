@@ -23,6 +23,18 @@ namespace Website
                 defaults: new { controller = "Page", action = "Index", slug = UrlParameter.Optional }
             );
 
+            routes.MapRoute(
+                name: "Services",
+                url: "services/{*slug}",
+                defaults: new { controller = "Page", action = "Services", slug = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Blog",
+                url: "blog/{*slug}",
+                defaults: new { controller = "Page", action = "Blog", slug = UrlParameter.Optional }
+            );
+
 
             routes.MapRoute(
                 name: "Default",

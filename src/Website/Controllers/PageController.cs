@@ -38,10 +38,32 @@ namespace Website.Controllers
             return View(page);
         }
 
-        [Route("~/blog")]
-        public ActionResult Blog(int page = 1)
+        public ActionResult Services(string slug = "services")
         {
-            const int articlesPerPage = 3;
+            if (!slug.Contains("services"))
+            {
+                slug = "services/" + slug;
+            }
+
+            var page = _contentService.GetBySlug(slug);
+
+            if (page == null)
+            {
+                page = _postService.GetBySlug(slug);
+
+                if (page == null)
+                {
+                    return HttpNotFound();
+                }
+            }
+
+            return View("Index", page);
+        }
+
+        [Route("~/blog")]
+        public ActionResult Blogs(int page = 1)
+        {
+            const int articlesPerPage = 10;
             var spec = new PageSpecification
             {
                 Take = articlesPerPage,
@@ -53,6 +75,23 @@ namespace Website.Controllers
             ViewBag.Page = page;
 
             return View(blogs);
+        }
+
+        public ActionResult Blog(string slug)
+        {
+            var page = _contentService.GetBySlug(slug);
+
+            if (page == null)
+            {
+                page = _postService.GetBySlug(slug);
+
+                if (page == null)
+                {
+                    return HttpNotFound();
+                }
+            }
+
+            return View("Index", page);
         }
     }
 }
