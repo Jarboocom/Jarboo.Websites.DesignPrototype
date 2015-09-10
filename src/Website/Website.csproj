@@ -165,7 +165,9 @@
     <Content Include="assets\images\development.png" />
     <Content Include="assets\images\empl.png" />
     <Content Include="assets\images\facebook.png" />
+    <Content Include="assets\images\favico.png" />
     <Content Include="assets\images\gigster.png" />
+    <Content Include="assets\images\huma.png" />
     <Content Include="assets\images\imac.png" />
     <Content Include="assets\images\instant-prices.png" />
     <Content Include="assets\images\ipad.png" />
