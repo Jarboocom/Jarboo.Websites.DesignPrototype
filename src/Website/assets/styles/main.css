@@ -60,6 +60,11 @@ img {
   color: #222222;
   border: none; }
 
+.button-dropdown:focus {
+  background: #F8F8F8;
+  color: #222222;
+  border: none; }
+
 .dropdown-menu {
   margin-left: 15px; }
 
@@ -169,8 +174,7 @@ img {
   padding-bottom: 30px; }
 
 ul {
-  list-style-type: none;
-  color: white; }
+  list-style-type: none; }
 
 .footer-wrapper {
   width: 95%; }
@@ -518,8 +522,11 @@ a {
   text-align: center;
   padding: 0; }
 
-li a {
+.section1-text-footer > ul > li a {
   font-size: 0.9em; }
+
+.footer-category-title {
+  color: white; }
 
 .footer-category-title {
   font-size: 1.5em;
@@ -590,6 +597,9 @@ li a {
 
 .reference-case-study-text > a:hover {
   text-decoration: none; }
+
+ul {
+  color: #222222 !important; }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .header-li-margin-element {
@@ -1014,7 +1024,7 @@ p {
 
 .pageli a {
   color: #222222;
-  font-size: 0.9em; }
+  font-size: 1em; }
 
 .content-wrapper > p {
   font-size: 0.9em;
@@ -1028,9 +1038,8 @@ p {
   border: 1px solid #C3C3C3;
   width: 50%;
   margin: 0 auto;
-  margin-left: 2%;
+  margin-left: 5%;
   margin-top: 40px;
-  margin-left: 25%;
   margin-bottom: 40px;
   padding: 15px; }
 

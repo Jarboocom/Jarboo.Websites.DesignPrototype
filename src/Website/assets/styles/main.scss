@@ -86,6 +86,12 @@ img {
     border: none;
 }
 
+.button-dropdown:focus {
+    background: #F8F8F8;
+    color: #222222;
+    border: none;
+}
+
 .dropdown-menu {
     margin-left: 15px;
 }
@@ -217,7 +223,6 @@ img {
 
 ul {
     list-style-type: none;
-    color: white;
 }
 
 .footer-wrapper {
@@ -659,8 +664,11 @@ a {
     padding: 0;
 }
 
-li a {
+.section1-text-footer>ul>li a {
     font-size: 0.9em;
+}
+.footer-category-title {
+    color: white;
 }
 
 .footer-category-title {
@@ -750,6 +758,11 @@ li a {
 .reference-case-study-text>a:hover {
     text-decoration:none;
 }
+
+ul {
+    color: #222222 !important;
+}
+
 
 
 // ------- MEDIA QUERIES -------- //
@@ -1445,7 +1458,7 @@ p {
     max-width: 80%;
 }
 
-.pageli a { color: #222222; font-size: 0.9em; }
+.pageli a { color: #222222; font-size: 1em; }
 
 .content-wrapper > p {
     font-size: 0.9em;
@@ -1460,9 +1473,8 @@ p {
     border: 1px solid #C3C3C3;
     width: 50%;
     margin: 0 auto;
-    margin-left: 2%;
+    margin-left: 5%;
     margin-top: 40px;
-    margin-left: 25%;
     margin-bottom: 40px;
     padding: 15px;
 }
