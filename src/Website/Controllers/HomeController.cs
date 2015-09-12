@@ -85,6 +85,11 @@ namespace Website.Controllers
             return View();
         }
 
+        public ActionResult NotFound()
+        {
+            return View("404");
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Route("~/contact")]

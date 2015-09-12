@@ -601,6 +601,13 @@ a {
 ul {
   color: #222222 !important; }
 
+.h1-mega {
+  font-size: 7em;
+  padding-left: 0px; }
+
+.h3-404 {
+  color: #222222; }
+
 @media (min-width: 768px) and (max-width: 992px) {
   .header-li-margin-element {
     margin-right: 0px; }
