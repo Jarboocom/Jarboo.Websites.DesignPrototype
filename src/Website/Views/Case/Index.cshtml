@@ -4,43 +4,72 @@
     ViewBag.Title = Model.Title;
 }
 
-<div class="row">
+
+<div class="row single-case-study-top-view">
     <div class="wrapper">
-        <p class="section1-text"><a href="@Url.Action("References", "Home")">References</a> > @Model.Title</p>
-        <div class="col-md-12 col-sm-12 col-xs-12 cs-page-case-study section1-text">
-            <h1>@Model.Title</h1>
-            @Html.Raw(Model.Description)
-        </div>
+            <div class="col-md-8 col-sm-12 col-xs-12 section1-text-white">
+                <h1>@Model.Title</h1>
+                <p>Here would go a short description of this case study. Try to include at least 2-3 lines of text if possible. Nothing too much, just to look a bit less like a spam phising webiste.</p>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 section1-text-white"></div>
     </div>
 </div>
-<div class="row content-wrapper">
 
-    <div class="col-md-8 col-sm-12 col-xs-12 mail-box-case-study">
+<div class="row single-case-study-line">
+</div>
 
-        <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup">
-            <form action="//jarboo.us9.list-manage.com/subscribe/post?u=d7f26f1c6e2ffe07ab5b7efd5&amp;id=60e680a9bd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                    <div class="mc-field-group">
-                        <input type="email" value="" name="EMAIL" class="required email mail-input" id="mce-EMAIL" placeholder="E-Mail address">
-                    </div>
-                    <div id="mce-responses" class="clear">
-                        <div class="response" id="mce-error-response" style="display: none"></div>
-                        <div class="response" id="mce-success-response" style="display: none"></div>
-                    </div>
-                    <div style="position: absolute; left: -5000px;">
-                        <input type="text" name="b_d7f26f1c6e2ffe07ab5b7efd5_60e680a9bd" tabindex="-1" value="">
-                    </div>
-                    <div class="clear">
-                        <input type="submit" value="GET CASE" name="subscribe" id="mc-embedded-subscribe" class="button get-pdf-button">
-                        <input type="hidden" name="JARBOO_PLA" id="JARBOO_PLA" value="@Model.DownloadUrl" />
-                        <!--Change the value of hidden field if you want to use this field somewhere else too-->
-                    </div>
+    <div class="row single-case-study-bottom-view">
+        <div class="wrapper">
+            <div class="col-md-7 col-sm-12 col-xs-12 section1-text">
+                <h2 class="black-text-case-study">Why is this case study so awesome?</h2>
+                <p>Description why is this case study so awesome, and why should they get it right now! Don't wate time guys! Just joking, few lines of text would go awesome here because it will just look a bit like a description, so they know what are they getting. Try to get them interested in this part so they feel like wow, I better give my email to this guys right away!</p>
+            </div>
+            <div class="col-md-5 col-sm-12 col-xs-12 mail-box-case-study">
+                <div class="col-md-12 col-sm-12 col-xs-12 download-background">
+                    <h2>Download this case study now:</h2>
                 </div>
-            </form>
+                <p>We will send you this guide to your mail so you can downalod it!</p>
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+                    <form action="//jarboo.us9.list-manage.com/subscribe/post?u=d7f26f1c6e2ffe07ab5b7efd5&amp;id=60e680a9bd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="mc-field-group">
+                                <label for="email" class="col-md-12  col-sm-12 col-xs-12 control-label-case-study">E-mail:</label>
+                                <input type="email" value="" name="EMAIL" class="required email mail-input" id="mce-EMAIL" placeholder="E-Mail address">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display: none"></div>
+                                <div class="response" id="mce-success-response" style="display: none"></div>
+                            </div>
+                            <div style="position: absolute; left: -5000px;">
+                                <input type="text" name="b_d7f26f1c6e2ffe07ab5b7efd5_60e680a9bd" tabindex="-1" value="">
+                            </div>
+                            <div class="clear">
+                                <input type="submit" value="GET CASE" name="subscribe" id="mc-embedded-subscribe" class="button get-pdf-button">
+                                <input type="hidden" name="JARBOO_PLA" id="JARBOO_PLA" value="@Model.DownloadUrl" />
+                                <!--Change the value of hidden field if you want to use this field somewhere else too-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--End mc_embed_signup-->
+            </div>
         </div>
-        <!--End mc_embed_signup-->
+    </div>
 
 
+<div class="row CTA-section">
+    <div class="CTA-wrapper">
+        <div class="col-md-6 col-sm-12 col-xs-12 section1-text">
+            <h2 class="CTA-h2">Solve your development:</h2>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 CTA-buttons-CTA">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button onclick="location.href ='@Url.Action("DiscussProject","Lead")'" class="CTA-button-full-CTA">DISCUSS A PROJECT</button>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button onclick="location.href='@Url.Action("Contact","Home")'" class="CTA-button-ghost-CTA">CONTACT US</button>
+            </div>
+        </div>
     </div>
 </div>
