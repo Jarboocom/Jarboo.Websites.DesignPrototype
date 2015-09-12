@@ -61,10 +61,12 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="@Html.IsActive("Index", "Home")">@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li class="@Html.IsActive("About", "Home")">@Html.ActionLink("Solving development", "About", "Home")</li>
-                    <li class="@Html.IsActive("References", "Home")">@Html.ActionLink("References", "References", "Home")</li>
-                    <li class="dropdown">
+                    <li id="navbar-li" class="@Html.IsActive("Index", "Home")">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li id="navbar-li" class="@Html.IsActive("About", "Home")">@Html.ActionLink("Solving development", "About", "Home")</li>
+                    <li id="navbar-li" class="@Html.IsActive("References", "Home")">@Html.ActionLink("References", "References", "Home")</li>
+                    <li id="navbar-li" class="@Html.IsActive("Index", "Page")">@Html.ActionLink("Resources", "Services", "Page")</li>
+                    <li id="navbar-li" class="@Html.IsActive("Blog", "Page")">@Html.ActionLink("Blog", "Blogs", "Page")</li>
+                    <!--<li class="dropdown">
                         <a class="@Html.IsActive("Index", "Page") btn btn-primary dropdown-toggle button-dropdown" href="@Url.Action("Index", "Page")">
                             Resources
                             <span class="caret"></span>
@@ -74,8 +76,8 @@
                             <li class="divider"></li>
                             <li class="@Html.IsActive("Blog", "Page")">@Html.ActionLink("Blog", "Blogs", "Page")</li>
                         </ul>
-                    </li>
-                    <li class="@Html.IsActive("Contact", "Home")">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "header-li-margin-element" })</li>
+                    </li>-->
+                    <li id="navbar-li" class="@Html.IsActive("Contact", "Home")">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "header-li-margin-element" })</li>
                     <li>
                         <a href="@Url.Action("DiscussProject", "Lead")" style="padding: 0;"><button class="CTA-button-full-head">DISCUSS A PROJECT</button></a>
                     </li>
