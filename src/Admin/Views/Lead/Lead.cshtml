@@ -4,44 +4,44 @@
     ViewBag.Title = "Edit lead";
 }
 
-<h1>Lead #@Model.Id</h1>
+<h1>Lead #@Model.Id (@Model.Name)</h1>
 
 @Html.ActionLink("GO back","Index","Lead")
 
 <div>
     <h2>Lead data</h2>
-    <div>
-        @Model.Email
-    </div>
-    <div>
-        @Model.DateCreated
-    </div>
-    <div>
-        @Model.DateUpdated
-    </div>
-    <div>
-        @Model.LeadStatus
-    </div>
-    <div>
-        @Model.Company
-    </div>
-    <div>
-        @Model.Name
-    </div>
-    <div>
-        @Model.Skype
-    </div>
+    <dl class="dl-horizontal">
+        <dt>Email: </dt>
+        <dd>@Model.Email</dd>
+
+        <dt>Date Created</dt>
+        <dd>@Model.DateCreated</dd>
+
+        <dt>Date Updated</dt>
+        <dd>@Model.DateUpdated</dd>
+
+        <dt>Status</dt>
+        <dd>@Model.LeadStatus</dd>
+
+        <dt>Company</dt>
+        <dd>@Model.Company</dd>
+
+        <dt>Name</dt>
+        <dd>@Model.Name</dd>
+
+        <dt>Skype</dt>
+        <dd>@Model.Skype</dd>
+    </dl>
 
     <h2>Project data</h2>
-    <div>
-        @Model.ProjectDescription
-    </div>
-    <div>
-        @Model.ProjectDeadline
-    </div>
-    <div>
-        @Model.ProjectStart
-    </div>
+    <dl class="dl-horizontal">
+        <dt>Description</dt>
+        <dd>@Model.ProjectDescription</dd>
 
+        <dt>Deadline</dt>
+        <dd>@Model.ProjectDeadline</dd>
 
+        <dt>Start</dt>
+        <dd>@Model.ProjectStart</dd>
+    </dl>
 </div>

@@ -30,6 +30,12 @@ namespace Website
             );
 
             routes.MapRoute(
+                name: "Projects",
+                url: "projects/{*slug}",
+                defaults: new { controller = "Page", action = "Projects", slug = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Blog",
                 url: "blog/{*slug}",
                 defaults: new { controller = "Page", action = "Blog", slug = UrlParameter.Optional }

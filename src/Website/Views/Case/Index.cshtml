@@ -1,4 +1,5 @@
-﻿@model Services.Domain.Case.Case
+﻿@using System.Web.UI.WebControls
+@model Services.Domain.Case.Case
 
 @{
     ViewBag.Title = Model.Title;
@@ -33,14 +34,21 @@
                     </div>
                     <div class="clear">
                         <input type="submit" value="GET CASE" name="subscribe" id="mc-embedded-subscribe" class="button get-pdf-button">
-                        <input type="hidden" name="JARBOO_PLA" id="JARBOO_PLA" value="@Model.DownloadUrl" />
+                        <input type="hidden" name="JARBOO_PLA" id="JARBOO_PLA" value="@Model.DownloadUrl"/>
                         <!--Change the value of hidden field if you want to use this field somewhere else too-->
                     </div>
                 </div>
             </form>
         </div>
         <!--End mc_embed_signup-->
-
-
     </div>
 </div>
+
+@section scripts {
+    <script type="text/javascript">
+        $(function() {
+            window._fbq = window._fbq || [];
+            window._fbq.push(['track', '@Model.Id', { type: 'case', title: '@Model.Title', description: '@Model.Description' }]);
+        });
+    </script>
+}

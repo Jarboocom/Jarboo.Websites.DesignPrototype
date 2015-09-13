@@ -65,12 +65,12 @@
                     <li class="@Html.IsActive("About", "Home")">@Html.ActionLink("Solving development", "About", "Home")</li>
                     <li class="@Html.IsActive("References", "Home")">@Html.ActionLink("References", "References", "Home")</li>
                     <li class="dropdown">
-                        <a class="@Html.IsActive("Index", "Page") btn btn-primary dropdown-toggle button-dropdown" href="@Url.Action("Index", "Page")">
+                        <a class="@Html.IsActive("Index", "Page") btn btn-primary dropdown-toggle button-dropdown" href="@Url.Action("Index", "Page", new { slug = "" })">
                             Resources
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="@Html.IsActive("Index", "Page")">@Html.ActionLink("Services", "Services", "Page")</li>
+                            <li class="@Html.IsActive("Services", "Page")">@Html.ActionLink("Services", "Services", "Page", new { slug = "" }, null)</li>
                             <li class="divider"></li>
                             <li class="@Html.IsActive("Blog", "Page")">@Html.ActionLink("Blog", "Blogs", "Page")</li>
                         </ul>
@@ -83,9 +83,6 @@
             </div>
         </div>
     </nav>
-
-
-
 
     @RenderBody()
 
@@ -170,9 +167,6 @@
         </div>
     </div>
 
-
-
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <script type="text/javascript">
@@ -187,7 +181,6 @@
         __gaTracker('set', 'forceSSL', true);
         __gaTracker('require', 'displayfeatures');
         __gaTracker('send', 'pageview');
-
     </script>
 
     <script type="text/javascript">
