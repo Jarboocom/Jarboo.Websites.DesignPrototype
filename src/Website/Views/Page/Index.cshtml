@@ -1,13 +1,17 @@
-﻿@model Services.Domain.Pages.JarbooPage
+﻿@model Website.Models.JarbooPageViewModel
 
 @{
     ViewBag.Title = Model.Title;
+    if (Model.UseSidebarLayout)
+    {
+        Layout = "_SideBarLayout.cshtml";
+    }
 }
 
 <div class="row content-row">
     <div class="content-wrapper">
         <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
-            <h1>@Model.Title</h1>
+            <h1>@Html.Raw(Model.Title)</h1>
 
             @Html.Raw(Model.Content)
         </div>

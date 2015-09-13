@@ -140,8 +140,10 @@
     </Compile>
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
+    <Compile Include="Models\ExtensionMethods\FormatExtensions.cs" />
     <Compile Include="Models\ExtensionMethods\MandrillSendExtension.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\JarbooPageViewModel.cs" />
     <Compile Include="Models\ReferencesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -265,6 +267,7 @@
     <Content Include="Views\Page\Blogs.cshtml" />
     <Content Include="Views\Home\EbookSignup.cshtml" />
     <Content Include="Views\Home\404.cshtml" />
+    <Content Include="Views\Page\_SideBarLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

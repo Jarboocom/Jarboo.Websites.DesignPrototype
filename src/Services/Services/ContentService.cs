@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Text;
 using Newtonsoft.Json;
 using Services.Domain.Pages;
 using Services.Domain.Pages.DTO;
@@ -24,6 +25,7 @@ namespace Services.Services
             {
                 try
                 {
+                    client.Encoding = Encoding.UTF8;
                     var data = client.DownloadString(url);
 
                     var page = JsonConvert.DeserializeObject<WordpressPage>(data);

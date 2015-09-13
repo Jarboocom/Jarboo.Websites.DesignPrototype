@@ -1,6 +1,10 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Services.Domain.Pages;
 using Services.Services;
+using Website.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Website.Controllers
 {
@@ -8,6 +12,10 @@ namespace Website.Controllers
     {
         private readonly IContentService _contentService;
         private readonly IPostService _postService;
+        private List<string> _useSidebarLayoutSlug = new List<string>
+        {
+            "resources/mandrill"
+        };
 
         public PageController()
         {
@@ -35,7 +43,12 @@ namespace Website.Controllers
                 }
             }
 
-            return View(page);
+            var model = new JarbooPageViewModel(page);
+            if (_useSidebarLayoutSlug.Any(item => slug.ToLower().Contains(item)))
+            {
+                model.UseSidebarLayout = true;
+            }
+            return View(model);
         }
 
         public ActionResult Services(string slug = "services")
@@ -57,7 +70,29 @@ namespace Website.Controllers
                 }
             }
 
-            return View("Index", page);
+            return View("Index", new JarbooPageViewModel(page));
+        }
+
+        public ActionResult Projects(string slug = "projects")
+        {
+            if (!slug.Contains("projects"))
+            {
+                slug = "projects/" + slug;
+            }
+
+            var page = _contentService.GetBySlug(slug);
+
+            if (page == null)
+            {
+                page = _postService.GetBySlug(slug);
+
+                if (page == null)
+                {
+                    return HttpNotFound();
+                }
+            }
+
+            return View("Index", new JarbooPageViewModel(page));
         }
 
         [Route("~/blog")]
@@ -91,7 +126,9 @@ namespace Website.Controllers
                 }
             }
 
-            return View("Index", page);
+            var model = new JarbooPageViewModel(page);
+            model.UseSidebarLayout = true;
+            return View("Index", model);
         }
     }
 }

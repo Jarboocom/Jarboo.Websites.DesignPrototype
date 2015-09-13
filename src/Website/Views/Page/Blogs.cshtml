@@ -1,5 +1,7 @@
-﻿@model List<Services.Domain.Pages.JarbooPage>
+﻿@using Website.Models.ExtensionMethods
+@model List<Services.Domain.Pages.JarbooPage>
 @{
+    Layout = "_SideBarLayout.cshtml";
     ViewBag.Title = "Blog";
     var page = (int)ViewBag.Page;
     int? totalPages = null;
@@ -14,10 +16,15 @@
     <div class="content-wrapper">
         @foreach (var post in Model)
         {
-            <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
-                <h2>
-                    @Html.ActionLink(post.Title, "Blog", new { controller = "Page", slug = post.Slug })
-                </h2>
+            <div class="col-md-12 col-sm-12 col-xs-12 section1-text blog-list">
+                <h3>
+                    @Html.ActionLink(post.Title, "Blog", new {controller = "Page", slug = post.Slug})
+                    <br/>
+                    <span>Published on @post.DateCreated.DisplayAsDate()</span>
+                </h3>
+                <p class="excerpt">
+                    @Html.Raw(post.Content.FirstSentence())... <a href="@Url.Action("Blog", new { controller = "Page", slug = post.Slug })">Read more</a>
+                </p>
             </div>
         }
 

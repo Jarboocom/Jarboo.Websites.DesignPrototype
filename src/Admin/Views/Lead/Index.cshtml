@@ -6,38 +6,34 @@
 }
 
 <h1>Leads</h1>
-
-<table class="table table-stripped">
-    <thead>
-        <tr>
-            <th>
-                ID
-            </th>
-            <th>Date</th>
-            <th>
-                Email
-            </th>
-            <th>Lead status</th>
-            <th>See lead</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Lead a_case in Model)
-        {
+<div class="table-responsive">
+    <table class="table table-stripped">
+        <thead>
             <tr>
-                <td>
-                    @a_case.Id
-                </td>
-                <td>@a_case.DateCreated.ToString("dd-MM-yyyy hh:mm:ss")</td>
-                <td>
-                    @a_case.Email
-                </td>
-                <td>@a_case.LeadStatus</td>
-                <td>
-                    @Html.ActionLink("See lead","Lead","Lead",new {id=a_case.Id},null)
-                </td>
-               
+                <th>Name</th>
+                <th>Date</th>
+                <th>Email</th>
+                <th>Lead status</th>
+                <th>See lead</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (Lead a_case in Model)
+            {
+                <tr>
+                    <td>
+                        @a_case.Name
+                    </td>
+                    <td>@a_case.DateCreated.ToString("dd-MM-yyyy hh:mm:ss")</td>
+                    <td>
+                        @a_case.Email
+                    </td>
+                    <td>@a_case.LeadStatus</td>
+                    <td>
+                        @Html.ActionLink("See lead", "Lead", "Lead", new { id = a_case.Id }, null)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
