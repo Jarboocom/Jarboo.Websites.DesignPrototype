@@ -1492,14 +1492,100 @@ p {
 .mail-box-case-study {
     background: #F5F5F5;
     border: 1px solid #C3C3C3;
-    width: 50%;
-    margin: 0 auto;
-    margin-left: 5%;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding-bottom: 25px;
+    margin-top: -200px;
     padding: 15px;
 }
 
+
+.single-case-study-top-view {
+    background: $main-color;
+    padding-top: 60px; 
+    padding-bottom: 30px;
+    margin-top: -30px;
+}
+
+.section1-text-white {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.section1-text-white > h1 {
+    color: white;
+    padding-bottom: 30px;
+    font-size: 3em;
+}
+
+.section1-text-white > p {
+    color: white;
+    padding-bottom: 30px;
+    width: 70%;
+    font-size: 1.3em;
+}
+
+.single-case-study-bottom-view {
+    background: white;
+    padding-top: 50px; 
+    padding-bottom: 100px;
+}
+
+.single-case-study-line {
+    background: $main-color-hover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.black-text-case-study {
+    color: #222222;
+    padding-bottom: 30px;
+
+}
+
+.download-background {
+    background: $amazon;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-bottom: 20px;
+}
+
+.download-background > h2 {
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+.control-label-case-study {
+    margin-top: 20px;
+    margin-left: -10px;
+}
+
+.get-case-button {
+    width: 100%;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: $amazon;
+    color: white;
+    transition: 0.5s all;
+    margin-bottom: 20px;
+}
+
+.get-case-button:hover {
+    width: 100%;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: $amazon;
+    color: white;
+}
+
+.check-holder-case {
+    width: 100%;
+    height: 15px;
+    margin-bottom: 40px;
+}
 
 // ------------------------------------------------ //
 // ----------------------------------------------- //
