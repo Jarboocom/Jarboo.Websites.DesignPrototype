@@ -223,6 +223,7 @@
     <Content Include="assets\styles\main.css.map">
       <DependentUpon>main.css</DependentUpon>
     </Content>
+    <Content Include="assets\styles\blog\sidebar.scss" />
     <None Include="compilerconfig.json" />
     <None Include="Properties\PublishProfiles\file.pubxml" />
     <None Include="Properties\PublishProfiles\JarbooDesignPrototype.pubxml" />
