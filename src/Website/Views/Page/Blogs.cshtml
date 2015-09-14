@@ -18,13 +18,14 @@
         {
             <div class="col-md-12 col-sm-12 col-xs-12 section1-text blog-list">
                 <h3>
-                    @Html.ActionLink(post.Title, "Blog", new {controller = "Page", slug = post.Slug})
-                    <br/>
-                    <span>Published on @post.DateCreated.DisplayAsDate()</span>
+                    @Html.ActionLink(post.Title, "Blog", new { controller = "Page", slug = post.Slug })
+                    <br />
+                    <span><i>Published on @post.DateCreated.DisplayAsDate()</i></span>
                 </h3>
                 <p class="excerpt">
-                    @Html.Raw(post.Content.FirstSentence())... <a href="@Url.Action("Blog", new { controller = "Page", slug = post.Slug })">Read more</a>
+                    @Html.Raw(post.Content.FirstSentence())...
                 </p>
+                <a href="@Url.Action("Blog", new { controller = "Page", slug = post.Slug })"><button class="read-more-button-blog-listing">Read more</button></a>
             </div>
         }
 
@@ -33,15 +34,16 @@
             {
                 for (int i = 1; i <= totalPages; i++)
                 {
-                    
+
                     if (page == i)
                     {
-                        <span>@i</span>
+
+                        <span class="btn btn-primary pingnation-btn-active">@i</span>
                     }
 
                     if (page != i)
                     {
-                        <a href="@Url.Action("Blogs", new {controller = "Page", page = i})" class="btn btn-primary">@i</a>
+                        <a href="@Url.Action("Blogs", new {controller = "Page", page = i})" class="btn btn-primary pingnation-btn">@i</a>
                     }
                 }
             }

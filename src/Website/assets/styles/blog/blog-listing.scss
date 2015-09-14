@@ -1,0 +1,70 @@
+.blog-list {
+    background: #F8F8F8;
+    border: 1px solid #E7E7E7;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.read-more-button-blog-listing {
+    width: 30%;
+    border: none;
+    background: $main-color;
+    border: 2px solid $main-color;
+    color: white;
+    transition: 0.5s all;
+    margin-top: 20px;
+}
+
+.read-more-button-blog-listing:hover {
+    width: 30%;
+    border: none;
+    background: $main-color-hover;
+    border: 2px solid $main-color-hover;
+    color: white;
+    transition: 0.5s all;
+    margin-top: 20px;
+}
+
+.blog-list > h3 > a:hover {
+    color: $main-color-hover;
+    text-decoration: none;
+}
+
+.active-pingation {
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+
+.pingnation-btn {
+    border: none;
+    background: white;
+    padding-top: 5px;
+    border: 2px solid #E7E7E7;
+    color: #7F7F7F;
+    transition: 0.5s all;
+    margin-top: 20px;
+}
+
+.pingnation-btn:hover {
+    border: none;
+    background: white;
+    padding-top: 5px;
+    border: 2px solid $main-color;
+    color: $main-color;
+    transition: 0.5s all;
+    margin-top: 20px;
+}
+
+.pingnation-btn-active {
+    border: none;
+    background: $main-color;
+    padding-top: 5px;
+    border: 2px solid $main-color;
+    color: white;
+    transition: 0.5s all;
+    margin-top: 20px;
+}

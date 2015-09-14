@@ -1234,3 +1234,122 @@ p {
     width: 90%;
     margin-left: 5%; } }
 
+.sidebar-holder {
+  background: #F8F8F8;
+  border: 1px solid #E7E7E7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px; }
+
+.sidebar-title {
+  color: #222222; }
+
+.get-case-button-sidebar {
+  width: 100%;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #F8F8F8;
+  border: 2px solid #e4b311;
+  color: #e4b311;
+  transition: 0.5s all;
+  margin-bottom: 20px; }
+
+.get-case-button-sidebar:hover {
+  width: 100%;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #e4b311;
+  border: 2px solid #e4b311;
+  color: white; }
+
+.CTA-button-sidebar {
+  width: 100%;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #e4b311;
+  border: 2px solid #e4b311;
+  color: white;
+  transition: 0.5s all;
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.CTA-button-sidebar:hover {
+  width: 100%;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #d4a814;
+  border: 2px solid #d4a814;
+  color: white;
+  transition: 0.5s all;
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.blog-list {
+  background: #F8F8F8;
+  border: 1px solid #E7E7E7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px; }
+
+.read-more-button-blog-listing {
+  width: 30%;
+  border: none;
+  background: #0976BB;
+  border: 2px solid #0976BB;
+  color: white;
+  transition: 0.5s all;
+  margin-top: 20px; }
+
+.read-more-button-blog-listing:hover {
+  width: 30%;
+  border: none;
+  background: #0a5b8e;
+  border: 2px solid #0a5b8e;
+  color: white;
+  transition: 0.5s all;
+  margin-top: 20px; }
+
+.blog-list > h3 > a:hover {
+  color: #0a5b8e;
+  text-decoration: none; }
+
+.active-pingation {
+  width: 20px;
+  height: 20px;
+  background: red; }
+
+.pingnation-btn {
+  border: none;
+  background: white;
+  padding-top: 5px;
+  border: 2px solid #E7E7E7;
+  color: #7F7F7F;
+  transition: 0.5s all;
+  margin-top: 20px; }
+
+.pingnation-btn:hover {
+  border: none;
+  background: white;
+  padding-top: 5px;
+  border: 2px solid #0976BB;
+  color: #0976BB;
+  transition: 0.5s all;
+  margin-top: 20px; }
+
+.pingnation-btn-active {
+  border: none;
+  background: #0976BB;
+  padding-top: 5px;
+  border: 2px solid #0976BB;
+  color: white;
+  transition: 0.5s all;
+  margin-top: 20px; }
+
