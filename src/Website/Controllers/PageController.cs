@@ -44,10 +44,6 @@ namespace Website.Controllers
             }
 
             var model = new JarbooPageViewModel(page);
-            //if (_useSidebarLayoutSlug.Any(item => slug.ToLower().Contains(item)))
-            //{
-            //    model.UseSidebarLayout = true;
-            //}
             model.UseSidebarLayout = true;
             return View(model);
         }
@@ -93,7 +89,9 @@ namespace Website.Controllers
                 }
             }
 
-            return View("Index", new JarbooPageViewModel(page));
+            var model = new JarbooPageViewModel(page);
+            model.UseSidebarLayout = true;
+            return View("Index", model);
         }
 
         [Route("~/blog")]
@@ -111,6 +109,20 @@ namespace Website.Controllers
             ViewBag.Page = page;
 
             return View(blogs);
+        }
+
+        [ChildActionOnly]
+        public ActionResult RecentlyPosts()
+        {
+            const int articlesPerPage = 10;
+            var spec = new PageSpecification
+            {
+                Take = articlesPerPage,
+                Skip = 0
+            };
+
+            var blogs = _postService.GetBySpecifiction(spec);
+            return PartialView("_RecentlyPosts", blogs);
         }
 
         public ActionResult Blog(string slug)

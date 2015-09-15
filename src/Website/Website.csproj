@@ -272,6 +272,9 @@
     <Content Include="Views\Home\EbookSignup.cshtml" />
     <Content Include="Views\Home\404.cshtml" />
     <Content Include="Views\Page\_SideBarLayout.cshtml" />
+    <Content Include="Views\Page\_RecentlyPosts.cshtml" />
+    <Content Include="Views\Shared\_DiscussProject.cshtml" />
+    <Content Include="Views\Home\ThankYou.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

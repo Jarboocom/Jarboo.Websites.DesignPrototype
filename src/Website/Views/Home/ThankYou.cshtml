@@ -1,0 +1,77 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Thanks for contacting - Jarboo";
+}
+
+@section Header{
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1413592955530466";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Facebook Conversion Code for Advice conversion -->
+<script>
+(function() {
+    var _fbq = window._fbq || (window._fbq = []);
+    if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+    }
+})();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', '6030769246198', { 'value': '0.01', 'currency': 'DKK' }]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6030769246198&amp;cd[value]=0.01&amp;cd[currency]=DKK&amp;noscript=1" /></noscript>
+
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6030599702798&amp;cd[value]=0.01&amp;cd[currency]=DKK&amp;noscript=1" /></noscript>
+}
+
+
+<div class="row content-row">
+    <div class="content-wrapper">
+        <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
+            <h1>
+                We have received your project information. We will contact with you soonest.
+            </h1>
+            <p>In the mean time, why not follow us on social media?</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Twitter</h2>
+                    <a class="twitter-timeline" href="https://twitter.com/Jarboocom" data-widget-id="640518659648176128">Our tweets</a>
+                    <script>
+                        !function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = p + "://platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, "script", "twitter-wjs");
+                    </script>
+                </div>
+                <div class="col-md-6">
+                    <h2>Facebook</h2>
+                    <div class="fb-page" data-href="https://www.facebook.com/jarboocom" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+                        <div class="fb-xfbml-parse-ignore">
+                            <blockquote cite="https://www.facebook.com/jarboocom"><a href="https://www.facebook.com/jarboocom">Jarboo</a></blockquote>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

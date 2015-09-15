@@ -53,10 +53,13 @@
                     <a href="@Url.Action("DiscussProject", "Lead")"><button class="CTA-button-sidebar">DISCUSS A PROJECT</button></a>
                 </div>
 
+                @{Html.RenderAction("RecentlyPosts", "Page");}
             </div>
         }
     </div>
 </div>
+
+@Html.Partial("_DiscussProject")
 
 @section scripts {
     @RenderSection("scripts", false)

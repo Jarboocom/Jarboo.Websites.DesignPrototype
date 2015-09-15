@@ -85,6 +85,7 @@ namespace Website.Controllers
             return View();
         }
 
+        [Route("~/not-found")]
         public ActionResult NotFound()
         {
             return View("404");
@@ -101,10 +102,17 @@ namespace Website.Controllers
                 //var result = MandrillSendExtension.customSend(model, MandrillTemplates.Invoice);
                 Send(model);
                 model.Status = "The message is sent.";
+                return RedirectToAction("ThankYou");
             }
             
             return View(model);
         }
+
+        public ActionResult ThankYou()
+        {
+            return View();
+        }
+
 
         private void Send(ContactViewModel model)
         {

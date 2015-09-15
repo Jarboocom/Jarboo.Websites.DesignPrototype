@@ -1,5 +1,5 @@
 ﻿body {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300; }
 
 img {
@@ -549,7 +549,6 @@ a {
   color: #2f2f2f;
   font-size: 1.03em;
   letter-spacing: 0; }
-
 .navbar-default .navbar-nav > li.active a {
   color: #0976BB; }
 
@@ -1189,7 +1188,7 @@ p {
 .lars-img {
   width: 250px;
   height: 250px;
-  background: url("/assets/images/lars.jpg");
+  background: url('/assets/images/lars.jpg');
   border-radius: 50%;
   background-size: contain; }
 
@@ -1259,6 +1258,12 @@ p {
 
 .sidebar-title {
   color: #222222; }
+
+.sidebar-holder .recently-posts li {
+  margin-bottom: 15px; }
+
+.sidebar-holder .recently-posts h4 {
+  margin-bottom: 5px; }
 
 .get-case-button-sidebar {
   width: 100%;
@@ -1437,3 +1442,4 @@ em {
   margin-top: 10px;
   font-weight: 500; }
 
+/*# sourceMappingURL=main.css.map */

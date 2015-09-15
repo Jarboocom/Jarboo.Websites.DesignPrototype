@@ -175,18 +175,5 @@
 
 @Html.Partial("_Ebook")
 
-<div class="row CTA-section">
-    <div class="CTA-wrapper">
-        <div class="col-md-6 col-sm-12 col-xs-12 section1-text">
-            <h2 class="CTA-h2">Solve your development:</h2>
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 CTA-buttons-CTA">
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <button onclick="location.href ='@Url.Action("DiscussProject","Lead")'" class="CTA-button-full-CTA">DISCUSS A PROJECT</button>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <button onclick="location.href='@Url.Action("Contact","Home")'" class="CTA-button-ghost-CTA">CONTACT US</button>
-            </div>
-        </div>
-    </div>
-</div>
+@Html.Partial("_DiscussProject")
+
