@@ -200,6 +200,12 @@
     <Content Include="assets\images\time.png" />
     <Content Include="assets\images\twitter.png" />
     <Content Include="assets\images\USA-tours.png" />
+    <Content Include="assets\styles\blog\blog-text.css">
+      <DependentUpon>blog-text.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\styles\blog\blog-text.min.css">
+      <DependentUpon>blog-text.css</DependentUpon>
+    </Content>
     <Content Include="assets\styles\main.css">
       <DependentUpon>main.scss</DependentUpon>
     </Content>

@@ -1,5 +1,5 @@
 ﻿body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 300; }
 
 img {
@@ -549,6 +549,7 @@ a {
   color: #2f2f2f;
   font-size: 1.03em;
   letter-spacing: 0; }
+
 .navbar-default .navbar-nav > li.active a {
   color: #0976BB; }
 
@@ -1188,7 +1189,7 @@ p {
 .lars-img {
   width: 250px;
   height: 250px;
-  background: url('/assets/images/lars.jpg');
+  background: url("/assets/images/lars.jpg");
   border-radius: 50%;
   background-size: contain; }
 
@@ -1271,8 +1272,8 @@ p {
   padding-top: 10px;
   padding-bottom: 10px;
   background: #F8F8F8;
-  border: 2px solid #e4b311;
-  color: #e4b311;
+  border: 2px solid #0976BB;
+  color: #0976BB;
   transition: 0.5s all;
   margin-bottom: 20px; }
 
@@ -1281,8 +1282,8 @@ p {
   border: none;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: #e4b311;
-  border: 2px solid #e4b311;
+  background: #0976BB;
+  border: 2px solid #0976BB;
   color: white; }
 
 .CTA-button-sidebar {
@@ -1290,8 +1291,8 @@ p {
   border: none;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: #e4b311;
-  border: 2px solid #e4b311;
+  background: #0976BB;
+  border: 2px solid #0976BB;
   color: white;
   transition: 0.5s all;
   margin-bottom: 20px;
@@ -1302,8 +1303,8 @@ p {
   border: none;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: #d4a814;
-  border: 2px solid #d4a814;
+  background: #0a5b8e;
+  border: 2px solid #0a5b8e;
   color: white;
   transition: 0.5s all;
   margin-bottom: 20px;
@@ -1382,24 +1383,32 @@ p {
   margin-top: 20px; }
 
 .blog-title {
-  font-weight: 500; }
+  font-weight: 500;
+  font-family: 'Merriweather', serif; }
 
 .blog-p {
-  font-weight: 400; }
+  font-family: 'Merriweather', serif;
+  font-size: 1.25em; }
+
+.blog-text {
+  font-family: 'Merriweather', serif !important; }
 
 .blog-text > h1 {
   font-weight: 600;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-family: 'Merriweather', serif; }
 
 .blog-text > h2 {
   font-weight: 600;
   margin-bottom: 20px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  font-family: 'Merriweather', serif; }
 
 .blog-text > h3 {
   font-weight: 600;
   margin-bottom: 20px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  font-family: 'Merriweather', serif; }
 
 .blog-text > h4 {
   font-weight: 600;
@@ -1434,12 +1443,28 @@ p {
   font-size: 1.15em; }
 
 .p1 {
-  font-weight: 400 !important;
-  font-size: 1.15em; }
+  font-family: 'Merriweather', serif;
+  font-size: 1.25em; }
 
-em {
-  color: #0976BB;
-  margin-top: 10px;
-  font-weight: 500; }
+.awesome-articles-button {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #0976BB;
+  border: 2px solid #0976BB;
+  color: white;
+  transition: 0.5s all; }
 
-/*# sourceMappingURL=main.css.map */
+.awesome-articles-button:hover {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #0a5b8e;
+  border: 2px solid #0a5b8e;
+  color: white;
+  transition: 0.5s all; }
+
