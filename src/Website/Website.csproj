@@ -226,6 +226,7 @@
     <Content Include="assets\styles\blog\sidebar.scss" />
     <Content Include="assets\styles\blog\blog-listing.scss" />
     <Content Include="assets\styles\case-study\single-case-study.scss" />
+    <Content Include="assets\styles\blog\blog-text.scss" />
     <None Include="compilerconfig.json" />
     <None Include="Properties\PublishProfiles\file.pubxml" />
     <None Include="Properties\PublishProfiles\JarbooDesignPrototype.pubxml" />

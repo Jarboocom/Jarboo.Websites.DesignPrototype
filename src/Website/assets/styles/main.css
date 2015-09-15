@@ -1367,9 +1367,73 @@ p {
   transition: 0.5s all;
   margin-top: 20px; }
 
+.pingnation-btn-active:hover {
+  border: none;
+  background: #0976BB;
+  padding-top: 5px;
+  border: 2px solid #0976BB;
+  color: white;
+  transition: 0.5s all;
+  margin-top: 20px; }
+
 .blog-title {
   font-weight: 500; }
 
 .blog-p {
   font-weight: 400; }
+
+.blog-text > h1 {
+  font-weight: 600;
+  margin-bottom: 30px; }
+
+.blog-text > h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.blog-text > h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.blog-text > h4 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.blog-text > h5 {
+  font-weight: 600; }
+
+.blog-text > p {
+  font-weight: 400;
+  font-size: 1.15em;
+  margin-bottom: 15px; }
+
+.blog-text > i {
+  color: red; }
+
+.blog-text > ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  list-style-type: circle;
+  font-weigh: 400 !important; }
+
+.blog-text > ul > li > ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  list-style-type: circle;
+  font-weigh: 400 !important; }
+
+.blog-text > ul > li {
+  font-weight: 400 !important;
+  font-size: 1.15em; }
+
+.p1 {
+  font-weight: 400 !important;
+  font-size: 1.15em; }
+
+em {
+  color: #0976BB;
+  margin-top: 10px;
+  font-weight: 500; }
 

@@ -69,6 +69,16 @@
     margin-top: 20px;
 }
 
+.pingnation-btn-active:hover {
+    border: none;
+    background: $main-color;
+    padding-top: 5px;
+    border: 2px solid $main-color;
+    color: white;
+    transition: 0.5s all;
+    margin-top: 20px;
+}
+
 .blog-title {
     font-weight: 500;
 }
