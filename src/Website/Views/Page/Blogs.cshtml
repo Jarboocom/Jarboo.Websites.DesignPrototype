@@ -17,12 +17,12 @@
         @foreach (var post in Model)
         {
             <div class="col-md-12 col-sm-12 col-xs-12 section1-text blog-list">
-                <h3>
+                <h3 class="blog-title">
                     @Html.ActionLink(post.Title, "Blog", new { controller = "Page", slug = post.Slug })
                     <br />
                     <span><i>Published on @post.DateCreated.DisplayAsDate()</i></span>
                 </h3>
-                <p class="excerpt">
+                <p class="excerpt blog-p">
                     @Html.Raw(post.Content.FirstSentence())...
                 </p>
                 <a href="@Url.Action("Blog", new { controller = "Page", slug = post.Slug })"><button class="read-more-button-blog-listing">Read more</button></a>

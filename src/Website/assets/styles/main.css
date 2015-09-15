@@ -1,5 +1,6 @@
 ﻿body {
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  font-weight: 300; }
 
 img {
   max-height: 100%;
@@ -478,7 +479,8 @@ ul {
   color: #0976BB;
   margin-bottom: 50px;
   text-align: left;
-  font-size: 3em; }
+  font-size: 3em;
+  font-weight: 300; }
 
 p {
   color: #222222;
@@ -1013,22 +1015,28 @@ ul {
   margin: 0 auto; }
 
 h1 {
-  color: #0976BB; }
+  color: #0976BB;
+  font-weight: 300; }
 
 h2 {
-  color: #0976BB; }
+  color: #0976BB;
+  font-weight: 300; }
 
 h3 {
-  color: #0976BB; }
+  color: #0976BB;
+  font-weight: 300; }
 
 h4 {
-  color: #0976BB; }
+  color: #0976BB;
+  font-weight: 300; }
 
 h5 {
-  color: #0976BB; }
+  color: #0976BB;
+  font-weight: 300; }
 
 h6 {
-  color: #0976BB; }
+  color: #0976BB;
+  font-weight: 300; }
 
 p {
   color: #222222;
@@ -1358,4 +1366,10 @@ p {
   color: white;
   transition: 0.5s all;
   margin-top: 20px; }
+
+.blog-title {
+  font-weight: 500; }
+
+.blog-p {
+  font-weight: 400; }
 
