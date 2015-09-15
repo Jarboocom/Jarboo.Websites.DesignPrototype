@@ -44,10 +44,11 @@ namespace Website.Controllers
             }
 
             var model = new JarbooPageViewModel(page);
-            if (_useSidebarLayoutSlug.Any(item => slug.ToLower().Contains(item)))
-            {
-                model.UseSidebarLayout = true;
-            }
+            //if (_useSidebarLayoutSlug.Any(item => slug.ToLower().Contains(item)))
+            //{
+            //    model.UseSidebarLayout = true;
+            //}
+            model.UseSidebarLayout = true;
             return View(model);
         }
 
