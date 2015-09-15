@@ -1,5 +1,6 @@
 ﻿body {
-  font-family: "Raleway", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; }
 
 img {
   max-height: 100%;
@@ -1013,7 +1014,8 @@ ul {
   margin: 0 auto; }
 
 h1 {
-  color: #0976BB; }
+  color: #0976BB;
+  font-family: 'Montserrat', sans-serif; }
 
 h2 {
   color: #0976BB; }
@@ -1033,7 +1035,8 @@ h6 {
 p {
   color: #222222;
   margin-bottom: 5px;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  font-weight: 400; }
 
 .cs-page-case-study > h1 {
   max-width: 80%; }
