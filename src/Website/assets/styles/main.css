@@ -1130,6 +1130,12 @@ p {
   height: 15px;
   margin-bottom: 40px; }
 
+@media (min-width: 0px) and (max-width: 992px) {
+  .mail-box-case-study {
+    margin-top: 30px; }
+  .section1-text-white > p {
+    width: 100%; } }
+
 #contact-page {
   margin-top: 30px; }
 
