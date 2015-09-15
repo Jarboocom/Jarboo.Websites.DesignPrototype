@@ -1,4 +1,4 @@
-$font: 'Raleway', sans-serif;
+$font: 'Open Sans', sans-serif;
 $main-color: #0976BB;
 $amazon: #e4b311;
 $amazon-hover: #d4a814;
@@ -9,6 +9,7 @@ $footer-color: #1B1B1B;
 
 body {
     font-family: $font;
+    font-weight: 400;
 }
 
 img {
@@ -1439,6 +1440,7 @@ ul {
 
 h1 {
     color: $main-color;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
@@ -1466,6 +1468,7 @@ p {
     color: $text-color;
     margin-bottom: 5px;
     font-size: 1.1em;
+    font-weight: 400;
 }
 
 
