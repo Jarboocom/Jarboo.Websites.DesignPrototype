@@ -40,5 +40,6 @@ namespace Website.Models
         public int Pages { get; set; }
 
         public bool UseSidebarLayout { get; set; }
+        public string GoBackUrl { get; set; }
     }
 }

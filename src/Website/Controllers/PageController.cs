@@ -45,6 +45,7 @@ namespace Website.Controllers
 
             var model = new JarbooPageViewModel(page);
             model.UseSidebarLayout = true;
+            model.GoBackUrl = slug != "resources" ? Url.Action("Index", "Page", new {slug = ""}) : "";
             return View(model);
         }
 
@@ -67,7 +68,9 @@ namespace Website.Controllers
                 }
             }
 
-            return View("Index", new JarbooPageViewModel(page));
+            var model = new JarbooPageViewModel(page);
+            model.GoBackUrl = slug != "services" ? Url.Action("Services", "Page", new { slug = "" }) : "";
+            return View("Index", model);
         }
 
         public ActionResult Projects(string slug = "projects")
@@ -91,6 +94,7 @@ namespace Website.Controllers
 
             var model = new JarbooPageViewModel(page);
             model.UseSidebarLayout = true;
+            model.GoBackUrl = slug != "projects" ? Url.Action("Projects", "Page", new { slug = "" }) : "";
             return View("Index", model);
         }
 
@@ -141,6 +145,7 @@ namespace Website.Controllers
 
             var model = new JarbooPageViewModel(page);
             model.UseSidebarLayout = true;
+            model.GoBackUrl = Url.Action("Blogs", "Page");
             return View("Index", model);
         }
     }

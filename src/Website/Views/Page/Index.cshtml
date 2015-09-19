@@ -14,7 +14,10 @@
             <h1>@Html.Raw(Model.Title)</h1>
 
             @Html.Raw(Model.Content)
-            <a href="#"><button class="awesome-articles-button">Go back to find more awesome articles!</button></a>
+            @if (!string.IsNullOrEmpty(Model.GoBackUrl))
+            {
+                <a href="@Model.GoBackUrl"><button class="awesome-articles-button">Go back to articles</button></a>
+            }
         </div>
     </div>
 </div>
