@@ -11,7 +11,7 @@
 
                 <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup">
-                    @*<form action="//jarboo.us9.list-manage.com/subscribe/post?u=d7f26f1c6e2ffe07ab5b7efd5&amp;id=60e680a9bd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <form action="//jarboo.us9.list-manage.com/subscribe/post?u=d7f26f1c6e2ffe07ab5b7efd5&amp;id=60e680a9bd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <div id="mc_embed_signup_scroll">
             <div class="mc-field-group">
                 <input type="email" value="" name="EMAIL" class="required email mail-input" id="mce-EMAIL" placeholder="E-Mail address">
@@ -29,8 +29,8 @@
                 <!--Change the value of hidden field if you want to use this field somewhere else too-->
             </div>
         </div>
-    </form>*@
-                    <form action="@Url.Action("Subscriber", "Home")" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    </form>
+                    @*<form action="@Url.Action("Subscriber", "Home")" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                         <div id="mc_embed_signup_scroll">
                             <div class="mc-field-group">
                                 <input type="email" value="" name="EMAIL" class="required email mail-input" id="mce-EMAIL" placeholder="E-Mail address">
@@ -45,11 +45,11 @@
                             <div class="clear">
                                 <input type="submit" value="GET FREE PDF" name="subscribe" id="mc-embedded-subscribe" class="button get-pdf-button">
                                 <input type="hidden" name="JARBOO_PLA" id="JARBOO_PLA" value="GetPdfEbook"/>
-                                <input type="hidden" name="redirectUrl" value="@Url.Action("NewsletterSignUp", "Home")" />
-                                <!--Change the value of hidden field if you want to use this field somewhere else too-->
+                                <input type="hidden" name="redirectUrl" value="@Url.Action("NewsletterSignUp", "Home")"/>
+                                <input type="hidden" name="returnUrl" value="@Url.Action("Index", "Home")" />
                             </div>
                         </div>
-                    </form>
+                    </form>*@
                 </div>
                 <!--End mc_embed_signup-->
             </div>
