@@ -113,6 +113,10 @@ namespace Website.Controllers
             return View();
         }
 
+        public ActionResult Subcribe()
+        {
+            return View();
+        }
 
         private void Send(ContactViewModel model)
         {

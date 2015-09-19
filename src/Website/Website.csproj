@@ -65,6 +65,9 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -145,6 +148,7 @@
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\JarbooPageViewModel.cs" />
     <Compile Include="Models\ReferencesViewModel.cs" />
+    <Compile Include="Models\SubscriberViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
