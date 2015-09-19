@@ -8,7 +8,7 @@ namespace Services.Domain.Subscribers
 {
     public interface ISubscriberService
     {
-        void Subscribe(string email);
-        void Unsubscribe(string email);
+        void Subscribe(Subscriber subscriber);
+        void Unsubscribe(Subscriber subscriber);
     }
 }

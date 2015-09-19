@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{1DAC17F2-D500-40F8-B042-EBBB51E1AB7B}"
 EndProject
@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin", "Admin\Admin.csproj", "{AA8DE933-AF28-47B8-AFCA-6EC290A1357E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{A25BD321-1F23-4131-94C3-22C1F30D32E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{AA8DE933-AF28-47B8-AFCA-6EC290A1357E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA8DE933-AF28-47B8-AFCA-6EC290A1357E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA8DE933-AF28-47B8-AFCA-6EC290A1357E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A25BD321-1F23-4131-94C3-22C1F30D32E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A25BD321-1F23-4131-94C3-22C1F30D32E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A25BD321-1F23-4131-94C3-22C1F30D32E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A25BD321-1F23-4131-94C3-22C1F30D32E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

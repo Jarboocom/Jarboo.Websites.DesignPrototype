@@ -23,7 +23,7 @@ namespace Services.Domain.MailChimps
             ApiKey = apiKey;
         }
 
-        public IMailChimpEndpoint<ListResource, ListRequest> Lists
+        public IMailChimpEndpoint<AddSubscriberResource, AddSubscriberRequest> Lists
         {
             get
             {

@@ -1,7 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Mandrill;
 using Mandrill.Model;
 using Services.Domain.Case;
+using Services.Domain.Subscribers;
 using Services.Services;
 using Website.Models;
 
@@ -11,11 +13,11 @@ namespace Website.Controllers
     public class HomeController : Controller
     {
         private readonly ICaseService _caseService;
-
+        private readonly ISubscriberService _subscriberService;
         public HomeController()
         {
             _caseService = new CaseService();
-
+            _subscriberService = new SubscriberService();
         }
 
         public ActionResult Index()
@@ -113,9 +115,27 @@ namespace Website.Controllers
             return View();
         }
 
-        public ActionResult Subcribe()
+        [HttpPost]
+        public ActionResult Subscribe(SubscriberViewModel model)
         {
-            return View();
+            try
+            {
+                _subscriberService.Subscribe(new Subscriber
+                {
+                    Email = model.Email,
+                    Subscribe = model.Subcribe,
+                    JarbooPlacement = model.JarbooPlacement
+                });
+
+                if (string.IsNullOrEmpty(model.RedirectUrl)) return RedirectToAction("ThankYou");
+                return Redirect(model.RedirectUrl);
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            
+            return Redirect(model.ReturnUrl);
         }
 
         private void Send(ContactViewModel model)

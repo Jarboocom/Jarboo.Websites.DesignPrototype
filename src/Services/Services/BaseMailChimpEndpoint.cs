@@ -8,6 +8,10 @@ using RestSharp;
 using Newtonsoft.Json;
 using System.Collections;
 using System.Net;
+using RestSharp.Serializers;
+using JsonSerializer = Services.Domain.MailChimps.JsonSerializer;
+using log4net;
+using RestSharp.Authenticators;
 
 namespace Services.Services
 {
@@ -15,6 +19,8 @@ namespace Services.Services
         where T : BaseMailChimpResource
         where TK: BaseMailChimpRequest
     {
+        private static readonly ILog Logger = LogManager.GetLogger(typeof (BaseMailChimpEndpoint<T, TK>));
+
         private readonly string MailChimpEndpoint = "https://us9.api.mailchimp.com/3.0";
 
         protected string ApiKey { get; set; }
@@ -28,7 +34,7 @@ namespace Services.Services
         {
             var client = GetClient(request);
             var restRequest = PreaparePostRequest(request);
-
+            
             var response = client.Execute(restRequest);
 
             if (response.StatusCode != HttpStatusCode.OK)
@@ -60,10 +66,8 @@ namespace Services.Services
 
         protected virtual RestRequest PreaparePostRequest(TK request)
         {
-            var restRequest = new RestRequest { Method = Method.POST };
-
-            SerializeObject(restRequest, request);
-
+            var restRequest = new RestRequest { Method = Method.POST, RequestFormat = DataFormat.Json };
+            restRequest.AddParameter("application/json; charset=utf-8", JsonConvert.SerializeObject(request), ParameterType.RequestBody);
             return restRequest;
         }
 
@@ -71,9 +75,7 @@ namespace Services.Services
         private RestClient GetClient(TK request)
         {
             var client = new RestClient(string.Join(@"/", MailChimpEndpoint, request.Url));
-
-            client.AddDefaultHeader("Authorization", string.Format("apikey {0}", ApiKey));
-
+            client.Authenticator = new HttpBasicAuthenticator("APIKey", ApiKey);
             return client;
         }
 
@@ -87,66 +89,12 @@ namespace Services.Services
             throw new Exception(error.Message.ToString());
         }
 
-        private void SerializeObject(RestRequest request, TK resource)
-        {
-            var properties = resource.GetType().GetProperties();
-
-            foreach (var propertyInfo in properties)
-            {
-                //if there is an ignore property, then we ignore the value
-                if (propertyInfo.GetCustomAttributes(typeof(JsonIgnoreAttribute), false).Any())
-                {
-                    continue;
-                }
-
-                var value = propertyInfo.GetValue(resource, null);
-                var attribute = propertyInfo.GetCustomAttributes(typeof(JsonPropertyAttribute), false).Cast<JsonPropertyAttribute>().FirstOrDefault();
-
-                if (attribute != null)
-                {
-                    if (attribute.Required == Required.Always && value == null)
-                    {
-                        throw new Exception(propertyInfo.Name);
-                    }
-                }
-
-                if (value != null)
-                {
-                    string name;
-                    //setting name
-                    if (attribute != null && !string.IsNullOrEmpty(attribute.PropertyName))
-                    {
-                        //if there is an attribute and it has a name, then we set it
-                        name = attribute.PropertyName;
-                    }
-                    else
-                    {
-                        //otherwise we set proeprty name lowered
-                        name = propertyInfo.Name.ToLowerInvariant();
-                    }
-
-                    if (propertyInfo.PropertyType.IsGenericType
-                        && typeof(IEnumerable).IsAssignableFrom(propertyInfo.PropertyType))
-                    {
-                        IEnumerable list = value as IEnumerable;
-                        if (list != null)
-                        {
-                            foreach (var item in list)
-                            {
-                                request.AddParameter(name, item);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        request.AddParameter(name, value);
-                    }
-                }
-            }
-        }
-
         private BaseMailChimpResponse<T> GetResult<T>(IRestResponse resp)
         {
+            if (Logger.IsDebugEnabled)
+            {
+                Logger.DebugFormat("Resource: {0}, Result: {1}", typeof(T).Name, resp.Content);                
+            }
             var data = JsonConvert.DeserializeObject<T>(resp.Content);
             return new StandardResponse<T>
             {

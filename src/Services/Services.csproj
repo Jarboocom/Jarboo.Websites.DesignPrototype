@@ -38,9 +38,8 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MailChimp, Version=1.1.77.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MailChimp.NET.1.1.77.0\lib\net35\MailChimp.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -72,8 +71,13 @@
     <Compile Include="Domain\MailChimps\BaseMailChimpRequest.cs" />
     <Compile Include="Domain\MailChimps\BaseMailChimpResource.cs" />
     <Compile Include="Domain\MailChimps\BaseMailChimpResponse.cs" />
+    <Compile Include="Domain\MailChimps\DTO\Link.cs" />
+    <Compile Include="Domain\MailChimps\DTO\Location.cs" />
+    <Compile Include="Domain\MailChimps\DTO\SubscriberStats.cs" />
+    <Compile Include="Domain\MailChimps\DTO\SubscriberStatus.cs" />
     <Compile Include="Domain\MailChimps\IMailChimpEndpoint.cs" />
     <Compile Include="Domain\MailChimps\IMailChimpResponse.cs" />
+    <Compile Include="Domain\MailChimps\JsonSerializer.cs" />
     <Compile Include="Domain\MailChimps\MailChimpClient.cs" />
     <Compile Include="Domain\Subscribers\ISubscriberService.cs" />
     <Compile Include="Domain\Common\Specification.cs" />
@@ -86,8 +90,8 @@
     <Compile Include="Domain\Pages\IPostService.cs" />
     <Compile Include="Domain\Pages\JarbooPage.cs" />
     <Compile Include="Domain\Pages\PageSpecification.cs" />
-    <Compile Include="Domain\MailChimps\Lists\ListRequest.cs" />
-    <Compile Include="Domain\MailChimps\Lists\ListResource.cs" />
+    <Compile Include="Domain\MailChimps\Lists\AddSubscriberRequest.cs" />
+    <Compile Include="Domain\MailChimps\Lists\AddSubscriberResource.cs" />
     <Compile Include="Domain\MailChimps\StandardResponse.cs" />
     <Compile Include="Services\MailChimps\ListsMailChimpEndpoint.cs" />
     <Compile Include="Domain\Subscribers\Subscriber.cs" />

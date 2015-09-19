@@ -9,5 +9,7 @@ namespace Services.Domain.Subscribers
     public class Subscriber
     {
         public string Email { get; set; }
+        public string Subscribe { get; set; }
+        public string JarbooPlacement { get; set; }
     }
 }
