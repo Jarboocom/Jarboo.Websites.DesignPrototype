@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Services.Domain.MailChimps.Lists
 {
-    public class AddSubscriberResource : BaseMailChimpResource
+    public class SubscriberResource : BaseMailChimpResource
     {
         [JsonProperty("id")]
         public string Id { get; set; }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Services.Services.MailChimps.Lists
 {
-    public class ListsMailChimpEndpoint : BaseMailChimpEndpoint<AddSubscriberResource, AddSubscriberRequest>
+    public class SubscriberMailChimpEndpoint : BaseMailChimpEndpoint<SubscriberResource, SubscriberRequest>
     {
-        public ListsMailChimpEndpoint(string apiKey)
+        public SubscriberMailChimpEndpoint(string apiKey)
             : base(apiKey)
         {
 

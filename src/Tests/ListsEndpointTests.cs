@@ -19,11 +19,10 @@ namespace Tests
             request.EmailAddress = "hellangle381@gmail.com";
             request.Status = SubscriberStatus.Subscribed;
             request.MergeFields = new Dictionary<string, object>() { { "subscribe", "GET FREE PDF" }, { "JARBOO_PLA", "GetPdfEbook" } };
-            var response = client.Lists.Post(request);
+            var response = client.Subscribers.Post(request);
 
             Assert.IsNotNull(response);
             Assert.IsNotNull(response.Result);
-            Assert.IsNotNull(response.Result.Id);
         }
     }
 }

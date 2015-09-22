@@ -6,12 +6,14 @@ using Services.Domain.Case;
 using Services.Domain.Subscribers;
 using Services.Services;
 using Website.Models;
+using log4net;
 
 namespace Website.Controllers
 {
     [RoutePrefix("home")]
     public class HomeController : Controller
     {
+        private static readonly ILog Logger = LogManager.GetLogger(typeof (HomeController));
         private readonly ICaseService _caseService;
         private readonly ISubscriberService _subscriberService;
         public HomeController()
@@ -50,8 +52,6 @@ namespace Website.Controllers
         {
             return View();
         }
-
-
 
         [Route("~/about")]
         public ActionResult About()
@@ -115,7 +115,7 @@ namespace Website.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Subscribe(SubscriberViewModel model)
         {
             try
@@ -123,7 +123,6 @@ namespace Website.Controllers
                 _subscriberService.Subscribe(new Subscriber
                 {
                     Email = model.Email,
-                    Subscribe = model.Subcribe,
                     JarbooPlacement = model.JarbooPlacement
                 });
 
@@ -132,7 +131,7 @@ namespace Website.Controllers
             }
             catch (Exception ex)
             {
-                
+                Logger.Error(ex);
             }
             
             return Redirect(model.ReturnUrl);

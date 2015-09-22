@@ -15,7 +15,7 @@ using RestSharp.Authenticators;
 
 namespace Services.Services
 {
-    public abstract class BaseMailChimpEndpoint<T, TK> : IMailChimpEndpoint<T, TK>
+    public class BaseMailChimpEndpoint<T, TK> : IMailChimpEndpoint<T, TK>
         where T : BaseMailChimpResource
         where TK: BaseMailChimpRequest
     {
@@ -28,6 +28,49 @@ namespace Services.Services
         protected BaseMailChimpEndpoint(string apiKey)
         {
             ApiKey = apiKey;
+        }
+
+        public virtual BaseMailChimpResponse<IList<T>> Get(TK request)
+        {
+            var client = GetClient(request);
+            var r = PrepareGetListRequest(request);
+
+            var response = client.Execute(r);
+
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                HandleError(response);
+            }
+
+            var result = GetResult<IList<T>>(response);
+
+            return result;
+        }
+
+        public async virtual Task<BaseMailChimpResponse<IList<T>>> GetAsync(TK request)
+        {
+            var client = GetClient(request);
+            var r = PrepareGetListRequest(request);
+
+            var response = await client.ExecuteTaskAsync(r).ConfigureAwait(false);
+
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                HandleError(response);
+            }
+
+            var result = GetResult<IList<T>>(response);
+
+            return result;
+        }
+
+        protected virtual RestRequest PrepareGetListRequest(TK request)
+        {
+            var r = new RestRequest { RequestFormat = DataFormat.Json, JsonSerializer = new JsonSerializer(), Method = Method.GET };
+
+            SerializeObject(r, request);
+
+            return r;
         }
 
         public BaseMailChimpResponse<T> Post(TK request)
@@ -86,21 +129,71 @@ namespace Services.Services
                 throw new Exception(response.ErrorMessage);
             }
             var error = JsonConvert.DeserializeObject<dynamic>(response.Content);
-            throw new Exception(error.Message.ToString());
+            throw new Exception(error.detail.ToString());
         }
 
-        private BaseMailChimpResponse<T> GetResult<T>(IRestResponse resp)
+        private BaseMailChimpResponse<TP> GetResult<TP>(IRestResponse resp)
         {
             if (Logger.IsDebugEnabled)
             {
                 Logger.DebugFormat("Resource: {0}, Result: {1}", typeof(T).Name, resp.Content);                
             }
-            var data = JsonConvert.DeserializeObject<T>(resp.Content);
-            return new StandardResponse<T>
+            var data = JsonConvert.DeserializeObject<TP>(resp.Content);
+            return new StandardResponse<TP>
             {
                 Result = data,
                 Headers = resp.Headers.ToDictionary(k => k.Name, v => v.Value)
             };
+        }
+
+        private void SerializeObject(RestRequest r, TK request)
+        {
+            var properties = request.GetType().GetProperties();
+
+            foreach (var propertyInfo in properties)
+            {
+                //if there is an ignore property, then we ignore the value
+                if (propertyInfo.GetCustomAttributes(typeof(JsonIgnoreAttribute), false).Any())
+                {
+                    continue;
+                }
+
+                var value = propertyInfo.GetValue(request, null);
+                var attribute = propertyInfo.GetCustomAttributes(typeof(JsonPropertyAttribute), false).Cast<JsonPropertyAttribute>().FirstOrDefault();
+
+                if (value != null && attribute != null)
+                {
+                    string name;
+                    //setting name
+                    if (attribute != null && !string.IsNullOrEmpty(attribute.PropertyName))
+                    {
+                        //if there is an attribute and it has a name, then we set it
+                        name = attribute.PropertyName;
+                    }
+                    else
+                    {
+                        //otherwise we set proeprty name lowered
+                        name = propertyInfo.Name.ToLowerInvariant();
+                    }
+
+                    if (propertyInfo.PropertyType.IsGenericType
+                        && typeof(IEnumerable).IsAssignableFrom(propertyInfo.PropertyType))
+                    {
+                        IEnumerable list = value as IEnumerable;
+                        if (list != null)
+                        {
+                            foreach (var item in list)
+                            {
+                                r.AddParameter(name, item);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        r.AddParameter(name, value);
+                    }
+                }
+            }
         }
         #endregion
     }

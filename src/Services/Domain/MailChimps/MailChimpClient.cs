@@ -11,6 +11,7 @@ namespace Services.Domain.MailChimps
 {
     public class MailChimpClient
     {
+        private object syncObject = new object();
         public string ApiKey { get; private set; }
 
         public MailChimpClient()
@@ -23,11 +24,19 @@ namespace Services.Domain.MailChimps
             ApiKey = apiKey;
         }
 
-        public IMailChimpEndpoint<AddSubscriberResource, AddSubscriberRequest> Lists
+        private IMailChimpEndpoint<SubscriberResource, SubscriberRequest> subscribers;
+        public IMailChimpEndpoint<SubscriberResource, SubscriberRequest> Subscribers
         {
             get
             {
-                return new ListsMailChimpEndpoint(ApiKey);
+                lock (syncObject)
+                {
+                    if (subscribers == null)
+                    {
+                        subscribers = new SubscriberMailChimpEndpoint(ApiKey);    
+                    }
+                }
+                return subscribers;
             }
         }
     }

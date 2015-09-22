@@ -11,6 +11,17 @@ namespace Services.Domain.MailChimps
         where TK : BaseMailChimpRequest
     {
         /// <summary>
+        /// Get a list of resources
+        /// </summary>
+        /// <returns>A list of requested resources</returns>
+        BaseMailChimpResponse<IList<T>> Get(TK request);
+        /// <summary>
+        /// Get a list of resources asynchronously
+        /// </summary>
+        /// <returns>A list of requested resources</returns>
+        Task<BaseMailChimpResponse<IList<T>>> GetAsync(TK request);
+
+        /// <summary>
         /// Create a new resource
         /// </summary>
         /// <param name="resource">A resource to be created</param>

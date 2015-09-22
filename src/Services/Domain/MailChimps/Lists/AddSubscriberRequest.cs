@@ -7,11 +7,11 @@ using Newtonsoft.Json;
 
 namespace Services.Domain.MailChimps.Lists
 {
-    public class AddSubscriberRequest : BaseMailChimpRequest
+    public class AddSubscriberRequest : SubscriberRequest
     {
         public AddSubscriberRequest(string listId)
+            : base(listId)
         {
-            Url = string.Format("lists/{0}/members", listId);
         }
 
         [JsonProperty("email_address")]

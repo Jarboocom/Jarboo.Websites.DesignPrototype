@@ -78,6 +78,9 @@
     <Compile Include="Domain\MailChimps\IMailChimpEndpoint.cs" />
     <Compile Include="Domain\MailChimps\IMailChimpResponse.cs" />
     <Compile Include="Domain\MailChimps\JsonSerializer.cs" />
+    <Compile Include="Domain\MailChimps\Lists\SubscriberRequest.cs" />
+    <Compile Include="Domain\MailChimps\Lists\GetSubscribersRequest.cs" />
+    <Compile Include="Domain\MailChimps\Lists\SubscriberResource.cs" />
     <Compile Include="Domain\MailChimps\MailChimpClient.cs" />
     <Compile Include="Domain\Subscribers\ISubscriberService.cs" />
     <Compile Include="Domain\Common\Specification.cs" />
@@ -91,9 +94,8 @@
     <Compile Include="Domain\Pages\JarbooPage.cs" />
     <Compile Include="Domain\Pages\PageSpecification.cs" />
     <Compile Include="Domain\MailChimps\Lists\AddSubscriberRequest.cs" />
-    <Compile Include="Domain\MailChimps\Lists\AddSubscriberResource.cs" />
     <Compile Include="Domain\MailChimps\StandardResponse.cs" />
-    <Compile Include="Services\MailChimps\ListsMailChimpEndpoint.cs" />
+    <Compile Include="Services\MailChimps\SubscriberMailChimpEndpoint.cs" />
     <Compile Include="Domain\Subscribers\Subscriber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CaseService.cs" />
