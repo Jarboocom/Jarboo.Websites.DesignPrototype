@@ -1,0 +1,47 @@
+﻿@model Website.Models.HomeViewModel
+@{
+    ViewBag.Title = "Jarboo - Build anything";
+}
+
+<div class="row single-case-study-top-view">
+    <div class="wrapper">
+        <div class="col-md-8 col-sm-12 col-xs-12 section1-text-white">
+            <h1 class="email-h1">Wouldn’t it be great if hiring trusted developers was easy?</h1>
+            <p class="email-main-p">We know the feeling. It's why we made Jarboo.</p>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12 section1-text-white">
+            <img src="@Url.Content("~/assets/images/lap-top-white.png")" alt="" class="instant-prices">
+        </div>
+    </div>
+</div>
+
+
+<div class="row single-case-study-line">
+</div>
+
+<div class="row single-case-study-bottom-view">
+    <div class="wrapper">
+        <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
+            <h2 class="email-no-h2">You might not need more developers now,
+but let us know when you’re ready to build the future.</h2>
+            <p class="p-email-no">We appreciate you letting us know that your company isn’t currently in need of more development resources,
+but if you know a company that is, feel free to share our site with them.</p>
+        </div>
+    </div>
+</div>
+
+    <div class="row CTA-section">
+        <div class="CTA-wrapper">
+            <div class="col-md-6 col-sm-12 col-xs-12 section1-text">
+                <h2 class="CTA-h2">Solve your development:</h2>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 CTA-buttons-CTA">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <button onclick="location.href ='@Url.Action("DiscussProject","Lead")'" class="CTA-button-full-CTA">DISCUSS A PROJECT</button>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <button onclick="location.href='@Url.Action("Contact","Home")'" class="CTA-button-ghost-CTA">CONTACT US</button>
+                </div>
+            </div>
+        </div>
+    </div>

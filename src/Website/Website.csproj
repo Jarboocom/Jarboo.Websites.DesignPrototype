@@ -185,6 +185,7 @@
     <Content Include="assets\images\instant-prices.png" />
     <Content Include="assets\images\ipad.png" />
     <Content Include="assets\images\juf-logo.png" />
+    <Content Include="assets\images\lap-top-white.png" />
     <Content Include="assets\images\lars.jpg" />
     <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\manager.png" />
@@ -244,6 +245,7 @@
     <Content Include="assets\styles\blog\blog-listing.scss" />
     <Content Include="assets\styles\case-study\single-case-study.scss" />
     <Content Include="assets\styles\blog\blog-text.scss" />
+    <Content Include="assets\styles\mail-chimp\email-maybe.scss" />
     <None Include="compilerconfig.json" />
     <None Include="Properties\PublishProfiles\file.pubxml" />
     <None Include="Properties\PublishProfiles\JarbooDesignPrototype.pubxml" />
@@ -292,6 +294,7 @@
     <Content Include="Views\Page\_RecentlyPosts.cshtml" />
     <Content Include="Views\Shared\_DiscussProject.cshtml" />
     <Content Include="Views\Home\ThankYou.cshtml" />
+    <Content Include="Views\Home\EmailMaybe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
