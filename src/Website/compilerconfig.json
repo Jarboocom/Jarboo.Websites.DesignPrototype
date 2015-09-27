@@ -2,5 +2,9 @@
   {
     "outputFile": "assets/styles/main.css",
     "inputFile": "assets/styles/main.scss"
+  },
+  {
+    "outputFile": "assets/styles/blog/blog-text.css",
+    "inputFile": "assets/styles/blog/blog-text.scss"
   }
 ]

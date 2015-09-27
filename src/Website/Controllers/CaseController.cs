@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Services.Domain.Case;
 using Services.Services;
 
@@ -10,7 +6,7 @@ namespace Website.Controllers
 {
     public class CaseController : Controller
     {
-        private ICaseService _caseService;
+        private readonly ICaseService _caseService;
         public CaseController()
         {
             _caseService = new CaseService();
@@ -21,9 +17,12 @@ namespace Website.Controllers
         {
             var our_case = _caseService.GetBySlug(slug);
 
+            if (our_case != null)
+            {
+                return View(our_case);
+            }
 
-
-            return View(our_case);
+            return new HttpNotFoundResult();
         }
     }
 }

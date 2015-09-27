@@ -1,9 +1,24 @@
-﻿@model Services.Domain.Pages.JarbooPage
+﻿@model Website.Models.JarbooPageViewModel
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = Model.Title;
+    if (Model.UseSidebarLayout)
+    {
+        Layout = "_SideBarLayout.cshtml";
+    }
 }
 
-<h1>@Model.Title</h1>
+<div class="row content-row">
+    <div class="content-wrapper">
+        <div class="col-md-12 col-sm-12 col-xs-12 section1-text blog-text">
+            <h1>@Html.Raw(Model.Title)</h1>
 
-@Html.Raw(Model.Content)
+            @Html.Raw(Model.Content)
+            @if (!string.IsNullOrEmpty(Model.GoBackUrl))
+            {
+                <a href="@Model.GoBackUrl"><button class="awesome-articles-button">Go back to articles</button></a>
+            }
+        </div>
+    </div>
+</div>
+

@@ -1,73 +1,277 @@
 ﻿@model Website.Models.ReferencesViewModel
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "References and case studies - Jarboo";
 }
 
-<div class="row wrapper-padding">
-    <div class="col-md-7 col-sm-12 col-xs-12 references-heading">
-        <h1>We do quality work for a wide <br> range of clients</h1>
-    </div>
-    <div class="col-md-5 col-sm-12 col-xs-12">
-        <div class="img1-wrapper">
-            <img src="@Url.Content("~/assets/images/gigster.png")" alt="">
+
+
+<div class="row reference-section1">
+    <div class="wrapper-solving-section2">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h1>We do quality work for a wide range of clients</h1>
+            <h3>Customers in different growth stages</h3>
+            <p>
+                We strive to be a great partner for software development in all growth phases. We understand the needs for small startups are very different from those of an established and well-known company. Below are four examples of customers in very different growth phases:
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                    <div class="col-md-12 col-sm-12 col-xs-12 reference-growth-company">
+                        <a href="http://saxo.com/"><img src="@Url.Content("~/assets/images/saxo.png")" alt=""></a>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <h4 class="references-h4">The most popular webshop in Denmark 2014</h4>
+                        <p class="solving-p">SAXO is one of the biggest webshops in Denmark, and has international ambitions. We have been an extra arm for their scrum team, as well as a partner for a lot of side projects and internal systems.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                    <div class="col-md-12 col-sm-12 col-xs-12 reference-growth-company">
+                        <a href="http://monera.dk/"><img src="@Url.Content("~/assets/images/monera-logo.png")" alt=""></a>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <h4 class="references-h4">New startup in the finance industry</h4>
+                        <p class="solving-p">Monera is a new startup that seeks to improve everyone's economy. We started working before they had funding, and built the first prototype which could then be used to gather data and feedback.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                <div class="col-md-12 col-sm-12 col-xs-12 reference-growth-company">
+                    <a href="http://www.usatours.dk/"> <img src="@Url.Content("~/assets/images/USA-tours.png")" alt=""></a>
+
+</div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h4 class="references-h4">Travel agent for US trips</h4>
+                    <p class="solving-p">USATours is a big company in the travel industry, which sells vacations and trips to USA. We are maintaining their commerce website, and implementing new requirements and features.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                <div class="col-md-12 col-sm-12 col-xs-12 reference-growth-company">
+                    <a href="https://shipbeat.com/"><img src="@Url.Content("~/assets/images/shipbeat.png")" alt=""></a>
+</div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h4 class="references-h4">Shipping API for e-commerce</h4>
+                    <p class="solving-p">Shipbeat is a funded startup that seeks to build a shipping API for all e-commerce. We have been working with clearly scoped projects which they decided to move outside their core developers.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 
-<div class="row wrapper">
+
+
+<div class="row refference-case-study">
+    <div class="reference-case-study-holder">
+        @foreach (var ourCase in Model.Cases)
+        {
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="reference-case-study-icon">
+                        <a href="@Url.Action("Index", new {controller = "Case", slug = ourCase.Slug})"><img src="@Url.Content("~/assets/images/case-study-white.pmg.png")" alt=""></a>
+                    </div>
+                    <div class="reference-case-study-line"></div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="reference-case-study-text">
+                        <a href="@Url.Action("Index", new {controller = "Case", slug = ourCase.Slug})"><h4 class="reference-case-study-h4">@ourCase.Title</h4></a>
+                        <p class="reference-case-study-p">@ourCase.Description</p>
+                        <a href="@Url.Action("Index", new {controller = "Case", slug = ourCase.Slug})"><button class=" references-case-study-btn">READ MORE</button></a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="row company-logo-section">
+    <div class="index-wrapper">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 company-logo-margin">
+                <h3 class="references-h3">Our customers include</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="http://www.billigeflybilletter.dk/"><img src="@Url.Content("~/assets/images/BilligeFly.png")" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="https://shipbeat.com/"><img src="@Url.Content("~/assets/images/shipbeat.png")" alt=" "></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="http://www.usatours.dk/"><img src="@Url.Content("~/assets/images/USA-tours.png")" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="http://www.amino.dk/"><img src="@Url.Content("~/assets/images/amino.png")" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="http://www.blochstech.com/"><img src="@Url.Content("~/assets/images/tech.png")" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="http://saxo.com/"><img src="@Url.Content("~/assets/images/saxo.png")" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="http://monera.dk/"><img src="@Url.Content("~/assets/images/monera-logo.png")" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="http://nosuchagency.dk/"><img src="@Url.Content("~/assets/images/nsa-log.png")" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 hidden-sm hidden-xs company-logo-margin"></div>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="http://huma.dk/"><img src="@Url.Content("~/assets/images/huma.png")" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs company-logo-margin">
+                <div class="company-logo-img-hodler">
+                    <a href="http://www.juf.dk/"><img src="@Url.Content("~/assets/images/juf-logo.png")" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin"></div>
+        </div>
+
+        </div>
+</div>
+
+
+@*<div class="row wrapper">
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <h3>Customers in different growth stages</h3>
+        <h3 class="references-h3">Customers in different growth stages</h3>
     </div>
-</div>
+</div>*@
 
-<div class="row wrapper-padding">
+@*<div class="row wrapper-padding">
     <div class="col-md-4 col-sm-12 col-xs-12">
-        <img src="@Url.Content("~/assets/images/references/saxo.png")" alt="">
+        <div class="resourcess-img-container-left">
+            <img src="@Url.Content("~/assets/images/references/saxo.png")" alt="saxo">
+        </div>
     </div>
-    <div class="col-md-8 col-sm-12 col-xs-12">
-        <h4>The most popular webshop in Denmark 2014</h4>
+    <div class="col-md-8 col-sm-12 col-xs-12 references-project-text-left">
+        <h4 class="references-h4">The most popular webshop in Denmark 2014</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis arcu nec dui ornare bibendum. In hac habitasse platea dictumst. Curabitur at odio in mauris ultricies convallis. Nam nec semper dui. Fusce pulvinar elit interdum efficitur malesuada. Nulla odio felis, ullamcorper at tellus non, laoreet vulputate nibh. Pellentesque in risus quis nulla vestibulum consequat a vel nunc. Phasellus aliquet euismod elit, eget dapibus augue bibendum quis. Vivamus congue fermentum diam, ac fermentum arcu semper vitae.</p>
     </div>
 </div>
 
 <div class="row wrapper-padding">
-    <div class="col-md-8 col-sm-12 col-xs-12">
-        <h4>New startup in the finance industry</h4>
+    <div class="col-md-8 col-sm-12 col-xs-12 references-project-text-right">
+        <h4 class="references-h4">New startup in the finance industry</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis arcu nec dui ornare bibendum. In hac habitasse platea dictumst. Curabitur at odio in mauris ultricies convallis. Nam nec semper dui. Fusce pulvinar elit interdum efficitur malesuada. Nulla odio felis, ullamcorper at tellus non, laoreet vulputate nibh. Pellentesque in risus quis nulla vestibulum consequat a vel nunc. Phasellus aliquet euismod elit, eget dapibus augue bibendum quis. Vivamus congue fermentum diam, ac fermentum arcu semper vitae.</p>
     </div>
     <div class="col-md-4 col-sm-12 col-xs-12">
-        <img src="@Url.Content("~/assets/images/references/saxo.png")" alt="">
+        <div class="resourcess-img-container-right">
+            <img src="@Url.Content("~/assets/images/references/USA-tours.png")" alt="usa-tours">
+        </div>
     </div>
 </div>
 
 <div class="row wrapper-padding">
     <div class="col-md-4 col-sm-12 col-xs-12">
-        <img src="@Url.Content("~/assets/images/references/saxo.png")" alt="">
+        <div class="resourcess-img-container-left">
+            <img src="@Url.Content("~/assets/images/references/USA-tours.png")" alt="usa-tours">
+        </div>
     </div>
-    <div class="col-md-8 col-sm-12 col-xs-12">
-        <h4>Travel agent for US trips</h4>
+    <div class="col-md-8 col-sm-12 col-xs-12 references-project-text-left">
+        <h4 class="references-h4">Travel agent for US trips</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis arcu nec dui ornare bibendum. In hac habitasse platea dictumst. Curabitur at odio in mauris ultricies convallis. Nam nec semper dui. Fusce pulvinar elit interdum efficitur malesuada. Nulla odio felis, ullamcorper at tellus non, laoreet vulputate nibh. Pellentesque in risus quis nulla vestibulum consequat a vel nunc. Phasellus aliquet euismod elit, eget dapibus augue bibendum quis. Vivamus congue fermentum diam, ac fermentum arcu semper vitae.</p>
     </div>
 </div>
 
 <div class="row wrapper-padding">
-    <div class="col-md-8 col-sm-12 col-xs-12">
-        <h4>New startup in the finance industry</h4>
+    <div class="col-md-8 col-sm-12 col-xs-12 references-project-text-right">
+        <h4 class="references-h4">Shipping API for e-commerce</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis arcu nec dui ornare bibendum. In hac habitasse platea dictumst. Curabitur at odio in mauris ultricies convallis. Nam nec semper dui. Fusce pulvinar elit interdum efficitur malesuada. Nulla odio felis, ullamcorper at tellus non, laoreet vulputate nibh. Pellentesque in risus quis nulla vestibulum consequat a vel nunc. Phasellus aliquet euismod elit, eget dapibus augue bibendum quis. Vivamus congue fermentum diam, ac fermentum arcu semper vitae.</p>
     </div>
     <div class="col-md-4 col-sm-12 col-xs-12">
-        <img src="@Url.Content("~/assets/images/references/saxo.png")" alt="">
+        <div class="resourcess-img-container-right">
+            <img src="@Url.Content("~/assets/images/references/shipbeat.png")" alt="shipbeat">
+        </div>
     </div>
 </div>
 
-<h2>Cases</h2>
+<div class="row refference-case-study">
+    <div class="reference-case-study-holder">
+        @foreach (var ourCase in Model.Cases)
+        {
+            <div class="col-md-3 col-sm-12 col-xs-12">
 
-<ul>
-    @foreach (var our_case in Model.Cases)
-    {
-        <li>
-            @Html.ActionLink("See case","Index","Case",new { slug =our_case.Slug},null)
-        </li>
-    }
-</ul>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="reference-case-study-icon">
+                        <a href=""><img src="@Url.Content("~/assets/images/case-study-white.png")" alt="case-study"></a>
+                    </div>
+                    <div class="reference-case-study-line"></div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="reference-case-study-text">
+                        <h4 class="reference-case-study-h4">@ourCase.Title.ToUpper()</h4>
+                        <p class="reference-case-study-p">@ourCase.Description</p>
+                        <a href="@Url.Action("Index", "Case", new {slug = ourCase.Slug})">
+                            <button class="references-case-study-btn">READ MORE</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="row company-logo-section">
+    <div class="index-wrapper">
+        <div class="col-md-12 col-sm-6 col-xs-12 company-logo-margin">
+            <h3 class="references-h3">Our customers include</h3>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <a href="#"><img src="@Url.Content("~/assets/images/references/saxo.png")" alt="saxo"></a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <a href="#"><img src="@Url.Content("~/assets/images/references/USA-tours.png")" alt="usa-tours"></a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <a href="#"><img src="@Url.Content("~/assets/images/references/shipbeat.png")" alt="shipbeat"></a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <a href="#"><img src="@Url.Content("~/assets/images/references/saxo.png")" alt="saxo"></a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin"></div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <a href="#"><img src="@Url.Content("~/assets/images/references/USA-tours.png")" alt="usa-tours"></a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin">
+            <div class="company-logo-img-hodler">
+                <a href="#"><img src="@Url.Content("~/assets/images/references/shipbeat.png")" alt="shipbeat"></a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 company-logo-margin"></div>
+    </div>
+</div>*@

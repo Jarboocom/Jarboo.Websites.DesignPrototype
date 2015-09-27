@@ -1,94 +1,101 @@
 ﻿@model Services.Domain.Leads.Lead
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Get a free quote about your software project - Jarboo";
 }
 
-<div class="row contact-wraper">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <h1>Start a development project</h1>
-        <p class="contact-page-p">No matter if your project is big or small, if it is a new or existing project, you should contact us. In most situations are we able to help, and when we are not, we can still give advice and give recommendations.</p>
-    </div>
-</div>
-
-<div class="row contact-wraper">
-    <div class="col-md-6 col-sm-12 col-xs-12">
-        <h2>Basic data</h2>
-        @using (Html.BeginForm("DiscussProject", "Lead", FormMethod.Post))
-        {
-
-            <div class="form-group">
-                <label for="email" class="col-md-3  col-sm-12 col-xs-12 control-label">E-mail</label>
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    @Html.TextBoxFor(m=>m.Email,new {@class="form-control", placeholder ="Your e-mail adress"})
-                </div>
-                <div class="col-md-1 col-sm-12 col-xs-12"></div>
-            </div>
-
-            <div class="form-group">
-                <label for="name" class="col-md-3 col-sm-12 col-xs-12 control-label">Your name:</label>
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your name" })
-                </div>
-                <div class="col-md-1  col-sm-12 col-xs-12"></div>
-            </div>
-
-            <div class="form-group">
-                <label for="skype" class="col-md-3 col-sm-12 col-xs-12 control-label">Skype ID:</label>
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                   @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your Skype" })
-                </div>
-                <div class="col-md-1 col-sm-12 col-xs-12"></div>
-            </div>
-
-            <div class="form-group">
-                <label for="company" class="col-md-3 col-sm-12 col-xs-12 control-label">Company name:</label>
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your company name" })
-                </div>
-                <div class="col-md-1  col-sm-12 col-xs-12"></div>
-            </div>
-
-            <h2>Project data</h2>
-
-            <div class="form-group">
-                <label for="message" class="col-md-12 col-sm-12 col-xs-12 control-label control-label-margin">Describe your project or situation:</label>
-                <div class="col-sm-12">
-                    @Html.TextAreaFor(m=>m.ProjectDescription,new {@class="form-control", placeholder = "Describe your project or situation" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="start" class="col-md-12 col-sm-12 col-xs-12 control-label">When do you expect the project to start?</label>
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    @Html.TextBoxFor(m => m.ProjectStart, new { @class = "form-control", placeholder = "Project start" })
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12"></div>
-            </div>
 
 
-            <div class="form-group">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <input id="submit" name="submit" type="submit" value="Start project" class="submit-btn">
-                </div>
-            </div>
-
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="check-holder">
-                    <p class="check-p"><img src="@Url.Content("~/assets/images/check.png")" class="chceck-img" alt="">100% Risk free</p>
-                    <p class="check-p"><img src="@Url.Content("~/assets/images/check.png")" class="chceck-img" alt="">Free advice and help on project</p>
-                    <p><img src="@Url.Content("~/assets/images/check.png")" class="chceck-img" alt="">We're more affordable than employees, and we've no minimum project size</p>
-                </div>
-
-            </div>
-        }
-
-      
-    </div>
-    <div class="col-md-5 col-sm-12 col-xs-12">
-        <h2 class="brands">Trusted by big local brands</h2>
-        <div class="company-wrapper">
-            <img src="@Url.Content("~/assets/images/references/comapny.png")" alt="">
+<div class="row">
+    <div class="wrapper">
+        <div class="col-md-12 col-sm-12 col-xs-12 section1-text">
+            <h1>Start a development project</h1>
+            <p class="contact-page-p">No matter if your project is big or small, if it is a new or existing project, you should contact us. In most situations are we able to help, and when we are not, we can still give advice and give recommendations.</p>
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="wrapper">
+        <div class="col-md-7 col-sm-12 col-xs-12 section1-text">
+            <h2>Basic data</h2>
+            <form class="form-horizontal" role="form" method="post" action="#">
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    <label for="email" class="col-md-12  col-sm-12 col-xs-12 control-label"><div>E-mail:<span class="must-field">*</span></div></label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Your e-mail adress", value = "", id = "email" })
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="col-md-12 col-sm-12 col-xs-12 control-label">Your name:</label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your Name", value = "", id = "name" })
+                    </div>
+                    <div class="col-md-2  col-sm-12 col-xs-12"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="skype" class="col-md-12 col-sm-12 col-xs-12 control-label">Skype ID:</label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.Skype, new { @class = "form-control", placeholder = "Your Skype", value = "", id = "skype" })
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company" class="col-md-12 col-sm-12 col-xs-12 control-label">Company name:</label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.Company, new { @class = "form-control", placeholder = "Company name", value = "company", id = "company" })
+                    </div>
+                    <div class="col-md-2  col-sm-12 col-xs-12"></div>
+                </div>
+
+                <h2>Project data</h2>
+
+                <div class="form-group">
+                    <label for="message" class="col-md-12 col-sm-12 col-xs-12 control-label control-label-margin">Describe your project or situation:<span class="must-field">*</span></label>
+                    <div class="col-sm-10">
+                        @Html.TextAreaFor(m => m.ProjectDescription, new { @class = "form-control", placeholder = "Describe your project or situation", rows = "4", name = "message" })
+                    </div>
+                    <div class="col-md-2  col-sm-12 col-xs-12"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="start" class="col-md-12 col-sm-12 col-xs-12 control-label">When do you expect the project to start?</label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.ProjectStart, new { @class = "form-control", placeholder = "Project start", id = "start", name = "start", value = "" })
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12"></div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <input id="submit" name="submit" type="submit" value="Start project" class="submit-btn">
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="check-holder">
+                        <p class="check-p"><img src="@Url.Content("~/assets/images/check.png")" class="chceck-img" alt="">100% Risk free</p>
+                        <p class="check-p"><img src="@Url.Content("~/assets/images/check.png")" class="chceck-img" alt="">Free advice and help on project</p>
+                        <p><img src="@Url.Content("~/assets/images/check.png")" class="chceck-img" alt="">We're more affordable than employees, and we've no minimum project size</p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="col-md-5 col-sm-12 col-xs-12 brands">
+            <h2 class="brands">Trusted by big local brands</h2>
+            <div class="company-wrapper">
+                <img src="@Url.Content("~/assets/images/comapny.png")" alt="">
+            </div>
+            <a href="@Url.Action("References","Home")" class="underline">See more companies we worked with</a>
+        </div>
+    </div>
+</div>
+

@@ -1,24 +1,34 @@
-﻿@using Website.Domain.Case
-@model System.Collections.Generic.List<Website.Domain.Case.Case>
+﻿@using Services.Domain.Case
+@model System.Collections.Generic.List<Services.Domain.Case.Case>
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Cases";
 }
 
 <h1>Cases</h1>
 
 @Html.ActionLink("New case","NewCase","Case")
 
-<table class=""table table-stripped">
+<table class="table table-stripped">
     <thead>
     <tr>
         <th>
-            ID
-        </th>
-        <th>
             Title
         </th>
-        <th>Edit</th>
+        <th>
+            Description
+        </th>
+        <th>
+            Slug
+        </th>
+        <th>
+            DownloadUrl
+        </th>
+
+        <th>
+            Edit
+        </th>
+
     </tr>
     </thead>
     <tbody>
@@ -26,11 +36,18 @@
         {
             <tr>
                 <td>
-                    @a_case.Id
-                </td>
-                <td>
                     @a_case.Title
                 </td>
+                <td>
+                    @a_case.Description
+                </td>
+                <td>
+                    @a_case.Slug
+                </td>
+                <td>
+                    @a_case.DownloadUrl
+                </td>
+                
                 <td>
                     @Html.ActionLink("Edit","EditCase","Case",new {slug=a_case.Slug},null)
                 </td>

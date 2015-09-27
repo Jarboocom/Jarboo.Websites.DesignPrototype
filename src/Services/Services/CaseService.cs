@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Services.Database;
 using Services.Domain.Case;
-using Website.Domain.Case;
 
 namespace Services.Services
 {
@@ -56,7 +55,7 @@ namespace Services.Services
             //    dbLetters = dbLetters.Where(c => c.Id == specification.Id);
             //}
 
-            return cases.OrderBy(c=>c.Id).Take(specification.Take).Skip(specification.Skip).ToList();
+            return cases.OrderByDescending(c=>c.Id).Take(specification.Take).Skip(specification.Skip).ToList();
         }
     }
 }

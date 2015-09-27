@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Website.Domain.Case
+﻿namespace Services.Domain.Case
 {
     public class Case
     {
@@ -14,6 +9,7 @@ namespace Website.Domain.Case
         public string Title { get; set; }
 
         public string Description { get; set; }
-        
+
+        public string Mailchimp { get; set; }
     }
 }

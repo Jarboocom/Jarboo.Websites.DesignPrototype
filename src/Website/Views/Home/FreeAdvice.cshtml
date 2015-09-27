@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Get free advice on your software project - Jarboo";
+}
+
+<div class="row section1">
+    <div class="col-md-7 col-sm-12 col-xs-12 section1-text">
+        <h1 class="h1-index h1-centered">
+            Want free advice on your<br>technical software project?
+        </h1>
+        <p>
+            I offer a free one-hour consultation, where we talk about advice regarding your technical software project (app, website, webshop or similar).
+        </p>
+
+        <div class="row buttons-section1">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <a href="@Url.Action("Contact","Home")"><button class="CTA-button-full-section1">Book free consultation</button></a>
+            </div>
+        </div>
+        @*<p class="fun-fact"><span style="color:#0976BB;">Did you know?</span> We're cheaper than employees, <br> and we have no minimum project size?</p>*@
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12 section1-image">
+        <img src="@Url.Content("~/assets/images/instant-prices.png")" alt="" class="instant-prices">
+        @*<h4 class="index-consulting">Having a project? <br> Get a free chat about anything technical</h4>*@
+    </div>
+</div>
+
+<div class="row solving-section2">
+    <div class="wrapper-solving-section2">
+        <div class="col-md-7 col-sm-12 col-xs-12">
+            <h1>Examples of advice</h1>
+
+            <p>
+                We can talk about anything technical you like, but here are some examples of subjects that could be elements:
+            </p>
+            <div class="col-md-12 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                <div class="col-md-2 col-sm-2 col-xs-12 solving-section2-icon">
+                    <img src="@Url.Content("~/assets/images/scalable.png")" alt="">
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-12 sm-left-p">
+                    <h4 class="solving-h4">How much does it cost to make this website/app/webshop/etc.</h4>
+                    <p>It can be extremely difficult for a non-technical person to judge how much it costs to make a specific website, app, webshop and similar.</p>
+                    <p>When we go through the project together, I can help giving a rough estimate (or suggest how a very cheap prototype could be made).</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                <div class="col-md-2 col-sm-2 col-xs-12 solving-section2-icon">
+                    <img src="@Url.Content("~/assets/images/time.png")" alt=" ">
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-12 sm-left-p">
+                    <h4 class="solving-h4">How to find the right technical co-founder?</h4>
+                    <p>If you have a startup, quite often you will need a technical co-founder. However, how do you judge if a candidate is good or bad? And how do you even find such a person?</p>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 solving-section2-icontext-wrapper">
+                <div class="col-md-2 col-sm-2 col-xs-12 solving-section2-icon">
+                    <img src="@Url.Content("~/assets/images/money.png")" alt="">
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-12 sm-left-p">
+                    <h4 class="solving-h4">How do I make a cheap prototoype?</h4>
+                    <p>In order to get an investment, or simply to test if some idea works, it's a very good idea to make a prototype</p>
+                    <p>There are always ways to make a cheap prototype, and we can discuss how to do that.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-5 hidden-sm hidden-xs solving-ipad">
+            <img src="@Url.Content("~/assets/images/ipad.png")" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row testemonial-section">
+    <div class="section2-index-wrapper">
+        <div class="col-md- col-sm-12 col-xs-12 section1-text">
+            <h1 class="h1-index  h1-centered">Technical advice from an expert</h1>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+            <div class="client-holder">
+                <img src="@Url.Content("~/assets/images/lars.jpg")" alt="Monera">
+            </div>
+            <h3 class="client-name">Lars Holdgaard</h3>
+            <p class="client-position">CEO og co-founder i Jarboo</p>
+        </div>
+        <div class="col-md-9 col-sm-12 col-xs-12 testemonial">
+            <p>
+                <i>I've made websites, apps, internal applications and have used most major technologies.<br/><br/>I have been programming for 9 years, and have been in the startup world for 7 years. I also have a bachelors degree in software technology, and a master degree in e-business.<br/><br/>But most important:<br/>Every day I work with startups. In my company Jarboo, we help founders get their things built. We strive to be <b>THE</b> cheapest way, while still having high quality. </i>.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row CTA-section">
+    <div class="CTA-wrapper">
+        <div class="col-md-6 col-sm-12 col-xs-12 section1-text">
+            <h2 class="CTA-h2">Book a free consultation:</h2>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 CTA-buttons-CTA">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button onclick="location.href ='@Url.Action("Contact","Home")'" class="CTA-button-full-CTA">Book a free consultation</button>
+            </div>
+        </div>
+    </div>
+</div>

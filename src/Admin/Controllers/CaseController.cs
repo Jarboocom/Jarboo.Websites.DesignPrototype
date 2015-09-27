@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using Services.Domain.Case;
 using Services.Domain.Leads;
 using Services.Services;
-using Website.Domain.Case;
 
 namespace Admin.Controllers
 {
@@ -18,7 +17,6 @@ namespace Admin.Controllers
             _caseService = new CaseService();
         }
 
-        // GET: Case
         public ActionResult Index()
         {
             List<Case> cases = _caseService.GetBySpecification(new CaseSpecification()
@@ -29,24 +27,57 @@ namespace Admin.Controllers
 
             return View(cases);
         }
+        // GET: Case
 
+        [HttpGet]
         public ActionResult NewCase()
         {
             return View(new Case());
         }
 
+        [HttpPost]
         public ActionResult NewCase(Case newcase)
         {
+            if (ModelState.IsValid)
+            {
+                CaseService caseService = new CaseService();
+                caseService.Create(newcase);
+            }
+            else
+            {
+                return View(newcase);
+            }
             return RedirectToAction("Index");
         }
 
-        public ActionResult EditCase()
+        [HttpGet]
+        public ActionResult EditCase(string slug)
         {
-            return null;  //View();
+            if (!String.IsNullOrEmpty(slug))
+            {
+                CaseService caseService = new CaseService();
+                Case caseToEdit = caseService.GetBySlug(slug);
+                if (caseToEdit != null)
+                    return View(caseToEdit);
+            }
+            return RedirectToAction("Index");
         }
 
+        [HttpPost]
         public ActionResult EditCase(Case newcase)
         {
+            if (ModelState.IsValid)
+            {
+                CaseService caseService = new CaseService();
+                if (caseService.GetById(newcase.Id) != null)
+                {
+                    caseService.Update(newcase);
+                }
+            }
+            else
+            {
+                return View(newcase);
+            }
             return RedirectToAction("Index");
         }
     }
