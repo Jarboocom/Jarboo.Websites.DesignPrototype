@@ -48,12 +48,19 @@ namespace Website
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-           
+
             routes.MapRoute(
                 name: "Page",
                 url: "{controller}/{action}/{slug}",
                 defaults: new { controller = "Page", action = "Index" }
             );
+
+            routes.MapRoute(
+                            name: "Sitemap",
+                            url: "{controller}/{action}/{id}",
+                            defaults: new { controller = "Sitemap", action = "Index", id = UrlParameter.Optional }
+                        );
+
 
 
         }

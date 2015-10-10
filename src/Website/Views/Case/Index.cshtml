@@ -10,7 +10,7 @@
     <div class="wrapper">
         <div class="col-md-8 col-sm-12 col-xs-12 section1-text-white">
             <h1>@Model.Title</h1>
-            <p>Here would go a short description of this case study. Try to include at least 2-3 lines of text if possible. Nothing too much, just to look a bit less like a spam phising webiste.</p>
+            <p>@Model.Description</p>
         </div>
         <div class="col-md-4 col-sm-12 col-xs-12 section1-text-white"></div>
     </div>
@@ -22,8 +22,8 @@
 <div class="row single-case-study-bottom-view">
     <div class="wrapper">
         <div class="col-md-7 col-sm-12 col-xs-12 section1-text">
-            <h2 class="black-text-case-study">Why is this case study so awesome?</h2>
-            <p>Description why is this case study so awesome, and why should they get it right now! Don't wate time guys! Just joking, few lines of text would go awesome here because it will just look a bit like a description, so they know what are they getting. Try to get them interested in this part so they feel like wow, I better give my email to this guys right away!</p>
+            <h2 class="black-text-case-study">@Model.LowerDescriptionHeadline</h2>
+            <p>@Model.LowerDescriptionHeadline</p>
         </div>
         <div class="col-md-5 col-sm-12 col-xs-12 mail-box-case-study">
             <div class="col-md-12 col-sm-12 col-xs-12 download-background">

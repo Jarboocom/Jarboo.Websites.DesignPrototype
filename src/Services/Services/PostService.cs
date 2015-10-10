@@ -5,6 +5,7 @@ using System.Net;
 using Newtonsoft.Json;
 using Services.Domain.Pages;
 using Services.Domain.Pages.DTO;
+using Services.Services.Caching;
 using ServiceStack.Text;
 
 namespace Services.Services
@@ -15,25 +16,47 @@ namespace Services.Services
         private const string SingleApiBase = "api/get_post?slug=";
         private const string MultipleApiBase = "api/get_posts?";
 
+        private readonly HttpCacheService _httpCacheService;
+
+        public PostService(HttpCacheService httpCacheService)
+        {
+            _httpCacheService = httpCacheService;
+        }
+
 
         public JarbooPage GetBySlug(string slug)
         {
             var url = string.Format("{0}{1}{2}", DomainBase, SingleApiBase, slug);
 
-            try
-            {
-                using (var client = new WebClient())
-                {
-                    var data = client.DownloadString(url);
+            var cacheKey = _httpCacheService.GetCacheKey("Content", "GetBySlug", slug);
 
-                    var page = JsonConvert.DeserializeObject<WordpressPost>(data);
-                    return ConvertDTOToObject(page);
+            if (!_httpCacheService.ContainsKey(cacheKey))
+            {
+                try
+                {
+                    using (var client = new WebClient())
+                    {
+                        var data = client.DownloadString(url);
+
+                        var page = JsonConvert.DeserializeObject<WordpressPost>(data);
+
+                        var res = ConvertDTOToObject(page);
+
+                        _httpCacheService.Create(cacheKey, res);
+
+                        return res;
+
+                    }
+                }
+                catch (Exception)
+                {
+                    return null;
                 }
             }
-            catch (Exception)
-            {
-                return null;
-            }
+
+            return (JarbooPage)(_httpCacheService.GetById(cacheKey));
+
+        
         }
 
         public JarbooPage Create(JarbooPage page)
@@ -51,35 +74,55 @@ namespace Services.Services
             throw new NotImplementedException();
         }
 
+        public List<JarbooPage> GetBySpecification(ContentSpecification specification)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<JarbooPage> GetBySpecifiction(PageSpecification specification)
         {
-            var result = new List<JarbooPage>();
-            var url = string.Format("{0}{1}posts_per_page={2}&offset={3}", DomainBase, MultipleApiBase, specification.Take, specification.Skip);
-            try
+            var cacheKey = _httpCacheService.GetCacheKey("PostContent", "GetBySlug", specification.ToString());
+
+            if (!_httpCacheService.ContainsKey(cacheKey))
             {
-                using (var client = new WebClient())
+
+                var result = new List<JarbooPage>();
+                var url = string.Format("{0}{1}posts_per_page={2}&offset={3}", DomainBase, MultipleApiBase, specification.Take, specification.Skip);
+                try
                 {
-                    var data = client.DownloadString(url);
-
-                    var blog = JsonConvert.DeserializeObject<WordpressBlog>(data);
-
-                    result.AddRange(blog.posts.Select(s => new JarbooPage
+                    using (var client = new WebClient())
                     {
-                        Content = s.content,
-                        DateCreated = s.date,
-                        Title = s.title,
-                        Slug = s.slug,
-                        Pages = blog.pages,
-                        TotalCount = blog.count_total
-                    }));
+                        var data = client.DownloadString(url);
 
+                        var blog = JsonConvert.DeserializeObject<WordpressBlog>(data);
+
+                        result.AddRange(blog.posts.Select(s => new JarbooPage
+                        {
+                            Content = s.content,
+                            DateCreated = s.date,
+                            Title = s.title,
+                            Slug = s.slug,
+                            Pages = blog.pages,
+                            TotalCount = blog.count_total
+                        }));
+
+                        var res = result;
+
+                        _httpCacheService.Create(cacheKey, res);
+
+                        return res;
+                    }
+                }
+                catch (Exception)
+                {
                     return result;
                 }
+
             }
-            catch (Exception)
-            {
-                return result;
-            }
+
+            return (List<JarbooPage>) (_httpCacheService.GetById(cacheKey));
+
+          
         }
 
         private JarbooPage ConvertDTOToObject(Page page)

@@ -31,7 +31,22 @@
             @Html.TextAreaFor(m => m.Description, new { required = "required", @class = "form-control" })
         </div>
     </div>
-    
+
+    <div class="form-group">
+        <div>
+            @Html.LabelFor(m => m.LowerDescriptionHeadline, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.LowerDescriptionHeadline, new { required = "required", @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div>
+            @Html.LabelFor(m => m.LowerDescription, new { @class = "control-label" })
+            @Html.TextAreaFor(m => m.LowerDescription, new { required = "required", @class = "form-control" })
+        </div>
+    </div>
+
+
     <div class="form-group">
         <div>
             @Html.LabelFor(m => m.DownloadUrl, new { @class = "control-label" })

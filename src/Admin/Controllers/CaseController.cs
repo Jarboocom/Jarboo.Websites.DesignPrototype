@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Services.Domain.Case;
 using Services.Domain.Leads;
 using Services.Services;
+using Services.Services.Caching;
 
 namespace Admin.Controllers
 {
@@ -14,7 +15,7 @@ namespace Admin.Controllers
         private ICaseService _caseService;
         public CaseController()
         {
-            _caseService = new CaseService();
+            _caseService = new CaseService(new HttpCacheService());
         }
 
         public ActionResult Index()
@@ -40,7 +41,7 @@ namespace Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                CaseService caseService = new CaseService();
+                CaseService caseService = new CaseService(new HttpCacheService());
                 caseService.Create(newcase);
             }
             else
@@ -55,7 +56,7 @@ namespace Admin.Controllers
         {
             if (!String.IsNullOrEmpty(slug))
             {
-                CaseService caseService = new CaseService();
+                CaseService caseService = new CaseService(new HttpCacheService());
                 Case caseToEdit = caseService.GetBySlug(slug);
                 if (caseToEdit != null)
                     return View(caseToEdit);
@@ -68,7 +69,7 @@ namespace Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                CaseService caseService = new CaseService();
+                CaseService caseService = new CaseService(new HttpCacheService());
                 if (caseService.GetById(newcase.Id) != null)
                 {
                     caseService.Update(newcase);

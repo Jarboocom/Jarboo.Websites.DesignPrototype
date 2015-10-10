@@ -9,6 +9,8 @@
         public string Title { get; set; }
 
         public string Description { get; set; }
+        public string LowerDescriptionHeadline { get; set; }
+        public string LowerDescription { get; set; }
 
         public string Mailchimp { get; set; }
     }

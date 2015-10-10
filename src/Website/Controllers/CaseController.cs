@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using Services.Domain.Case;
 using Services.Services;
+using Services.Services.Caching;
 
 namespace Website.Controllers
 {
@@ -9,7 +10,7 @@ namespace Website.Controllers
         private readonly ICaseService _caseService;
         public CaseController()
         {
-            _caseService = new CaseService();
+            _caseService = new CaseService(new HttpCacheService());
         }
 
         // GET: Case

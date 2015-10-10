@@ -5,6 +5,7 @@ using Services.Services;
 using Website.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Services.Services.Caching;
 
 namespace Website.Controllers
 {
@@ -19,8 +20,8 @@ namespace Website.Controllers
 
         public PageController()
         {
-            _contentService = new ContentService();
-            _postService = new PostService();
+            _contentService = new ContentService(new HttpCacheService());
+            _postService = new PostService(new HttpCacheService());
         } 
 
         // GET: Page

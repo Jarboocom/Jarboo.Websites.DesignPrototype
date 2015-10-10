@@ -7,6 +7,7 @@ using Services.Domain.Subscribers;
 using Services.Services;
 using Website.Models;
 using log4net;
+using Services.Services.Caching;
 
 namespace Website.Controllers
 {
@@ -18,7 +19,7 @@ namespace Website.Controllers
         private readonly ISubscriberService _subscriberService;
         public HomeController()
         {
-            _caseService = new CaseService();
+            _caseService = new CaseService(new HttpCacheService());
             _subscriberService = new SubscriberService();
         }
 
