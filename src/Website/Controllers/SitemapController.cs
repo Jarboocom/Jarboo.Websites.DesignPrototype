@@ -72,7 +72,7 @@ namespace Website.Controllers
 
             foreach (var our_page in content)
             {
-                //nodes.Add(new SitemapNode(Url.Action("Index","Page",new {slug= our_page.Slug })));
+                nodes.Add(new SitemapNode(Url.Action("Index","Page",new {slug= our_page.Slug })));
             }
 
             return new SitemapProvider().CreateSitemap(HttpContext, nodes);

@@ -10,5 +10,6 @@ namespace Services.Domain.Subscribers
     {
         public string Email { get; set; }
         public string JarbooPlacement { get; set; }
+        public string DevLater { get; set; }
     }
 }

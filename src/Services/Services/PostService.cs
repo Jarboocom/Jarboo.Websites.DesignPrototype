@@ -38,9 +38,9 @@ namespace Services.Services
                     {
                         var data = client.DownloadString(url);
 
-                        var page = JsonConvert.DeserializeObject<WordpressPost>(data);
+                        var page = JsonConvert.DeserializeObject<SingleWordpressPost>(data);
 
-                        var res = ConvertDTOToObject(page);
+                        var res = ConvertDTOToObject(page.post);
 
                         _httpCacheService.Create(cacheKey, res);
 
@@ -79,6 +79,7 @@ namespace Services.Services
             throw new NotImplementedException();
         }
 
+
         public List<JarbooPage> GetBySpecifiction(PageSpecification specification)
         {
             var cacheKey = _httpCacheService.GetCacheKey("PostContent", "GetBySlug", specification.ToString());
@@ -94,7 +95,7 @@ namespace Services.Services
                     {
                         var data = client.DownloadString(url);
 
-                        var blog = JsonConvert.DeserializeObject<WordpressBlog>(data);
+                        var blog = JsonConvert.DeserializeObject<WordpressPostList>(data);
 
                         result.AddRange(blog.posts.Select(s => new JarbooPage
                         {
@@ -125,7 +126,7 @@ namespace Services.Services
           
         }
 
-        private JarbooPage ConvertDTOToObject(Page page)
+        private JarbooPage ConvertDTOToObject(WordpressPost page)
         {
             return new JarbooPage
             {
@@ -136,9 +137,6 @@ namespace Services.Services
             };
         }
 
-        private JarbooPage ConvertDTOToObject(WordpressPost page)
-        {
-            return ConvertDTOToObject(page.post);
-        }
+
     }
 }

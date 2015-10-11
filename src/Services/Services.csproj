@@ -84,6 +84,9 @@
     <Compile Include="Domain\MailChimps\Lists\SubscriberResource.cs" />
     <Compile Include="Domain\MailChimps\MailChimpClient.cs" />
     <Compile Include="Domain\Pages\ContentSpecification.cs" />
+    <Compile Include="Domain\Pages\DTO\SingleWordpressPage.cs" />
+    <Compile Include="Domain\Pages\DTO\SingleWordpressPost.cs" />
+    <Compile Include="Domain\Pages\DTO\WordpressPost.cs" />
     <Compile Include="Domain\Subscribers\ISubscriberService.cs" />
     <Compile Include="Domain\Common\Specification.cs" />
     <Compile Include="Domain\Leads\ILeadService.cs" />

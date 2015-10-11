@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text;
 using Newtonsoft.Json;
@@ -13,6 +14,8 @@ namespace Services.Services
     {
         private const string DomainBase = "http://blog.jarboo.com/";
         private const string ApiBase = "api/get_page?slug=";
+        private const string GetAllBase = "api/get_page_index/";
+
         private readonly HttpCacheService _httpCacheService;
 
         public ContentService(HttpCacheService httpCacheService)
@@ -35,9 +38,9 @@ namespace Services.Services
                         client.Encoding = Encoding.UTF8;
                         var data = client.DownloadString(url);
 
-                        var page = JsonConvert.DeserializeObject<WordpressPage>(data);
+                        var page = JsonConvert.DeserializeObject<SingleWordpressPage>(data);
 
-                        var res = ConvertDTOToObject(page);
+                        var res = ConvertDTOToObject(page.page).FirstOrDefault();
                         _httpCacheService.Create(cacheKey, res);
                         return res;
                     }
@@ -71,18 +74,75 @@ namespace Services.Services
 
         public List<JarbooPage> GetBySpecification(ContentSpecification specification)
         {
-            throw new NotImplementedException();
+            var cacheKey = _httpCacheService.GetCacheKey("Content", "GetBySpecification", specification.ToString());
+
+            if (!_httpCacheService.ContainsKey(cacheKey))
+            {
+                var url = string.Format("{0}{1}", DomainBase, GetAllBase);
+
+                using (var client = new WebClient())
+                {
+                    try
+                    {
+                        client.Encoding = Encoding.UTF8;
+                        var data = client.DownloadString(url);
+
+                        var page = JsonConvert.DeserializeObject<WordpressPageList>(data);
+
+                        var res = ConvertDTOToObject(page.pages.ToList());
+                        _httpCacheService.Create(cacheKey, res);
+                        return res;
+                    }
+                    catch (Exception)
+                    {
+                        return null;
+                    }
+
+                }
+            }
+
+            return (List<JarbooPage>)(_httpCacheService.GetById(cacheKey));
         }
 
-        private JarbooPage ConvertDTOToObject(WordpressPage page)
+        private List<JarbooPage> ConvertDTOToObject(List<WordpressPage> pages)
         {
-            return new JarbooPage
+            List<JarbooPage> jp = new List<JarbooPage>();
+
+            foreach (var wordpressPage in pages)
             {
-                Content = page.page.content,
-                DateCreated = page.page.date,
-                Title = page.page.title,
-                Slug = page.page.slug
+                jp.AddRange(ConvertDTOToObject(wordpressPage));
+            }
+
+            return jp;
+
+        }
+
+        private List<JarbooPage> ConvertDTOToObject(WordpressPage page)
+        {
+            List<JarbooPage> jps = new List<JarbooPage>();
+            var jp =  new JarbooPage
+            {
+                Content = page.content,
+                Title = page.title,
+                Slug = page.slug,
+                DateCreated = page.date,
+                
             };
+
+
+            jps.Add(jp);
+
+            if (page.children != null && page.children.Any())
+            {
+                foreach (var wordpressPage in page.children)
+                {
+                    jps.AddRange(ConvertDTOToObject(wordpressPage));
+                }
+            }
+          
+
+            return jps;
+
         }
     }
 }
