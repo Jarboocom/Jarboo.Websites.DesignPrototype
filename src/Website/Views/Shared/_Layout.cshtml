@@ -28,6 +28,17 @@
     </script>
     <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=883873758344579&amp;ev=PixelInitialized" /></noscript>
 
+    <!-- Start of Sleeknote signup and lead generation tool - www.sleeknote.com -->
+    <script id='sleeknoteScript' type='text/javascript'>
+    (function () {        var sleeknoteScriptTag = document.createElement('script');
+        sleeknoteScriptTag.type = 'text/javascript';
+        sleeknoteScriptTag.charset = 'utf-8';
+        sleeknoteScriptTag.src = ('//sleeknotecustomerscripts.sleeknote.com/2736.js');
+        var s = document.getElementById('sleeknoteScript');
+        s.parentNode.insertBefore(sleeknoteScriptTag, s);
+    })();
+    </script>
+    <!-- End of Sleeknote signup and lead generation tool - www.sleeknote.com-->
 </head>
 <body>
     <!-- Google Tag Manager -->
@@ -181,8 +192,8 @@
             $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
         });
     </script>
-    <!-- This site is converting visitors into subscribers and customers with OptinMonster - http://optinmonster.com --><div id="om-c2ozfsge1xw2qqyp-holder"></div>
-    <script>var c2ozfsge1xw2qqyp,c2ozfsge1xw2qqyp_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){c2ozfsge1xw2qqyp_poll(function(){if(window['om_loaded']){if(!c2ozfsge1xw2qqyp){c2ozfsge1xw2qqyp=new OptinMonsterApp();return c2ozfsge1xw2qqyp.init({u:"11640.221741",staging:0,dev:0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optinmonster.com/app/js/api.min.js",o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;c2ozfsge1xw2qqyp=new OptinMonsterApp();c2ozfsge1xw2qqyp.init({u:"11640.221741",staging:0,dev:0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><!-- / OptinMonster -->
-    @RenderSection("scripts", required: false)
+
+
+@RenderSection("scripts", required: false)
 </body>
 </html>
